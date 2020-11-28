@@ -23,7 +23,7 @@
           "type": "markdown",
           "state": {
             "file": "index.md",
-            "mode": "preview"
+            "mode": "source"
           }
         },
         "group": "2c4b2f12094a2335"
@@ -100,6 +100,9 @@
   },
   "lastOpenFiles": [
     "index.md",
+    "Code/Codesheet.md",
+    "Code/JS/Deep Compare.md",
+    "articles-eng/Untitled.md",
     "sidebar.md",
     "Untitled.md"
   ]

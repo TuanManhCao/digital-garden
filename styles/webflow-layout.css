@@ -67,7 +67,7 @@ a.internal:hover {
   background-position: 0px 100%;
 }
 
-
+img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius: 8px; box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3);}
 .sidebar h3,.sidebar h4 {margin-top:16px;}
 .w-nav-brand  {color:#333333; text-decoration: none;}
 #nav-button {cursor: pointer; margin-left: 16px;}
@@ -101,7 +101,7 @@ a.internal:hover {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   left: 0px;
   z-index: 5;
   display: -webkit-box;

@@ -1,3 +1,3 @@
-### Digital Notes
+### [Digital Notes](/)
 
 * [[Zettelkasten Metodu]]

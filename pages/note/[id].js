@@ -23,6 +23,7 @@ export default function Home({ note }) {
 export async function getStaticPaths() {
     const allPostsData = await getPostListData();
     const paths = allPostsData.map(p => ({params: {id:p.id}}))
+    console.log("paths", paths)
     return {
       paths,
       fallback:false

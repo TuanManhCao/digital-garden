@@ -14,6 +14,10 @@ class MyDocument extends Document {
     render(props) {
         return (
         <Html data-wf-page="5fb1bacf34bc79d543fcd389" data-wf-site="5fb1bacf34bc79b9c4fcd388">
+            <link rel="stylesheet"
+                  href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/default.min.css">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/highlight.min.js"></script>
+
             <Head />
             <script src="https://d3js.org/d3.v6.min.js"></script>
 
