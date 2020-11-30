@@ -4,6 +4,8 @@ title: Self-Hosted Confluence Installation with Custom Domain
 
 One of our customers from [Seablue](https://www.seabluetours.com) and [AirportTransfer](https://airporttransfer.ist) ask the possibility of using Atlassian Confluence as a self-hosted wiki program. We look for solutions for a while. Later on, we discovered Cloudron app. In this article, We'll install Confluence with a custom domain on our servers. 
 
+[[Test Linki]]
+[[Zettelkasten Metodu]]
 
 ### What is Confluence?
 Confluence is a team collaboration and wiki software developed by Australian software company Atlassian. 

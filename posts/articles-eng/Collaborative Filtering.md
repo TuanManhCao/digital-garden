@@ -8,7 +8,6 @@ There are many approaches in recommenders systems considering various situations
 
 The basic idea of collaborative filtering is lying  on analyzing people's shared interests on domain specific items (in our case,  domain items are movies ).  Calculating similarity between taste of people or similarity between different items with each other allow us to make a good  recommendations. In general, Those recommendations can be item-based and/or user-based.
 
----
 
 On the rest of this article, to make a good illustration we will consider a hypothetical sitution that  are mainly consists of  two person; Person A and Person B and two items (movies) Movie X and Movie Y.
 

@@ -21,7 +21,7 @@ __CSS Snippets__
 <br/>
 
 __HTML__
-* [[HTTPS Force meta tag|Force Insecure Requrests to HTTPS]]: Güvensiz bağlantıları HTTPS'e zorlar. `<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">`
+* [[HTTPS Force Meta Tag]]: Güvensiz bağlantıları HTTPS'e zorlar.
 
 <br/>
 
@@ -34,8 +34,5 @@ __HTML__
 
 
 <br/>
-
-* SEO
-* [[Parameterized URL Index]]: If an indexer  can index the link, you get DA93 backlink.
 
 <br/>

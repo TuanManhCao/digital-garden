@@ -1,9 +1,8 @@
 ---
 title: Zettelkasten Metodu ile Akıllı Not-Alma
 description: Zettelkasten metodu ve üretkenliğinizi arttıracak not alma yöntemleri.
-canonical: [https://www.cbsofyalioglu.com/post/zettelkasten-metodu/](https://www.cbsofyalioglu.com/post/zettelkasten-metodu/)
-
-cover:[https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg](https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg)
+canonical: https://www.cbsofyalioglu.com/post/zettelkasten-metodu/
+cover: https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg
 ---
 
 ![https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg](https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg)
@@ -15,6 +14,7 @@ cover:[https://cbsofyalioglucom.imfast.io/zettelkasten/zettelkasten.jpg](https:/
 
 <br/>
 
+[[Confluence Installation]]
 
 Her taraftan bilgi bombardımanına tutulmaya pek ala alıştık artık. Akıllı telefonlar ve sosyal medya uygulamaları derken artık çok daha niş içerikler tüketmemize olanak veren ve bu dar bağlamın da dışına çıkmamamız için de yeterli içeriği bize sunabilecek uygulamalar da fazlasıyla mevcut.  (Flipboard, Medium, Feedly, Paper.li gibi)
 

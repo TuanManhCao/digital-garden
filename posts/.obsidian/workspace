@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "sidebar.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index.md",
+            "file": "sidebar.md",
             "mode": "source"
           }
         },
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "sidebar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,11 +99,11 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "sidebar.md",
     "index.md",
     "Code/Codesheet.md",
     "Code/JS/Deep Compare.md",
     "articles-eng/Untitled.md",
-    "sidebar.md",
     "Untitled.md"
   ]
 }

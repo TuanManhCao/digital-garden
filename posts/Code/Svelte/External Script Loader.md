@@ -1,4 +1,4 @@
-Bu yöntemi Stackoverflow'da [[blindfish|https://stackoverflow.com/a/61979865/9351362]] yazmış.
+Bu yöntemi Stackoverflow'da [blindfish](https://stackoverflow.com/a/61979865/9351362) yazmış.
 
 ```html
 // LibLoader.svelte

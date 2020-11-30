@@ -6,7 +6,7 @@ __cover__: https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-
 ![Cover](https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-siteleri.jpg)
 
 
----
+
 
 Günlük tutmak, kişisel fikirlerimizi ve kültürel birikimimizi paylaşmak, yazma yeteneğimizi geliştirmek, ürün veya hizmetlerimizi satmak gibi bir çok sebeple her gün sayısız blog yazısı yazılıyor. Siz de ister işletmeniz ister kendiniz için bir tane blog oluşturma fikrine sahipseniz bu yazı size göre.
 
@@ -14,7 +14,7 @@ Yazının başında ***blog açmak isteyenlere öneriler*** ve dikkat edilmesi
 
 Ayrıca fotoğraf ve illüstrasyon sanatçıları için ayrıca listeye alınan ve dijital ürünlerini satabilecekleri ve foto-blog'larını oluşturabilecekleri bir kaç platform da mevcut.
 
----
+
 
 ### **Ne Tür Blog Platformları İncelenecek?**
 
@@ -112,7 +112,7 @@ En azından şu hizmetlere bakabiliriz:
 - Epost bülteni tasarımı ve gönderilmesi.
 - Aylık eposta gönderim limitleri.
 
----
+
 
 ## **En İyi Blog Siteleri**
 
@@ -136,7 +136,7 @@ Gelelim fiyat kısmına: Ghost' blog kullanmanın maliyeti 29$, tabi eğer Ghost
 
 Ayrıca biraz uğraşmayı göze alırsanız, [Google Cloud Platform üzerinde ücretsiz olarak Ghost blog açmak](https://www.cbsofyalioglu.com/post/ghost-blog/) isimli yazıma bakabilirsiniz. ([[Ghost Blog Açma Rehberi]])
 
----
+
 
 ### **2) SquareSpace**
 
@@ -165,7 +165,7 @@ Ayrıca tasarım konusunda yalnızca size sunulan şablonları özelleştirmekle
 
 Toplam 70'den fazla hazır web sitesi şablonuna sahip yeterli gibi gözüküyor ancak gene de daha fazla olabilirdi.
 
----
+
 
 ### **3) HashNode**
 
@@ -183,7 +183,7 @@ Markdown editörlü bu sitede yalnızca yazılarınızı paylaşabilir ve bir ka
 
 Diğer ücretsiz blog sitelerinden HashNode'u ayıran şey kendi özel alan adınızı da ücretsiz olarak bağlamanıza izin veriyor oluşu.
 
----
+
 
 ### **4) WebFlow**
 
@@ -199,7 +199,7 @@ Ayrıca dahili Lottie animasyon deteğine sahip olduğunu da belitrtmek lazım.
 
 Webflow fiyatlandırmayı 2 genel kategori üzerinden yapıyor. $12'lık paket ile kendi alan adınızı bağlayabilirsiniz. Bir diğer kategori ise "Account Plan" adı altında sunulan ve daha çok freelancer, geliştiriciler ve ajanslar için uygun olan kategori. Bu kategori daha çok aynı anda kaç proje barındırabileceğiniz ve yatığınız projelerin kodlarını dışarı çıkartmak için geçerli.
 
----
+
 
 ### **5) Wix**
 
@@ -215,7 +215,7 @@ Ayrıca 500'den fazla hazır şablona sahip ve bunları ücretsiz kullanabiliyor
 
 Yapay zeka destekli editörünün yanında normal editör ve EditorX dahil 3 editöre sahip.
 
----
+
 
 ### **6) Visual Society**
 

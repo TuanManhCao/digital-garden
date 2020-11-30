@@ -47,6 +47,9 @@ p,a, li, h1, h2,h3,h4,h5,h6 {
 
 ul, ol {padding-left: 16px;}
 
+
+
+
 a {text-decoration: none;color:#222 !important}
 a.internal {
   color: #131313 ;
@@ -66,7 +69,61 @@ a.internal:hover {
           rgba(0, 255, 85, 0.7) calc(50% - 9px));
   background-position: 0px 100%;
 }
+.main a:not(.internal) {
+  color: #131313 ;
+  background-color: transparent !important;
+  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(75, 58, 225, 0.631) calc(50% - 9px), 	    		 rgba(0,255,0,0.35) 100%);
+  background-position: 0px 0px;
+  background-size: 100% 200%;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+  transition: all 0.2s ease-out;
+}
+.main a.internal.new, .sidebar .main a.internal.new {
+  color: #131313 ;
+  background-color: transparent !important;
+  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(250, 51, 54, 0.631) calc(50% - 9px), 	    		 rgba(0,255,0,0.35) 100%);
+  background-position: 0px 0px;
+  background-size: 100% 200%;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px 4px;
+  transition: all 0.2s ease-out;
+}
+.test {
+  color: #5221c4;
+}
 
+#graph-box {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom:64px;
+  min-height:400px;
+  background-color: #29203d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
+}
+#side-graph-box {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom:64px;
+  /* 
+  min-height:250px;
+  */
+  background-color: #29203d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#side-graph-box label {
+  margin: 32px 0 !important;
+}
+.jsnx .node-label { fill: white !important;font-size:12px;}
+.jsnx g.node {height:60px !important;}
+
+
+pre code {padding:16px !important; border-radius: 8px;}
 img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius: 8px; box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3);}
 .sidebar h3,.sidebar h4 {margin-top:16px;}
 .w-nav-brand  {color:#333333; text-decoration: none;}
@@ -110,7 +167,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
   display: flex;
   height: 100%;
   min-height: 100vh;
-  min-width: 250px;
+  min-width: 350px;
   padding: 32px 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -132,7 +189,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
 
 .main {
   position: relative;
-  left: 250px;
+  left: 350px;
   z-index: 0;
   width: 100%;
   min-height: 100vh;
@@ -181,18 +238,25 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
 
   .navbar {
     display: none;
+    z-index: 5 !important;
   }
 }
+
+
+
 @media screen and (min-width: 767px) { 
   .sidebar {left: 0 !important;}
-  .main {width: calc(100% - 250px);}
+  .main {width: calc(100% - 350px);}
 }
 
   @media screen and (max-width: 767px) {
   .sidebar {
-    position: absolute;
-    left: -250px;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    left: -350px;
     box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.3);
+    padding-top:96px;
   }
 
   .main {
@@ -222,7 +286,10 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
     display: block;
     background-color: #fff;
   }
-
+  #navbar {
+    position: relative;
+    z-index: 5 !important;
+  }
   .brand-3 {
     display: -webkit-box;
     display: -webkit-flex;

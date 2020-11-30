@@ -9,7 +9,7 @@ export default function Layout({ children, home }) {
     const [isOpen, setIsOpen] = useState(null)
     const toggle = () => setIsOpen(!isOpen)
 
-    const sidebarposition = isOpen ? "0px" : "-250px"
+    const sidebarposition = isOpen ? "0px" : "-350px"
     //console.log("effect: ", isOpen, sidebarposition)
 
   useEffect(()=>{

@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "cytoscape-d3-force": "^1.1.4",
+    "cytoscape-node-html-label": "^1.2.1",
+    "d3": "^6.2.0",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "jsnetworkx": "^0.3.4",
@@ -16,16 +19,21 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^13.0.0",
+    "remark-external-links": "^8.0.0",
+    "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
     "remark-parse": "^9.0.0",
     "remark-preset-lint-markdown-style-guide": "^4.0.0",
     "remark-wiki-link": "^1.0.0",
+    "to-vfile": "^6.1.0",
     "unified": "^9.2.0",
     "vfile-reporter": "^6.0.1"
   },
   "devDependencies": {
     "bimap": "^0.0.15",
+    "cytoscape": "^3.17.0",
     "remark-frontmatter": "^3.0.0",
-    "remark-react": "^8.0.0"
+    "remark-react": "^8.0.0",
+    "remark-stringify": "^9.0.0"
   }
 }
