@@ -8,15 +8,22 @@ import { Network } from "../components/graph";
 
 
 export default function Home({ content, graphdata, filenames, ...props }) {
-    //console.log("Index Page Props: ", props /* backlinks, filenames*/)
+   //console.log("Index Page Props: ", content /* backlinks, filenames*/)
     const ref = useRef(null);
     const router = useRouter()
+
     //var G = jsnx.binomialGraph(filenames.length, 1)
     //var G = jsnx.completeGraph(filenames.length);
     useEffect(() => {
         if (ref && ref.current){
 
-            const G = Network({el:ref.current, graphdata, current:"index", router, allNodes:true})
+            const G = Network({
+                el:ref.current,
+                graphdata,
+                current:"index",
+                router,
+                allNodes:false // If true then shows every markdown file as node
+            })
         }
     }, [])
 

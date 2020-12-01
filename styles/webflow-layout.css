@@ -32,8 +32,8 @@ h2 {font-size: 1.9em;font-weight: bold; margin-top:64px; color:#333}
 h3 {font-size: 1.5em;font-weight: bold; margin-top:48px; color:#444}
 h4 {font-size: 1.3em;font-weight: bold; color:#444}
 p, li {
-    padding-bottom: 8px;
-    padding-top: 8px;
+    padding-bottom: 4px;
+    padding-top: 4px;
     box-sizing: inherit;
     font-family: "Work Sans", sans-serif;
     font-size: 20px;
@@ -105,7 +105,8 @@ a {text-decoration: none;color:#222 !important}
   min-height:400px;
   background-color: #dcdbdf;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 4px -1px rgba(0, 0, 0, 0.9);
+  cursor: grab;
 }
 #side-graph-box {
   width: 100%;
@@ -116,18 +117,18 @@ a {text-decoration: none;color:#222 !important}
   */
   background-color: #29203d;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.3);
 }
 
 #side-graph-box label {
   margin: 32px 0 !important;
 }
 
-.jsnx .node-node {fill: #476ed0 !important;}
+.jsnx .node-node {fill: #5547d0 !important;}
 .jsnx .node-node:hover {fill: blueviolet !important;}
 .jsnx .node-label { fill: #333333 !important;font-size:12px; font-weight: bold;}
 .jsnx g.node {height:60px !important;}
-
+.jsnx .nde-edge { fill:black; stroke-width:2; stroke:black; }
 
 pre code {padding:16px !important; border-radius: 8px;}
 img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius: 8px; box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3);}
@@ -141,6 +142,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
 .sidebar li:hover {background-color: #fff;}
 .sidebar li a.internal {display:block; width: 100% !important;padding-left: 16px; padding-right: 16px;}
 
+main.main .main {max-width:800px;}
 
 blockquote {
     margin: 0;
@@ -222,10 +224,10 @@ blockquote {
   z-index: 0;
   width: 100%;
   min-height: 100vh;
-  padding: 32px 32px;
+  padding: 32px 1vw;
   overflow-wrap: break-word;
 }
-
+main.parent-main {display: flex;flex-direction: column;align-items: center; }
 
 .section {
   position: relative;
@@ -260,10 +262,6 @@ blockquote {
     left: 0px;
   }
 
-  .main {
-    padding-right: 32px;
-    padding-left: 32px;
-  }
 
   .navbar {
     display: none;
@@ -275,9 +273,11 @@ blockquote {
 
 @media screen and (min-width: 767px) { 
   .sidebar {left: 0 !important;}
-  .main {width: calc(100% - 250px);}
+  .main {width: calc(100% - 250px);  padding-left: 4vw; padding-right: 4vw;}
 }
-
+@media screen and (min-width: 991px) { 
+  .parent-main {width: calc(100% - 250px);  padding-left: 10vw !important; padding-right: 10vw;}
+}
   @media screen and (max-width: 767px) {
   .sidebar {
     position: fixed;

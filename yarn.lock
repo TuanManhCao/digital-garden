@@ -2809,6 +2809,13 @@ mdast-util-frontmatter@^0.2.0:
   dependencies:
     micromark-extension-frontmatter "^0.2.0"
 
+mdast-util-heading-range@^2.0.1:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/mdast-util-heading-range/-/mdast-util-heading-range-2.1.5.tgz#9a8e07bd46d07d40ad1596b0b6ab8535337725c3"
+  integrity sha512-jXbFD0C+MfRkwsaze+btzG9CmVrxnc5kpcJLtx3SvSlPWnNdGMlDRHKDB9/TIPEq9nRHnkixppT8yvaUJ5agJg==
+  dependencies:
+    mdast-util-to-string "^1.0.0"
+
 mdast-util-heading-style@^1.0.2:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/mdast-util-heading-style/-/mdast-util-heading-style-1.0.6.tgz#6410418926fd5673d40f519406b35d17da10e3c5"
@@ -3757,6 +3764,14 @@ regex-parser@^2.2.11:
   version "2.2.11"
   resolved "https://registry.yarnpkg.com/regex-parser/-/regex-parser-2.2.11.tgz#3b37ec9049e19479806e878cabe7c1ca83ccfe58"
   integrity sha512-jbD/FT0+9MBU2XAZluI7w2OBs1RBi6p9M83nkoZayQXXU9e8Robt69FcZc7wU4eJD/YFTjn1JdCk3rbMJajz8Q==
+
+remark-collapse@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/remark-collapse/-/remark-collapse-0.1.2.tgz#7ebf0b0e0932f39a8599a754906e0a097906070b"
+  integrity sha1-fr8LDgky85qFmadUkG4KCXkGBws=
+  dependencies:
+    mdast-util-heading-range "^2.0.1"
+    mdast-util-to-string "^1.0.2"
 
 remark-external-links@^8.0.0:
   version "8.0.0"

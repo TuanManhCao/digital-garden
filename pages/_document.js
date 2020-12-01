@@ -56,7 +56,7 @@ class MyDocument extends Document {
                     </div>
 
                     {/* CONTENT */}
-                    <main className="main">
+                    <main className="main parent-main">
                         <Main ppp="" />
                     </main>
                 </section>

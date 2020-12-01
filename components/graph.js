@@ -161,9 +161,12 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
                 })
             }
         },
+        weighted:true,
         layoutAttr:{
-            linkDistance:160,
-            charge:function(c){ return -280},
+            linkDistance:300,
+            linkStrength:1.5,
+            friction:0.5,
+            charge:function(c){ return -80},
         },
         nodeStyle: {
             fill: function(d) { 
@@ -182,8 +185,11 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
                 })
             }
         },
+
         edgeStyle:{
-            height:120
+            height:120,
+            strokeWidth:2,
+            stroke:"#999"
         }
     }, true);
     return G

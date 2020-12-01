@@ -6,12 +6,12 @@
       {
         "id": "ba2b426490a0a575",
         "type": "leaf",
-        "dimension": 58.15109343936382,
+        "dimension": 47.43589743589743,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "articles-tr/Articles (TR).md",
+            "file": "sidebar.md",
             "mode": "source"
           }
         },
@@ -20,11 +20,11 @@
       {
         "id": "7aa82793eba6e4fb",
         "type": "leaf",
-        "dimension": 41.84890656063619,
+        "dimension": 52.56410256410257,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "articles-tr/Articles (TR).md",
+            "file": "sidebar.md",
             "mode": "preview"
           }
         },
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "articles-tr/Articles (TR).md",
+                "file": "sidebar.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,15 +101,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "sidebar.md",
+    "Code/Codesheet.md",
+    "index.md",
     "articles-tr/Articles (TR).md",
     "notes-tr/Iyzico Gereklilikler.md",
     "articles-tr/Sidekick Browser.md",
     "articles-tr/Obsidian.md",
     "articles-tr/Google-Search-Quality.md",
     "articles-tr/Ghost Blog Açma Rehberi.md",
-    "articles-tr/En İyi Blog Siteleri.md",
-    "articles-tr/Clover Notes.md",
-    "articles-tr/Arama Motoru Optimizasyonu.md",
-    "articles-eng/Confluence Installation.md"
+    "articles-tr/En İyi Blog Siteleri.md"
   ]
 }

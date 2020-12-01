@@ -19,6 +19,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "remark": "^13.0.0",
+    "remark-collapse": "^0.1.2",
     "remark-external-links": "^8.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
