@@ -83,28 +83,39 @@ const Graph = ({ el, graphdata, current }) => {
 export const Network = ({ el, graphdata, current, router, allNodes }) => {
     var jsnx = require('jsnetworkx');
 
+    
+    //const grouper = (id) => id === "index" ? 1 : (id === "codesheet" ? 2 : 3)
 
 
     var currentnode = graphdata.filter(g => g.data.id === current)[0]
-    currentnode = [currentnode.data.id, { href:current==="index" ? "/" : `/note/${currentnode.data.id}` }];
-    
+    currentnode = [currentnode.data.id, {
+            label:current==="index" ? "HOME" : currentnode.data.title ? currentnode.data.title : currentnode.data.id,
+            href:current==="index" ? "/" : `/note/${currentnode.data.id}`,
+            //group:grouper(current)
+        }];
+    //var currentTargetNames = graphdata.filter(g => g.data.source === current).map(e => e.data.target)
+    //var currentTargetNodes = graphdata.filter(g => currentTargetNames.includes(g.data.id))
+
     var othernodes, edges;
     if (allNodes){
-        othernodes = graphdata.filter(g => g.data.id !== current)
+        othernodes = graphdata.filter(g => (g.data.id !== current) && !g.data.source)
         othernodes = othernodes.map(on => [on.data.id ,{
-            title:on.data.title ? on.data.title : on.data.id,
-            href: current === "index" ? "/" : `/note/${on.data.id}`
+            label:on.data.title ? on.data.title : on.data.id,
+            href: on.data.id === "index" ? "/" : `/note/${on.data.id}`,
+            //group: grouper(on.data.id)
             }
         ])
+        //console.log(othernodes)
         edges = graphdata.filter(g => g.data.source)
         edges = edges.map(e => [e.data.source, e.data.target])
     }
     else {
+        //console.log("else")
         var indexnode = graphdata.filter(g => g.data.id === "index")[0]
         indexnode = ["Home", { 
             width:30,
             height:30,
-            weight:10,
+            weight:1,
             href:`/`,
             title: "Home",
             fill:"blueviolet",
@@ -112,7 +123,7 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
         }]
 
         var currentRawEdges = graphdata.filter(g => g.data.source === current)
-        edges = currentRawEdges.map(ce => [ce.data.source, ce.data.target, {weight:5 } ])
+        edges = currentRawEdges.map(ce => [ce.data.source, ce.data.target, {weight:1 } ])
 
         var currentTargetNames = currentRawEdges.map(ie => ie.data.target)
         var currentTargets = graphdata.filter(g => currentTargetNames.includes(g.data.id))
@@ -122,13 +133,13 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
 
 
 
-    var G = new jsnx.completeGraph();
+    var G = new jsnx.DiGraph();
     G.addNodesFrom(
         [
             currentnode,
             ...othernodes,
         ], 
-        {color: 'black', width:60, height:60}
+        {color: '#999999', width:40, height:40}
     );
     G.addEdgesFrom(edges);
 
@@ -136,7 +147,10 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
         element: el,
         withLabels: true,
         labelStyle:{
-            color:"#ffffff"
+            color:"#333",
+            fill:function(n){
+                return n.node === current ? "#fff" : "#000"            
+            }
         },
         labelAttr:{
             class: "node-label",
@@ -148,16 +162,22 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
             }
         },
         layoutAttr:{
-            linkDistance:260,
+            linkDistance:160,
+            charge:function(c){ return -280},
         },
         nodeStyle: {
-            fill:"black"
+            fill: function(d) { 
+                return "#999"
+                //console.log("group", d.data.group)
+                //return color(d.data.group); 
+            },
+            stroke: 'none'
         },
         nodeAttr:{
-
+            class: "node-node",
             click:function(l){
-                //console.log("lll",this, "\n", l);
                 this.addEventListener("click", function(){
+                    console.log("lll", l.data);
                     router.push(l.data.href)
                 })
             }

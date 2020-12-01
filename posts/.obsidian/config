@@ -1,1 +1,1 @@
-{"theme":"moonstone","pluginEnabledStatus":{"file-explorer":true,"global-search":true,"switcher":true,"graph":true,"backlink":true,"command-palette":true,"markdown-importer":true,"word-count":true,"open-with-default-app":true},"promptDelete":false,"showFrontmatter":false}
+{"theme":"moonstone","pluginEnabledStatus":{"file-explorer":true,"global-search":true,"switcher":true,"graph":true,"backlink":true,"command-palette":true,"markdown-importer":true,"word-count":true,"open-with-default-app":true},"promptDelete":false,"showFrontmatter":false,"alwaysUpdateLinks":true}

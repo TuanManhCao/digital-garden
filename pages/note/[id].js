@@ -53,7 +53,12 @@ export default function Home({ note, graphdata, ...props }) {
             </Head>
             <section
             >
+                {/* COVER IMAGE */}
+                {note.cover && <img src={note.cover}  />}
+
+                {/* TITLE */}
                 {note.title && <h1>{note.title}</h1>}
+
                 <div 
                     className="article-body" 
                     dangerouslySetInnerHTML={{__html:note.data}}>
@@ -69,7 +74,7 @@ export default function Home({ note, graphdata, ...props }) {
 }
 export async function getStaticPaths() {
     const allPostsData = await getPostListData();
-    const paths = allPostsData.map(p => ({params: {id:p.id}}))
+    const paths = allPostsData.map(p => ({params: {id:p}}))
     //console.log("paths", paths)
     return {
       paths,
@@ -77,9 +82,11 @@ export async function getStaticPaths() {
     };
   }
 export async function getStaticProps({ params }) {
+    //console.log("params1", params.id)
     const note = await getSinglePost(params.id);
+    //console.log("params2", params)
     const graphdata = getGraphData();
-
+    //console.log("params3", params)
     
     //console.log("note: ", params)
     return {

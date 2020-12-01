@@ -1,4 +1,5 @@
 # GitHub'da yeni bir repo oluştur. Daha sonra lokal klasöre gidip aşağıdaki komutları gir.
+
 ```bash
 git init
 git add . && git commit -m "first commit"

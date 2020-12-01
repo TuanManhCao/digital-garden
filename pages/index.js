@@ -11,7 +11,6 @@ export default function Home({ content, graphdata, filenames, ...props }) {
     //console.log("Index Page Props: ", props /* backlinks, filenames*/)
     const ref = useRef(null);
     const router = useRouter()
-
     //var G = jsnx.binomialGraph(filenames.length, 1)
     //var G = jsnx.completeGraph(filenames.length);
     useEffect(() => {
@@ -20,9 +19,15 @@ export default function Home({ content, graphdata, filenames, ...props }) {
             const G = Network({el:ref.current, graphdata, current:"index", router, allNodes:true})
         }
     }, [])
+
+
     return (
         <Layout home>
-            <Head></Head>
+            <Head>
+                {content.title && <meta name="title" content={content.title} />}
+                {content.canonical && <meta name="canonical_url" content={content.canonical} />}
+                {content.description && <meta name="description" content={content.description} />}
+            </Head>
             <img src="https://cbsofyalioglu.fra1.digitaloceanspaces.com/cbs/digital-garden.jpg"  />
             <section>
                 <div dangerouslySetInnerHTML={{__html: content.data}} />
@@ -38,7 +43,7 @@ export default function Home({ content, graphdata, filenames, ...props }) {
 }
 
 export function getStaticProps() {
-    const contentData = getSinglePost("index.md");
+    const contentData = getSinglePost("index");
     const graphdata = getGraphData();
     return {
         props: {

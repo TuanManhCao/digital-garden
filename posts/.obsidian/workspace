@@ -6,11 +6,12 @@
       {
         "id": "ba2b426490a0a575",
         "type": "leaf",
+        "dimension": 58.15109343936382,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
+            "file": "articles-tr/Articles (TR).md",
             "mode": "source"
           }
         },
@@ -19,11 +20,12 @@
       {
         "id": "7aa82793eba6e4fb",
         "type": "leaf",
+        "dimension": 41.84890656063619,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
-            "mode": "source"
+            "file": "articles-tr/Articles (TR).md",
+            "mode": "preview"
           }
         },
         "group": "2c4b2f12094a2335"
@@ -82,12 +84,12 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sidebar.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "articles-tr/Articles (TR).md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           }
@@ -95,15 +97,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 100,
     "collapsed": true
   },
   "lastOpenFiles": [
-    "sidebar.md",
-    "index.md",
-    "Code/Codesheet.md",
-    "Code/JS/Deep Compare.md",
-    "articles-eng/Untitled.md",
-    "Untitled.md"
+    "articles-tr/Articles (TR).md",
+    "notes-tr/Iyzico Gereklilikler.md",
+    "articles-tr/Sidekick Browser.md",
+    "articles-tr/Obsidian.md",
+    "articles-tr/Google-Search-Quality.md",
+    "articles-tr/Ghost Blog Açma Rehberi.md",
+    "articles-tr/En İyi Blog Siteleri.md",
+    "articles-tr/Clover Notes.md",
+    "articles-tr/Arama Motoru Optimizasyonu.md",
+    "articles-eng/Confluence Installation.md"
   ]
 }

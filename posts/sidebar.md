@@ -2,6 +2,6 @@
 title: "Sidebar"
 ---
 ### [Digital Notes](/)
-
-* [[Zettelkasten Metodu]]
+* [[Articles (TR)]]
+* [[Articles (ENG)]]
 * [[Codesheet]]

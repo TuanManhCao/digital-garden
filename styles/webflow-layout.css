@@ -32,9 +32,12 @@ h2 {font-size: 1.9em;font-weight: bold; margin-top:64px; color:#333}
 h3 {font-size: 1.5em;font-weight: bold; margin-top:48px; color:#444}
 h4 {font-size: 1.3em;font-weight: bold; color:#444}
 p, li {
+    padding-bottom: 8px;
+    padding-top: 8px;
     box-sizing: inherit;
-    font-family: GT-Walsheim, "Neue Helvetica W02", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
     font-variant: common-ligatures;
     line-height: 1.8;
     text-size-adjust: inherit;
@@ -45,16 +48,18 @@ p,a, li, h1, h2,h3,h4,h5,h6 {
   overflow-wrap: break-word;
 }
 
+/*
 ul, ol {padding-left: 16px;}
 
+*/
 
 
 
 a {text-decoration: none;color:#222 !important}
-a.internal {
+.main a.internal {
   color: #131313 ;
   background-color: transparent !important;
-  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(0,255,0,0.35) calc(50% - 9px), 	    		 rgba(0,255,0,0.35) 100%);
+  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(0, 255, 85, 0.159) calc(50% - 9px),rgba(0, 255, 85, 0.159) 100%);
   background-position: 0px 0px;
   background-size: 100% 200%;
   font-weight: bold;
@@ -62,17 +67,15 @@ a.internal {
   padding: 2px 4px;
   transition: all 0.2s ease-out;
 }
-a.internal:hover {
+.main a.internal:hover {
   color:#131313;
-  background-image: 
-      linear-gradient(transparent 0%,transparent calc(50% - 9px),
-          rgba(0, 255, 85, 0.7) calc(50% - 9px));
+  background-image: linear-gradient(transparent 0%,transparent calc(40% - 9px),rgba(0, 255, 85, 0.159) calc(50% - 9px));
   background-position: 0px 100%;
 }
 .main a:not(.internal) {
   color: #131313 ;
   background-color: transparent !important;
-  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(75, 58, 225, 0.631) calc(50% - 9px), 	    		 rgba(0,255,0,0.35) 100%);
+  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(75, 58, 225, 0.631) calc(50% - 9px),rgba(0,255,0,0.35) 100%);
   background-position: 0px 0px;
   background-size: 100% 200%;
   font-weight: bold;
@@ -83,7 +86,7 @@ a.internal:hover {
 .main a.internal.new, .sidebar .main a.internal.new {
   color: #131313 ;
   background-color: transparent !important;
-  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(250, 51, 54, 0.631) calc(50% - 9px), 	    		 rgba(0,255,0,0.35) 100%);
+  background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(250, 51, 54, 0.631) calc(50% - 9px),rgba(0,255,0,0.35) 100%);
   background-position: 0px 0px;
   background-size: 100% 200%;
   font-weight: bold;
@@ -100,7 +103,7 @@ a.internal:hover {
   margin-top: 32px;
   margin-bottom:64px;
   min-height:400px;
-  background-color: #29203d;
+  background-color: #dcdbdf;
   border-radius: 8px;
   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.3);
 }
@@ -119,16 +122,32 @@ a.internal:hover {
 #side-graph-box label {
   margin: 32px 0 !important;
 }
-.jsnx .node-label { fill: white !important;font-size:12px;}
+
+.jsnx .node-node {fill: #476ed0 !important;}
+.jsnx .node-node:hover {fill: blueviolet !important;}
+.jsnx .node-label { fill: #333333 !important;font-size:12px; font-weight: bold;}
 .jsnx g.node {height:60px !important;}
 
 
 pre code {padding:16px !important; border-radius: 8px;}
 img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius: 8px; box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.3);}
-.sidebar h3,.sidebar h4 {margin-top:16px;}
 .w-nav-brand  {color:#333333; text-decoration: none;}
 #nav-button {cursor: pointer; margin-left: 16px;}
 #nav-icon { cursor: pointer; margin-left: 16px;}
+
+.sidebar h3,.sidebar h4 {margin-top:0px;padding-bottom: 16px; border-bottom: 2px solid rgba(0, 0, 0, 0.05);}
+.sidebar ul {list-style: none;}
+.sidebar li {font-weight: bold; font-size: 14px;}
+.sidebar li:hover {background-color: #fff;}
+.sidebar li a.internal {display:block; width: 100% !important;padding-left: 16px; padding-right: 16px;}
+
+
+blockquote {
+    margin: 0;
+    padding-left: 3em;
+    border-left: 0.5em rgb(222, 223, 255) solid;
+    margin:16px 0;
+}
 
 /* -----------------------*/
 .navigation-2 {
@@ -167,8 +186,8 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
   display: flex;
   height: 100%;
   min-height: 100vh;
-  min-width: 350px;
-  padding: 32px 16px;
+  min-width: 250px;
+  padding: 32px 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -186,10 +205,20 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
   background-color: #f5f6f8;
   color: #222;
 }
+.sidebar div { width: 100%; padding: 32px 0;}
+
+.sidebar ul {
+  width: 100%;
+  padding:0;
+}
+.sidebar h3  {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
 .main {
   position: relative;
-  left: 350px;
+  left: 250px;
   z-index: 0;
   width: 100%;
   min-height: 100vh;
@@ -227,7 +256,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
   }
 
   .sidebar {
-    position: absolute;
+    position: fixed;
     left: 0px;
   }
 
@@ -246,7 +275,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
 
 @media screen and (min-width: 767px) { 
   .sidebar {left: 0 !important;}
-  .main {width: calc(100% - 350px);}
+  .main {width: calc(100% - 250px);}
 }
 
   @media screen and (max-width: 767px) {
@@ -254,7 +283,7 @@ img {width:100%; height:auto; margin-top:16px; margin-bottom:48px; border-radius
     position: fixed;
     top:0;
     z-index: 1;
-    left: -350px;
+    left: -250px;
     box-shadow: 3px 3px 8px -2px rgba(0, 0, 0, 0.3);
     padding-top:96px;
   }

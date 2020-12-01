@@ -1,3 +1,7 @@
+---
+title: "List of Code Snippets"
+---
+
 Arşiv amaçlı saklanan code snippetleri.
 
 __API's__
@@ -16,7 +20,7 @@ __JavaScript__
 <br/>
 
 __CSS Snippets__
-* * [[Frost-Effect]]
+* * [[Frost Effect]]
 
 <br/>
 
@@ -32,7 +36,3 @@ __HTML__
 
 * [[Git Komutları]]
 
-
-<br/>
-
-<br/>

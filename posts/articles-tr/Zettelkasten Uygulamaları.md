@@ -44,7 +44,7 @@ Uygulama kişisel kullanımınız için ücretsiz.
 
 Link: [TiddlyWiki](https://www.tiddlywiki.com/)
 
-TiddlyWiki çok uzun süredir bizlerle beraber olan sıradışı bir knowledgebase/kişisel-wiki uygulaması. Sıradışılığı şuradan geliyor: Tüm program yalnızca bir HTML dosyasından ibaret. Tek bir dosyadan oluştuğu için basit bir uygulama olduğunu düşünecekseniz, şimdiden söyleyebilirim ki büyük bir yanılgıya düşersiniz. Hiç de başlangıç-tipi kullanıcı dostu olmayan bir arayüze sahip. Daha detaylı bilgi için incelemesini yaptığım [Not Alma Uygulaması:TiddlyWiki](https://www.cbsofyalioglu.com/post/not-alma-uygulamasi-tiddlywiki/) yazısına bakabilirsiniz. [[TiddlyWiki]]
+TiddlyWiki çok uzun süredir bizlerle beraber olan sıradışı bir knowledgebase/kişisel-wiki uygulaması. Sıradışılığı şuradan geliyor: Tüm program yalnızca bir HTML dosyasından ibaret. Tek bir dosyadan oluştuğu için basit bir uygulama olduğunu düşünecekseniz, şimdiden söyleyebilirim ki büyük bir yanılgıya düşersiniz. Hiç de başlangıç-tipi kullanıcı dostu olmayan bir arayüze sahip. Daha detaylı bilgi için incelemesini yaptığım [Not Alma Uygulaması:TiddlyWiki](https://www.cbsofyalioglu.com/post/not-alma-uygulamasi-tiddlywiki/) yazısına bakabilirsiniz. [[articles-tr/TiddlyWiki]]
 
 Ancak, muhtemelen piyasadaki tüm uygulamalardan çok daha yetenekli bir uygulama diyebilirim. Özellikle açık kaynak olması, uzun yıllardır biriken ciddi bir komüniteye sahip oluşu onu eşsiz bir yere koyuyor. Çok fazla varyasyona sahip bu uygulama için önerebileceğim bir kaç tanesi şunlar:
 

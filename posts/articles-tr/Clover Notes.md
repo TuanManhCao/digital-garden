@@ -1,7 +1,7 @@
 ---
-title: Clover Not-Alma Uygulaması
-canonical: https://www.cbsofyalioglu.com/post/clover-app/
-cover: https://cbsofyalioglu.fra1.digitaloceanspaces.com/note-images/clover-app/clover-banner.jpg
+title: "Clover Not-Alma Uygulaması"
+canonical: "https://www.cbsofyalioglu.com/post/clover-app/"
+cover: "https://cbsofyalioglu.fra1.digitaloceanspaces.com/note-images/clover-app/clover-banner.jpg"
 ---
 
 # Clover Not Uygulaması İlk İzlenimler

@@ -1,12 +1,9 @@
-__title__: Blog Açmak İsteyenlere Öneriler: En İyi Blog Siteleri
-__description__: Bir blog sitesi açarken dikkat edilmesi gerekenler ve en iyi blog sitelerinin incelendiği blog açmak isteyenlere öneriler yazısı. 
-__canonical__: https://www.cbsofyalioglu.com/post/en-iyi-blog-siteleri/
-__cover__: https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-siteleri.jpg
-
-![Cover](https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-siteleri.jpg)
-
-
-
+---
+title: "En İyi Blog Siteleri"
+description: "Bir blog sitesi açarken dikkat edilmesi gerekenler ve en iyi blog sitelerinin incelendiği blog açmak isteyenlere öneriler yazısı."
+canonical: "https://www.cbsofyalioglu.com/post/en-iyi-blog-siteleri/"
+cover: "https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-siteleri.jpg"
+---
 
 Günlük tutmak, kişisel fikirlerimizi ve kültürel birikimimizi paylaşmak, yazma yeteneğimizi geliştirmek, ürün veya hizmetlerimizi satmak gibi bir çok sebeple her gün sayısız blog yazısı yazılıyor. Siz de ister işletmeniz ister kendiniz için bir tane blog oluşturma fikrine sahipseniz bu yazı size göre.
 
