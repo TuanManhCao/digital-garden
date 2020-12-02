@@ -28,9 +28,9 @@ h5,
 h6 {font-weight: bold;line-height: 1.6em;}
 h5,h6 {font-weight: normal;}
 h1 {font-size: 2.1rem;text-align: left;font-weight: bold; margin-bottom:32px; margin-top:64px; color:#222}
-h2 {font-size: 1.9em;font-weight: bold; margin-top:64px; color:#333}
-h3 {font-size: 1.5em;font-weight: bold; margin-top:48px; color:#444}
-h4 {font-size: 1.3em;font-weight: bold; color:#444}
+h2 {font-size: 1.9em;font-weight: bold; margin-top:64px; color:#222}
+h3 {font-size: 1.5em;font-weight: bold; margin-top:48px; color:#222}
+h4 {font-size: 1.3em;font-weight: bold; color:#333}
 p, li {
     padding-bottom: 4px;
     padding-top: 4px;
@@ -55,7 +55,7 @@ ul, ol {padding-left: 16px;}
 
 
 
-a {text-decoration: none;color:#222 !important}
+a {text-decoration: none;color:#333 !important}
 .main a.internal {
   color: #131313 ;
   background-color: transparent !important;

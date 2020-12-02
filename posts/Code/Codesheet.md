@@ -2,37 +2,30 @@
 title: "List of Code Snippets"
 ---
 
-Arşiv amaçlı saklanan code snippetleri.
-
-__API's__
-* [[Google Sheets API]]
-* [[Airtable Fetch API]]
-
-<br/>
-
-__JavaScript__
-* [[Deep Compare]] Derin Karşılaştırma Yapar.
-* [[HTML Attribute Remover]]: String şeklinde verilen HTML'deki tüm attributeları siler.
-* [[External Script Loader]]: Script yükleyen Svelte componenti.
-* [[Webpack Env Variables]]: Passing environment variables from webpack.config.js
+Various code snippets mostly about front-end technologies like HTML/CSS/JS and Linux, Python etc.
 
 
-<br/>
+### __CSS Snippets__
+* [[Frost Effect]]: Create frost-blur effects like in Apple design.
 
-__CSS Snippets__
-* * [[Frost Effect]]
-
-<br/>
-
-__HTML__
+### __HTML__
 * [[HTTPS Force Meta Tag]]: Güvensiz bağlantıları HTTPS'e zorlar.
 
-<br/>
+### __JavaScript__
+* [[Google Sheets API]]: Fetch your sheets.
+* [[Airtable Fetch API]]: Unlike official API, it uses browser's Fetch API.
+* [[Deep Compare]] Make deep compare JS objects.
+* [[HTML Attribute Remover]]: Remove all attributes from given HTML string..
+* [[Webpack Env Variables]]: Passing environment variables from webpack.config.js
+* __React__
+* * [[React Hooks]]: Most useful hooks.
+* __Svelte__
+* * [[External Script Loader]]: Svelte component that loads script.
 
-* [[Linux Commands]]
-* [[React Hooks]]
-
-<br/>
-
+### __Linux/Bash__
+* [[Linux Commands]]: Various Linux/Bash commands.
 * [[Git Komutları]]
 
+### __Miscellaneous__
+* [[WebFlow]]: Useful Webflow snippets.
+* [[Brave Settings]]: Brave's settings panel.

@@ -11,7 +11,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
+            "file": "Code/Codesheet.md",
             "mode": "source"
           }
         },
@@ -24,7 +24,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
+            "file": "Code/Codesheet.md",
             "mode": "preview"
           }
         },
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sidebar.md",
+                "file": "Code/Codesheet.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -101,15 +101,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "sidebar.md",
     "Code/Codesheet.md",
+    "Code/WebFlow/WebFlow.md",
     "index.md",
+    "notes-eng/checklists/Sell Checklist.md",
+    "articles-eng/Articles (ENG).md",
     "articles-tr/Articles (TR).md",
+    "sidebar.md",
     "notes-tr/Iyzico Gereklilikler.md",
     "articles-tr/Sidekick Browser.md",
-    "articles-tr/Obsidian.md",
-    "articles-tr/Google-Search-Quality.md",
-    "articles-tr/Ghost Blog Açma Rehberi.md",
-    "articles-tr/En İyi Blog Siteleri.md"
+    "articles-tr/Obsidian.md"
   ]
 }
