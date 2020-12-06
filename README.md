@@ -1,4 +1,4 @@
-# Digital Garden Implementation of Next.JS
+# Digital Garden with Next.JS
 
 A digital garden implementation of React with Next.Js. It is currently not suitable for production environment. Also, code is written in a rush and it is not optimized yet.
 
