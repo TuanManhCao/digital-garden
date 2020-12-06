@@ -50,6 +50,9 @@ export default function Layout({ children, home }) {
 
       <main>{children}</main>
 
+      <footer>
+        Created with 
+      </footer>
     </div>
   )
 }

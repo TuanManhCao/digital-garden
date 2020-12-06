@@ -6,12 +6,12 @@
       {
         "id": "ba2b426490a0a575",
         "type": "leaf",
-        "dimension": 47.43589743589743,
+        "dimension": 45.24647887323944,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Code/Codesheet.md",
+            "file": "sidebar.md",
             "mode": "source"
           }
         },
@@ -20,11 +20,11 @@
       {
         "id": "7aa82793eba6e4fb",
         "type": "leaf",
-        "dimension": 52.56410256410257,
+        "dimension": 54.75352112676056,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Code/Codesheet.md",
+            "file": "sidebar.md",
             "mode": "preview"
           }
         },
@@ -68,7 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 208.01218795776367
   },
   "right": {
     "id": "6576f251ebe95476",
@@ -84,13 +84,21 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Code/Codesheet.md",
+                "file": "sidebar.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
               }
+            }
+          },
+          {
+            "id": "6ca348cc4fcdceca",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
             }
           }
         ]
@@ -101,15 +109,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "Code/Codesheet.md",
-    "Code/WebFlow/WebFlow.md",
-    "index.md",
-    "notes-eng/checklists/Sell Checklist.md",
-    "articles-eng/Articles (ENG).md",
-    "articles-tr/Articles (TR).md",
     "sidebar.md",
-    "notes-tr/Iyzico Gereklilikler.md",
+    "index.md",
     "articles-tr/Sidekick Browser.md",
-    "articles-tr/Obsidian.md"
+    "articles-eng/Collaborative Filtering.md",
+    "articles-eng/Articles (ENG).md",
+    "notes-tr/Kirazın Tadı.md",
+    "notes-tr/metafizik.md",
+    "articles-tr/Arama Motoru Optimizasyonu.md",
+    "articles-eng/Confluence Installation.md",
+    "Code/Codesheet.md"
   ]
 }

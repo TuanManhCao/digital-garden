@@ -11,7 +11,9 @@ export default function Home({ content, graphdata, filenames, ...props }) {
    //console.log("Index Page Props: ", content /* backlinks, filenames*/)
     const ref = useRef(null);
     const router = useRouter()
-
+    const routeQuery = router.query.id
+    const routeHandler = (r) => router.push(r)
+    //console.log("route", router)
     //var G = jsnx.binomialGraph(filenames.length, 1)
     //var G = jsnx.completeGraph(filenames.length);
     useEffect(() => {
@@ -21,7 +23,8 @@ export default function Home({ content, graphdata, filenames, ...props }) {
                 el:ref.current,
                 graphdata,
                 current:"index",
-                router,
+                routeQuery,
+                routeHandler,
                 allNodes:false // If true then shows every markdown file as node
             })
         }

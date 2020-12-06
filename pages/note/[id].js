@@ -18,12 +18,22 @@ export default function Home({ note, graphdata, ...props }) {
 
     const ref = useRef(null);
     const router = useRouter()
+    const routeQuery = router.query.id
+    const routeHandler = (r) => router.push(r)
+    //console.log("route", router)
+
     var G;
     useEffect(() => {
         if (ref && ref.current){            
-            G = Network({el:ref.current, graphdata, current:note.id, router, allNodes:false})
+            G = Network({
+                el:ref.current,
+                graphdata,
+                current:note.id,
+                routeHandler,
+                allNodes:false
+            })
         }
-}, [])
+}, [routeQuery])
 
     useEffect(() => {
         if (backlinks.length > 0){
@@ -82,9 +92,9 @@ export async function getStaticPaths() {
     };
   }
 export async function getStaticProps({ params }) {
-    //console.log("params1", params.id)
+    console.log("params1", params.id)
     const note = await getSinglePost(params.id);
-    //console.log("params2", params)
+    //console.log("params2", note)
     const graphdata = getGraphData();
     //console.log("params3", params)
     

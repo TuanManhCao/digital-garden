@@ -80,7 +80,7 @@ const Graph = ({ el, graphdata, current }) => {
 }
 
 
-export const Network = ({ el, graphdata, current, router, allNodes }) => {
+export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
     var jsnx = require('jsnetworkx');
 
     
@@ -128,7 +128,8 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
         var currentTargetNames = currentRawEdges.map(ie => ie.data.target)
         var currentTargets = graphdata.filter(g => currentTargetNames.includes(g.data.id))
         othernodes = currentTargets.map(ct => [ct.data.id, {size:6, href:`/note/${ct.data.id}`}])
-        othernodes = [indexnode, ...othernodes]
+        if (current !== "index"){othernodes.push(indexnode)}
+        //othernodes = [indexnode, ...othernodes]
     }
 
 
@@ -157,16 +158,17 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
             y:16,
             click:function(l){
                 this.addEventListener("click", function(){
-                    router.push(l.data.href)
+                    routeHandler(l.data.href)
                 })
             }
         },
         weighted:true,
         layoutAttr:{
-            linkDistance:300,
+            linkDistance:200,
             linkStrength:1.5,
-            friction:0.5,
-            charge:function(c){ return -80},
+            friction:0.3,
+            charge: -180,
+            //charge:function(c){ return -80},
         },
         nodeStyle: {
             fill: function(d) { 
@@ -181,7 +183,7 @@ export const Network = ({ el, graphdata, current, router, allNodes }) => {
             click:function(l){
                 this.addEventListener("click", function(){
                     console.log("lll", l.data);
-                    router.push(l.data.href)
+                    routeHandler(l.data.href)
                 })
             }
         },

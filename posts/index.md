@@ -6,7 +6,10 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 
 
 ## Quicklinks
-* __[[Articles (TR)]]: Articles written in Turkish__.
+* __[[Articles (ENG)]]__: Articles written in English.
+* __[[Codesheet]]__ : Code Snippets including Python, JS, CSS, HTML and Bash.
+
+*  __[[Articles (TR)]]__: Articles written in Turkish.
 * * [[Sidekick Browser]]: Harikulade bir kullanıcı deneyimine sahip chromium tarayıcı. 
 * * [[TiddlyWiki]]: Çok işlevli bir not alma uygulaması olan Tiddlywiki hakkındaki incelemem.
 * * [[Zettelkasten Metodu]]: Zettelkasten metodu ile akıllı notlar nasıl alınır?
@@ -24,8 +27,7 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 
 
 
-* [[Articles (ENG)]]: Articles written in English.
-* [[Codesheet]] : Code Snippets including Python, JS, CSS, HTML and Bash.
+
 
 
 

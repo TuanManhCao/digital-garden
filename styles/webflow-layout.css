@@ -102,10 +102,11 @@ a {text-decoration: none;color:#333 !important}
   width: 100%;
   margin-top: 32px;
   margin-bottom:64px;
-  min-height:400px;
-  background-color: #dcdbdf;
+  min-height:300px;
+  background-color: #FFCDDC;
   border-radius: 8px;
-  box-shadow: 0 0px 4px -1px rgba(0, 0, 0, 0.9);
+  border:2px solid #FF9E80;
+  box-shadow: 0 2px 8px 0px rgba(0, 0, 0, 0.0);
   cursor: grab;
 }
 #side-graph-box {
@@ -204,7 +205,7 @@ blockquote {
   -ms-flex-align: start;
   align-items: flex-start;
   border-right: 1px solid #999;
-  background-color: #f5f6f8;
+  background-color: #ECEBEE;
   color: #222;
 }
 .sidebar div { width: 100%; padding: 32px 0;}
@@ -223,9 +224,11 @@ blockquote {
   left: 250px;
   z-index: 0;
   width: 100%;
+  max-width: 98%;
   min-height: 100vh;
   padding: 32px 1vw;
   overflow-wrap: break-word;
+  background-color: #fcfcfc !important;
 }
 main.parent-main {display: flex;flex-direction: column;align-items: center; }
 
@@ -288,8 +291,12 @@ main.parent-main {display: flex;flex-direction: column;align-items: center; }
     padding-top:96px;
   }
 
+  .parent-main {max-width: calc(100% - 32px);}
   .main {
-    left: 0px;
+    left: 16px;
+    /*
+    width:calc(100% - 32px);
+    */
   }
 
   .heading {

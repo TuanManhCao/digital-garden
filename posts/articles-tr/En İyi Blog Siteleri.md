@@ -1,5 +1,5 @@
 ---
-title: "En İyi Blog Siteleri"
+title: "En iyi Blog Siteleri"
 description: "Bir blog sitesi açarken dikkat edilmesi gerekenler ve en iyi blog sitelerinin incelendiği blog açmak isteyenlere öneriler yazısı."
 canonical: "https://www.cbsofyalioglu.com/post/en-iyi-blog-siteleri/"
 cover: "https://www.cbsofyalioglu.com/content/images/size/w1000/2020/09/blog-siteleri.jpg"
