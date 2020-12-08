@@ -1,11 +1,15 @@
-__title__: TiddlyWiki: Pek Maharetli Bir Not Alma Uygulaması
-__description__: Bu yazıda sıradışı olduğu kadar pek de maharetli bir not alma uygulaması olan TiddlyWiki'den bahsedeceğim.
-__canonical__: https://www.cbsofyalioglu.com/post/not-alma-uygulamasi-tiddlywiki/
+---
+title: "TiddlyWiki: Pek Maharetli Bir Not Alma Uygulaması"
+description: "Bu yazıda sıradışı olduğu kadar pek de maharetli bir not alma uygulaması olan TiddlyWiki'den bahsedeceğim."
+canonical: "https://www.cbsofyalioglu.com/post/not-alma-uygulamasi-tiddlywiki/"
+tags: [tiddlywiki, zettelkasten-app, tutorial, app-review]
+
+---
+
 
 ![Cover](https://www.cbsofyalioglu.com/content/images/size/w2000/2020/10/tiddly-wiki-uygulamasi.jpg)
 
 
----
 
 Dijital Not tutma uygulamları pazar büyüklüğünün 2026 yılında 1.35 Milyar $ olacağı ön görülüyor[(1)](#references) ve her gün neredeyse yeni bir uygulama çıkıyor.
 
@@ -90,4 +94,4 @@ Mavi kutu içerisinde yer alan "Download Empty" yazılı butona tıklayarak boş
 </ul>
 </html>
 
-Tags: #tiddlywiki, #zettelkasten-app, #tutorial, #app-review   
+  

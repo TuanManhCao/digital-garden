@@ -6,12 +6,12 @@
       {
         "id": "ba2b426490a0a575",
         "type": "leaf",
-        "dimension": 45.24647887323944,
+        "dimension": 52.15493726132025,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
+            "file": "notes-tr/istnabulprivatetransfers/services/istanbul-cruise-port.md",
             "mode": "source"
           }
         },
@@ -20,11 +20,11 @@
       {
         "id": "7aa82793eba6e4fb",
         "type": "leaf",
-        "dimension": 54.75352112676056,
+        "dimension": 47.84506273867975,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "sidebar.md",
+            "file": "notes-tr/istnabulprivatetransfers/services/istanbul-cruise-port.md",
             "mode": "preview"
           }
         },
@@ -55,10 +55,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#js-code",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -68,7 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 208.01218795776367
+    "width": 347.0121879577637
   },
   "right": {
     "id": "6576f251ebe95476",
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sidebar.md",
+                "file": "notes-tr/istnabulprivatetransfers/services/istanbul-cruise-port.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -98,26 +98,28 @@
             "type": "leaf",
             "state": {
               "type": "tag",
-              "state": {}
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 100,
-    "collapsed": true
+    "width": 398.266845703125
   },
   "lastOpenFiles": [
-    "sidebar.md",
-    "index.md",
-    "articles-tr/Sidekick Browser.md",
-    "articles-eng/Collaborative Filtering.md",
-    "articles-eng/Articles (ENG).md",
-    "notes-tr/Kirazın Tadı.md",
-    "notes-tr/metafizik.md",
-    "articles-tr/Arama Motoru Optimizasyonu.md",
-    "articles-eng/Confluence Installation.md",
-    "Code/Codesheet.md"
+    "notes-tr/istnabulprivatetransfers/services/istanbul-cruise-port.md",
+    "notes-tr/istnabulprivatetransfers/tours/Untitled.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/istanbul-city-transfer.md",
+    "notes-tr/istnabulprivatetransfers/transfer/istanbul-galata-port.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/save-20-for-all-repeat-transfer-bookings.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/istanbul-primeclass-welcome.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/istanbul-airport-transfer.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/airport-services.md",
+    "notes-tr/istnabulprivatetransfers/airport-transfer/Untitled.md",
+    "notes-tr/istnabulprivatetransfers/Untitled.md"
   ]
 }
