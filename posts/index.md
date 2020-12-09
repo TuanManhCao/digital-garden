@@ -28,6 +28,16 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 
 
 
+<br/>
+<br/>
+
+[...](/notes-tr/istanbulprivatetransfers/index)
+
+[...](/notes-tr/seabluetours/blog-headers)
+
+
+
+
 
 
 
