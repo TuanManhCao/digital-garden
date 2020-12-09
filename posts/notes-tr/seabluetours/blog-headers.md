@@ -24,7 +24,7 @@ keywords:
 * __istanbul private tour guide__
 * __luxury private transfers__
 * __luxury transfers__
-* 
+* __private shuttle__
 
 
 ## İstanbulda bir turist yolda kalırsa ne yapmalı? 
