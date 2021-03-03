@@ -20,6 +20,7 @@ class MyDocument extends Document {
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/atom-one-dark.min.css" />
             <Head />
             <script src="https://d3js.org/d3.v3.min.js"></script>
+            <meta name="google-site-verification" content="7iZ3AXo66Mm1qElIrjOAcUD6pqBeDQGC63zZfwiGhbE" />
 
             <body className="body">
             
