@@ -1,0 +1,310 @@
+/* Custom colors */
+/* ------------- */
+.theme-light {
+  --bg-color: 255, 255, 255;
+  --text-color: 10, 10, 10;
+  --interactive-accent-rgb: 163, 183, 205;
+  --interactive-accent: #a3b7cd;
+}
+.theme-dark {
+  --bg-color: 0, 0, 0;
+  --text-color: 240, 240, 240;
+  --interactive-accent-rgb: 163, 183, 205;
+  --interactive-accent: #a3b7cd;
+}
+:root {
+  --interactive-accent-hover: rgba(var(--interactive-accent-rgb), 0.5)
+}
+
+/* Fonts and text (thanks to @kepano for this minimal alteration of the defaults */
+/* ----------------------------------------------------------------------------- */
+:root {
+  --default-font: sans-serif;
+
+  --font-normal:13px;
+  --font-small:11px;
+  --font-smaller:10px;
+
+  --normal-weight:400;  /* Switch to 300 if you want thinner default text */
+  --bold-weight:500;    /* Switch to 600 or 700 if you want thicker bold text */
+}
+
+::selection, .CodeMirror-selected, .CodeMirror-selectedtext {
+  background: var(--text-normal) !important;
+  color: var(--background-primary) !important;
+}
+
+h1,h2,h3,h4,h5,strong {font-weight:var(--bold-weight);}
+h1,h2,h3,h4 {letter-spacing:-0.02em;} 
+
+/* I don't want a titlebar */
+.titlebar { display: none; }
+body { padding-top: 0 !important; }
+
+body, input, button, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian {
+  letter-spacing:0.02rem;
+  font-size:var(--font-normal);
+  font-weight:var(--normal-weight);
+  -webkit-font-smoothing:subpixel-antialiased !important;
+}
+.cm-s-obsidian .cm-header, .cm-s-obsidian .cm-strong {
+  font-weight:var(--bold-weight);
+}
+.cm-formatting-header {
+  color:var(--text-faint) !important;
+  font-weight:var(--normal-weight) !important;
+}
+.file-embed-title,
+.markdown-embed-title {
+  letter-spacing:-0.02em;
+  text-align:left;
+  font-size:20px;
+  font-weight:var(--bold-weight);
+}
+.empty-state-title,
+.markdown-preview-view h1,
+.HyperMD-header-1,
+.cm-header-1 {
+  letter-spacing:-0.02em;
+  font-size:28px !important;
+  font-weight:var(--bold-weight) !important;
+}
+.markdown-preview-view h2,
+.HyperMD-header-2,
+.cm-header-2 {
+  letter-spacing:-0.02em;
+  font-size:22px !important;
+  font-weight:var(--bold-weight) !important;
+}
+.markdown-preview-view h3,
+.HyperMD-header-3,
+.cm-header-3 {
+  letter-spacing:-0em;
+  font-weight:var(--bold-weight) !important;
+  font-size:18px !important;
+}
+.markdown-preview-view h4,
+.HyperMD-header-4,
+.cm-header-4 {
+  font-variant:small-caps;
+  text-transform:lowercase;
+  letter-spacing:0.05em;
+  color:var(--text-normal);
+  font-weight:var(--normal-weight) !important;
+  font-size:18px !important;
+}
+.markdown-preview-view h5,
+.HyperMD-header-5,
+.cm-header-5 {
+  font-variant:small-caps;
+  text-transform:lowercase;
+  letter-spacing:0.05em;
+  color:var(--text-normal);
+  font-weight:300 !important;
+  font-size:16px !important;
+}
+.markdown-preview-view h6,
+.HyperMD-header-6,
+.cm-header-6 {
+  font-variant:small-caps;
+  text-transform:lowercase;
+  letter-spacing:0.1em;
+  color:var(--text-muted);
+  font-weight:300 !important;
+  font-size:14px !important;
+}
+
+/* Other variables */
+/* --------------- */
+:root {
+  --transition-length: 200ms;
+}
+
+
+/* Styling of content */
+/* ------------------ */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Collapsing sidedocks */
+.side-dock-ribbon.mod-left.is-collapsed:not(:hover), .side-dock-ribbon.mod-right.is-collapsed:not(:hover) {
+  width: 15px !important;
+  opacity: 0;
+}
+.side-dock-ribbon {
+  transition-property: width, opacity;
+}
+
+/* Fading header icons (MINIMAL EVERYTHING!!!) */
+.view-header:not(:hover) .view-actions, .view-header:not(:hover) .view-header-icon {
+  opacity: 0;
+  transition: opacity var(--transition-length) ease-in-out;
+}
+
+/* No borders on sidebar */
+.side-dock-ribbon.mod-right, .side-dock-ribbon.mod-left {
+  border: 0px;
+}
+
+/* Clean header */
+.view-header-title-container:after {
+  display: none;
+}
+
+/* Cleaner status bar */
+.status-bar {
+  background-color: var(--background-primary);
+  color: var(--text-faint);
+}
+
+/* Link styling */
+a.external-link, a.internal-link {
+  position: relative;
+  color: rgb(var(--text-color));
+  text-decoration-color: rgba(var(--text-color), 0.5);
+  transition: text-decoration-color var(--transition-length);
+}
+a.external-link:hover, a.internal-link:hover {
+  text-decoration-color: rgba(var(--text-color), 0.0);
+}
+.cm-s-obsidian span.cm-link, .cm-s-obsidian span.cm-hmd-internal-link {
+  color: rgba(var(--text-color), 0.7);
+}
+
+/* Remove border from status bar */
+.status-bar {
+  border: none !important;
+}
+
+/* Fainter icons, bringing focus to the text area */
+.view-action, .view-header-icon, .side-dock-ribbon-action,
+.nav-action-button, .workspace-tab-header-inner-icon {
+  color: var(--text-faint);
+  transition: color var(--transition-length) ease-in;
+}
+
+/* Same hovering accent color on every icon */
+.side-dock-ribbon-action:hover, .workspace-tab-header:hover .workspace-tab-header-inner-icon,
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-ribbon-collapse-btn:hover, .view-header-icon:hover {
+  color: var(--text-accent);
+}
+
+/* Side-bars do not have margins that restrict the content */
+.workspace-split.mod-right-split[style="width: 0px;"],
+.workspace-split.mod-left-split[style="width: 0px;"] {
+  margin: 0;
+}
+
+/* No overflow scrollbar in x-direction */
+.nav-files-container {
+  overflow-x: hidden;
+}
+
+/* Transparent ribbons (works better with the auto-hiding) */
+.workspace-ribbon.is-collapsed {
+  background: transparent;
+}
+
+/* I want things squared */
+.prompt, input, .modal, button, .dropdown, .list-item-ending-flair,
+.checkbox-container, .checkbox-container::after,
+.side-dock-collapsible-section-header, .search-result-file-match,
+.workspace-tab-header.is-active {
+  border-radius: 0px !important;
+}
+
+
+/* Markdown syntax highlighting */
+/* ---------------------------- */
+/* Headers */
+.cm-formatting-header {
+  color: var(--text-faint) !important;
+  font-weight: 400 !important;
+}
+.HyperMD-header-1 {
+  font-size: 18pt !important;
+}
+.HyperMD-header-2 {
+  font-size: 16pt !important;
+}
+.HyperMD-header-3 {
+  font-size: 14pt !important;
+}
+/* Lists */
+.cm-formatting-list {
+  color: var(--text-faint) !important;
+}
+/* Quote */
+.cm-formatting-quote {
+  color: var(--text-faint) !important;
+}
+/* Tags (pill style, borrowed from kepano/obsidian-minimal) */
+.tag {
+  background-color:var(--background-modifier-accent);
+  border:none;
+  color:var(--text-muted);
+  padding:1px 7px;
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:4px 0px 0px;
+  cursor:pointer;
+  border-radius:10px;
+}
+.tag:hover {
+  color:var(--text-muted);
+  background-color:var(--background-modifier-border);
+}
+.cm-s-obsidian span.cm-hashtag {
+  background-color:var(--background-modifier-accent);
+  border:none;
+  color:var(--text-muted);
+  text-align:center;
+  text-decoration:none;
+  display:inline-block;
+  margin:0;
+  vertical-align:middle;
+  padding-top:1px;
+  padding-bottom:1px;
+  cursor:text;
+}
+.cm-hashtag-begin {
+  border-top-left-radius:10px;
+  border-bottom-left-radius:10px;
+  padding-left:7px;
+}
+.cm-hashtag-end {
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  padding-right:7px;
+}
+span.cm-math {
+  font-style: normal;
+}
+.CodeMirror .cm-inline-code, .CodeMirror .cm-math {
+  color: var(--text-muted);
+}
+.cm-s-obsidian span.cm-formatting-math {
+  color: var(--text-muted);
+}
+
+
+/* Markdown preview styling */
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  border-radius: 4px;
+  border: solid var(--quote-opening-modifier);
+  border-width: 0px 0px 0px 7px;
+  background-color: var(--background-modifier-accent);
+}
+
+
+/* Obsidians internal color variables */
+.theme-light, .theme-dark {
+  --background-primary: rgb(var(--bg-color));
+  --text-normal: rgb(var(--text-color));
+  --text-muted: rgba(var(--text-color), 0.7);
+  --text-faint: rgba(var(--text-color), 0.3);
+}

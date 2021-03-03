@@ -4,7 +4,7 @@ canonical: "https://www.cbsofyalioglu.com/self-hosted-confluence/"
 cover: "https://cbsofyalioglu.fra1.digitaloceanspaces.com/note-images/confluence-installation/confluence.jpg"
 ---
 
-One of our customers from [Seablue](https://www.seabluetours.com) and [AirportTransfer](https://airporttransfer.ist) ask the possibility of using Atlassian Confluence as a self-hosted wiki program. We look for solutions for a while. Later on, we discovered Cloudron app. In this article, We'll install Confluence with a custom domain on our servers. 
+One of our customers ask the possibility of using Atlassian Confluence as a self-hosted wiki program. We look for solutions for a while. Later on, we discovered Cloudron app. In this article, We'll install Confluence with a custom domain on our servers. 
 
 [[Test Linki]]
 [[Zettelkasten Metodu]]

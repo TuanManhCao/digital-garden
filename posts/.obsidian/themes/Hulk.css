@@ -1,0 +1,673 @@
+.theme-dark {
+    --background-primary: #1A1B24;
+    --background-primary-alt: #282A36;
+    --background-secondary: #1A1B24;
+    --background-secondary-alt: #282A36;
+    --background-modifier-cover: #7f5fd4;
+    --text-normal: #bbc0c5;
+    --text-faint: rgba(187, 192, 197, 0.4);
+    --text-selection: #ceef83;
+    --text-title-h1: #bbc0c5;
+    --text-title-h2: #bbc0c5;
+    --text-title-h3: #bbc0c5;
+    --text-title-h4: #bbc0c5;
+    --text-title-h5: #bbc0c5;
+    --text-title-h6: var(--purple-pale);
+    --text-link: #3fce4a;
+    --text-a: #3fce4a;
+    --text-a-hover: rgba(63, 206, 74, 0.6);
+    --text-mark: var(--purple-paley);
+    --pre-code: #283136;
+    --text-highlight-bg: var(--purple-paley);
+    /* --interactive-accent: #ff7171; */
+    --interactive-accent: #00ba00;
+    --interactive-before: #2ac7c7;
+    --background-modifier-border: rgba(146, 161, 161, 0.5);
+    /* --blockquote-border: rgba(77, 60, 166, .6); */
+    --text-accent: rgb(0, 186, 0);
+    --interactive-accent-rgb: var(--green-light);
+    --font-family-editor: "victor mono",
+        inter;
+    --font-family-preview: "victor mono",
+        inter;
+
+    /* Hulk color palette */
+    --purple: #3c0a96;
+    --purple-light: #4632c8;
+    --purple-pale: #ac91f7;
+    --purple-paley: #7f5fd4;
+    --green: #0a5519;
+    --green-light: #0a8c28;
+    --green-pale: #A4E7C3;
+    --brackets-color #0a5519;
+    --pink: rgba(237, 160, 255, 0.73)
+}
+
+.cm-strong,
+strong {
+    color: var(--purple-pale);
+    font-family: "Victor Mono" !important;
+    font-weight: normal;
+}
+
+.cm-em,
+em {
+    /*color: var(--purple-pale);*/
+    font-family: "Victor Mono" !important;
+    font-style: oblique !important;
+}
+
+s {
+    color: var(--text-mark);
+}
+
+mark {
+    background-color: var(--text-mark) !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+    background-color: var(--purple-paley) !important;
+    color: var(--text-normal);
+}
+
+.markdown-preview-view hr {
+    background-color: var(--text-faint) !important;
+}
+
+/*Make folder title uppercase*/
+.nav-folder-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/***************************************/
+/*              Brackets               */
+/***************************************/
+
+.cm-s-obsidian span.cm-formatting-link {
+    color: var(--text-faint) !important;
+}
+
+/***************************************/
+/*             Blockquote              */
+/***************************************/
+
+/* for editor */
+.cm-quote {
+    color: var(--text-normal) !important;
+    /*font-style: italic;*/
+}
+
+/* .cm-s-obsidian span.cm-quote {
+    color: var(--purple-pale) !important;
+} */
+
+/* for preview */
+.markdown-preview-view blockquote {
+    background-color: #1A1B24;
+    border: 0px solid;
+    border-color: var(--purple-pale) !important;
+    border-left-width: 1px !important;
+    border-radius: 0 8px 8px 0;
+    font-size: 1em;
+    /*font-style: italic;*/
+    line-height: 1.5em;
+    margin: 0 10px;
+}
+
+/***************************************/
+/*               Checkbox              */
+/***************************************/
+
+.markdown-preview-view .task-list-item-checkbox {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 6px;
+    margin-right: 6px;
+}
+
+input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    border: 1px solid var(--text-faint);
+    padding: 0;
+}
+
+input[type=checkbox]:focus {
+    outline: 0;
+}
+
+input[type=checkbox]:checked {
+    background-color: var(--text-accent-hover);
+    border: 1px solid var(--text-accent-hover);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-4.000000, -6.000000)" fill="%23ffffff"><path d="M8.1043257,14.0367999 L4.52468714,10.5420499 C4.32525014,10.3497722 4.32525014,10.0368095 4.52468714,9.8424863 L5.24777413,9.1439454 C5.44721114,8.95166768 5.77142411,8.95166768 5.97086112,9.1439454 L8.46638057,11.5903727 L14.0291389,6.1442083 C14.2285759,5.95193057 14.5527889,5.95193057 14.7522259,6.1442083 L15.4753129,6.84377194 C15.6747499,7.03604967 15.6747499,7.35003511 15.4753129,7.54129009 L8.82741268,14.0367999 C8.62797568,14.2290777 8.3037627,14.2290777 8.1043257,14.0367999"></path></g></g></svg>');
+}
+
+/***************************************/
+/*                 Code                */
+/***************************************/
+
+/* code blocks in preview */
+pre code {
+    font-family: monaco !important;
+    font-size: 0.85em !important;
+    padding: 6px !important;
+    line-height: normal;
+    display: block;
+    background-color: var(--pre-code) !important;
+}
+
+.markdown-preview-view pre {
+    font-family: Monaco !important;
+    padding: 0px !important;
+}
+
+/* in-line code for editor and preview + code block for editor*/
+code,
+.cm-inline-code {
+    background-color: var(--pre-code) !important;
+    color: #bd93f9 !important;
+    bottom: 0px !important;
+    font-size: 0.85em !important;
+}
+
+/* code + code blocks for preview */
+.markdown-preview-view code {
+    color: var(--yellow);
+    font-family: monaco, 'Source Code Pro', monospace;
+    background-color: var(--pre-code) !important;
+    border-radius: 4px;
+    border-color: #ff79c6 !important;
+    padding: 2px 4px;
+    border: 0px solid;
+    font-size: 13.5px;
+    position: relative;
+    bottom: 2px;
+}
+
+.CodeMirror-cursor {
+    border-left: 2px solid #0a8c28;
+}
+
+/***************************************/
+/*             Graph view              */
+/***************************************/
+
+.graph-view.color-fill {
+    color: var(--purple-pale);
+}
+
+.graph-view.color-circle {
+    color: var(--purple-pale) !important;
+}
+
+.graph-view.color-line {
+    color: var(--green-light);
+}
+
+.graph-view.color-text {
+    color: var(--text-normal);
+}
+
+.graph-view.color-fill-highlight {
+    color: #a7b0e3;
+}
+
+.graph-view.color-line-highlight {
+    color: chartreuse;
+}
+
+/* New Graph v0.9.0 */
+
+.theme-dark .graph-view.color-fill-tag {
+    color: var(--green-pale);
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+    color: #616d6d;
+}
+
+.graph-view.color-fill-unresolved {
+    color: #463653;
+}
+
+
+/*************************/
+/*        HASHTAGS       */
+/*************************/
+
+.cm-s-obsidian span.cm-hashtag {
+    color: #616d6d !important;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+
+/*************************/
+/*   Headings -  EDITOR  */
+/*************************/
+
+/* normal text outside of headings and code */
+.cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-normal);
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+
+.mod-single-child .cm-s-obsidian {
+    font-family: var(--font-family-editor);
+    font-size: 15px;
+    color: var(--text-normal);
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+}
+
+/* Headings */
+
+.cm-header-1 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h1);
+}
+
+.cm-header-2 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h2);
+}
+
+.cm-header-3 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h3);
+}
+
+.cm-header-4 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h4);
+}
+
+.cm-header-5 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h5);
+}
+
+.cm-header-6 {
+    font-family: var(--font-family-editor);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h6);
+}
+
+/***********************/
+/*  Headings - PREVIEW */
+/***********************/
+
+/* normal text outside of headings and code */
+.markdown-preview-view {
+    font-family: var(--font-family-preview);
+    font-size: 15px;
+    color: var(--text-normal);
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+}
+
+.mod-single-child .markdown-preview-view {
+    font-family: var(--font-family-preview);
+    font-size: 15px;
+    color: var(--text-normal);
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+}
+
+/* headings */
+.markdown-preview-view h1 {
+    font-family: inter;
+    font-weight: 700 !important;
+    font-size: 32px;
+    font-weight: normal;
+    color: var(--text-title-h1);
+}
+
+.markdown-preview-view h2 {
+    font-family: inter;
+    font-weight: 700 !important;
+    font-size: 26px;
+    font-weight: normal;
+    color: var(--text-title-h2);
+}
+
+.markdown-preview-view h3 {
+    font-family: inter;
+    font-weight: 500;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-title-h3);
+}
+
+.markdown-preview-view h4 {
+    font-family: var(--font-family-preview);
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-title-h4);
+}
+
+.markdown-preview-view h5 {
+    font-family: var(--font-family-preview);
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-title-h5);
+}
+
+.markdown-preview-view h6 {
+    font-family: var(--font-family-preview);
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-title-h6);
+}
+
+/*************************************************/
+/* Side panel - File Explorer heading, Backlinks */
+/*************************************************/
+
+.file-view-actions a {
+    color: var(--text-muted) !important;
+}
+
+.file-view-actions a:hover {
+    color: var(--text-a) !important;
+}
+
+.theme-light,
+.file-view-actions a {
+    color: var(--purple) !important;
+}
+
+.theme-light,
+.file-view-actions a:hover {
+    color: var(--purple-light) !important;
+}
+
+/**********************/
+/* links and brackets */
+/**********************/
+
+/* link */
+
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link {
+    color: var(--text-a) !important;
+    text-decoration: none !important;
+    /*font-family: courier, arial !important;*/
+}
+
+.markdown-preview-view .internal-link {
+    text-decoration: none;
+}
+
+a.external-link {
+    color: var(--text-muted);
+}
+
+
+a.tag {
+    color: #616d6d !important;
+    font-style: italic;
+}
+
+/* link hover color */
+a:hover,
+.internal-link:hover {
+    color: var(--text-a-hover) !important;
+    text-decoration: none !important;
+}
+
+/* make external links italics to differentiate */
+/*a:not(.internal-link) {
+    font-style: italic;
+}*/
+
+/**********************/
+/* lists */
+/**********************/
+
+.markdown-preview-view ol {
+    /* color: var(--green-light) !important; */
+}
+
+.cm-s-obsidian span.cm-formatting-list {
+    color: #3fce4a !important;
+}
+
+/* ul {
+    list-style-type: "–   ";
+} */
+
+/***************************************/
+/*             Search panel            */
+/***************************************/
+
+.search-result-file-matched-text {
+    color: var(--text-normal);
+    background-color: var(--purple-paley) !important;
+}
+
+/***************************************/
+/*                Tables               */
+/***************************************/
+
+th {
+    font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+    font-weight: 800;
+    background-color: var(--green) !important;
+}
+
+thead {
+    border-bottom: 4px solid var(--background-modifier-border);
+}
+
+.table {
+    background-color: var(--background-secondary-alt);
+    border: 1px solid var(--background-modifier-border);
+    padding: 4px;
+    line-height: normal;
+    display: block;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/***************************************/
+/*                 Tags                */
+/***************************************/
+
+/* html tags in editor */
+.cm-tag {
+    color: var(--text-accent) !important;
+}
+
+/* embedded images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tag-pane-tag {
+    cursor: pointer;
+    user-select: none;
+    color: var(--green-light) !important;
+    padding: 2px 15px;
+    border-radius: 3px;
+    font-size: 14px !important;
+    position: relative;
+}
+
+.tag-pane-tag:hover {
+    background-color: var(--green);
+    color: #00ba00 !important;
+}
+
+.tag-pane-tag-text {
+    color: var(--text-muted);
+}
+
+/*********************************/
+/*           Side dock           */
+/*********************************/
+
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+    background-color: var(--green);
+    color: var(--text-normal);
+}
+
+/* side dock text, like file names and backlink context */
+.workspace-tabs * {
+    font-size: 14px !important;
+}
+
+/* side dock titles at top */
+.side-dock-title {
+
+    font-size: 20px !important;
+    font-weight: 800 !important;
+}
+
+/* hover actions on side dock navigation */
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-tab-inner:hover,
+.side-dock-ribbon-action:hover,
+.side-dock-ribbon-action.is-active:hover,
+.nav-action-button:hover,
+.side-dock-collapse-btn:hover {
+    color: var(--text-a);
+}
+
+/* condense line spacing on file explorer title list. also avoids character-level word breaks */
+.nav-file-title-content,
+.search-result-file-title,
+.search-result-file-match {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: normal !important;
+    word-break: keep-all;
+}
+
+/* clean up side bar empty state (e.g. unlinked mentions) */
+.search-empty-state {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: normal;
+}
+
+/* font for everything outside of editor/preview panes */
+.app-container {
+    font-family: var(--font-family-preview);
+}
+
+.status-bar-item {
+    font-family: var(--font-family-preview);
+    font-size: 12px;
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+    font-family: Monaco;
+    line-height: 1.3;
+    color: #bd93f9;
+    /* color: #ff79c6; */
+    font-size: 0.85em;
+}
+
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+    background-color: rgba(160, 251, 255, 0.12);
+    color: var(--text-normal);
+}
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title {
+    font-weight: 600;
+}
+
+.markdown-embed {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+/* remove secondary scroll bar in editor that comes from adding variable padding */
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* to have sidebar hide and then reveal on hover */
+.app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover),
+.app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
+    width: 0px !important;
+}
+
+.suggestion-item.is-selected {
+    background-color: #197300;
+}
+
+/****************************************/
+/*    add a rule line before ul list    */
+/****************************************/
+
+ul ul {
+    position: relative;
+}
+
+ul ul::before {
+    content: '';
+    border-left: 1px solid #393067;
+    position: absolute;
+}
+
+ul ul::before {
+    left: -1em;
+    top: 0;
+    bottom: 0;
+}
+
+/* rule line when there are checkboxes*/
+ul .task-list-item ul::before {
+    left: 0.15em !important
+}

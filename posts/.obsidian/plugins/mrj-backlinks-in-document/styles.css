@@ -1,0 +1,13 @@
+.CodeMirror-lines > .workspace-leaf {
+    margin-top: 50px;
+}
+
+.markdown-preview-view > .workspace-leaf {
+    margin-top: -30vh;
+}
+
+.markdown-preview-view.is-readable-line-width > .workspace-leaf {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}

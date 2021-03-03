@@ -4,31 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "ba2b426490a0a575",
+        "id": "156d0c5a09656a7c",
         "type": "leaf",
-        "dimension": 48.22592324402607,
+        "dimension": 46.007259528130675,
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes-tr/seabluetours/blog-headers.md",
+            "file": "travel/istanbul-airport.md",
             "mode": "source"
           }
         },
-        "group": "2c4b2f12094a2335"
+        "group": "64932cc7375d6645"
       },
       {
-        "id": "7aa82793eba6e4fb",
+        "id": "5159cc123672fb72",
         "type": "leaf",
-        "dimension": 51.77407675597393,
+        "dimension": 53.992740471869325,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "notes-tr/seabluetours/blog-headers.md",
+            "file": "travel/istanbul-airport.md",
             "mode": "preview"
           }
         },
-        "group": "2c4b2f12094a2335"
+        "group": "64932cc7375d6645"
       }
     ],
     "direction": "vertical"
@@ -55,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#js-code",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -68,7 +68,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 347.0121879577637
+    "width": 229
   },
   "right": {
     "id": "6576f251ebe95476",
@@ -84,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes-tr/seabluetours/blog-headers.md",
+                "file": "travel/istanbul-airport.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,24 +102,35 @@
                 "sortOrder": "frequency"
               }
             }
+          },
+          {
+            "id": "f60dc3508c5d201d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "travel/istanbul-airport.md"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 316.2668762207031
+    "width": 316.2668762207031,
+    "collapsed": true
   },
   "lastOpenFiles": [
-    "notes-tr/seabluetours/blog-headers.md",
-    "index.md",
-    "sidebar.md",
-    "notes-tr/istanbulprivatetransfers/airport-transfer/istanbul-primeclass-welcome.md",
-    "notes-tr/istanbulprivatetransfers/index.md",
-    "notes-tr/istanbulprivatetransfers/airport-transfer/save-20-for-all-repeat-transfer-bookings.md",
-    "notes-tr/istanbulprivatetransfers/booking.md",
-    "notes-tr/istanbulprivatetransfers/home.md",
-    "notes-tr/istnabulprivatetransfers/airport-transfer/istanbul-primeclass-welcome.md",
-    "notes-tr/istnabulprivatetransfers/index.md"
+    "travel/istanbul-airport.md",
+    "travel/istanbul.md",
+    "travel/Untitled.md",
+    "clients/turkey-know-how/Konya.md",
+    "clients/turkey-know-how/istanbul.md",
+    "clients/istanbulprivatetransfers/home.md",
+    "clients/transferexpert/ping-links.md",
+    "Code/Linux/Docker Commands.md",
+    "Code/HTML/HTTPS Force Meta Tag.md",
+    "clients/transferexpert/Overseas Shuttle Transfer.md"
   ]
 }

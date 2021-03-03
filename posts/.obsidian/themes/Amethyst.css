@@ -1,0 +1,595 @@
+/* Special Font */
+body {
+    font-family: "Gloria Hallelujah", "Dank Mono",'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "NotoColorEmoji", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+}
+
+.cm-s-obsidian {
+    font-family: "Dank Mono",'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "NotoColorEmoji","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    font-size: 16px;
+}
+
+.markdown-preview-view code {
+    font-family: "Dank Mono",'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "NotoColorEmoji","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    font-size: 16px;
+}
+
+.workspace {
+    font-family: "Dank Mono",'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "NotoColorEmoji","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    font-size: 16px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+/* App scrollbar weirdness */
+.app-container {
+    height: 99%;
+}
+/**/
+
+/* Empty pane */
+.workspace-leaf-content[data-type="empty"] {
+    background-color: var(--background-primary);
+}
+/**/
+
+/**/
+/* Editor Section */
+/**/
+/* Line size */
+.cm-s-obsidian pre.HyperMD-header {
+    line-height: 1!important;
+}
+
+/* Selection */
+.theme-light {
+    --text-selection: rgba(112, 93, 207, 0.5);
+}
+
+.theme-dark {
+    --text-selection: rgba(112, 93, 207, 0.5);
+}
+
+::selection {
+    background-color: #705dcf!important;
+    color: white!important;
+}
+
+/* Title */
+/* Current main pane */
+.view-header-title {
+    color: #705dcf;
+    text-align: center;
+}
+
+.workspace-leaf.mod-active .view-header {
+    text-align: center;
+}
+/* Other pane */
+.workspace-leaf-header-title-container {
+    text-align: center;
+}
+
+/* Headers */
+span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1 {
+    color: #705dcf;
+}
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2 {
+    color: #705dcf;
+}
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3 {
+    color: #705dcf;
+}
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4 {
+    color: #705dcf;
+}
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5 {
+    color: #705dcf;
+}
+
+span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
+    color: #705dcf;
+}
+
+/* Header folder icon */
+.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
+    color: #3e3471;
+}
+
+.CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded {
+    color: #705dcf;
+}
+
+/* Cursor */
+.cm-fat-cursor .CodeMirror-cursor {
+    background: #3e3471;
+}
+
+.cm-animate-fat-cursor {
+    background-color: #3e3471;
+}
+
+/* Selection in popup ([[]] autocomplete)*/
+.suggestion-item.is-selected {
+    background-color: #3e3471;
+    color: white;
+}
+
+.theme-light .suggestion-shortcut {
+    color: var(--text-normal);
+}
+
+/* Inner and Outer links */
+.cm-url {
+    color: lightblue!important;
+}
+
+.markdown-highlighting .internal-link .cl-underlined-text {
+    color: var(--text-accent)!important;
+}
+
+.markdown-highlighting .link .cl-underlined-text {
+    color: lightblue!important;
+}
+
+/* Blockquote */
+.preview blockquote {
+    background-color: var(--background-modifier-border);
+    border: 1px solid var(--text-muted);
+}
+
+/* Highlights and Bold */
+strong {
+    font-size: larger;
+    color: var(--text-normal);
+}
+
+mark {
+    background-color: darkgoldenrod;
+}
+
+.markdown-highlighting .tag {
+    color: var(--text-accent)!important;
+}
+
+/* Tables */
+.markdown-preview-view th {
+    background-color: #3e3471;
+    color: white
+}
+
+.cm-s-obsidian pre.HyperMD-table-row span.cm-hmd-table-sep {
+    color: unset;
+}
+
+.cm-s-obsidian pre.HyperMD-table-row-1 > span {
+    color: unset;
+}
+
+/* Status bar */
+.theme-dark .status-bar-item {
+    color: white;
+}
+
+.theme-light .status-bar-item {
+    color: black;
+}
+
+/**/
+/* Preview section */
+/**/
+/* Centered preview */
+.markdown-preview-view
+{
+    position: relative;
+    height: 100%;
+    /*
+    border-right-width: 7rem;
+    border-left-width: 7rem;
+    border-style: solid;
+    border-color: #262140;
+    */
+}
+
+.markdown-embed-title {
+    color: #705dcf;
+}
+
+.markdown-preview-view .markdown-embed {
+    background-color: var(--background-primary-alt);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.markdown-preview-view .internal-link {
+    color: #705dcf;
+}
+
+.markdown-preview-view a {
+    color: lightblue;
+}
+
+/**/
+/* Side panel section */
+/**/
+/* Plugin Title and Description */
+.plugin-name {
+    color: var(--text-normal);
+}
+
+.plugin-description {
+    color: var(--text-normal)
+}
+
+/* Files title and Buttons */
+.nav-file-title-content, .nav-folder-title-content {
+    color: var(--text-normal);
+}
+
+.nav-action-button {
+    color: var(--text-normal);
+}
+
+/* File explorer navigation selection */
+.nav-file.is-active > .nav-file-title, .nav-file.is-active > .nav-folder-title, .nav-file.is-active > .nav-folder-collapse-indicator, .nav-folder.is-active > .nav-file-title, .nav-folder.is-active > .nav-folder-title, .nav-folder.is-active > .nav-folder-collapse-indicator {
+    background-color: #3e3471;
+    color: white;
+}
+
+body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+.nav-file-title-content, .nav-folder-title-content {
+    color:unset;
+}
+
+.nav-folder.mod-root > .nav-file-title:hover, .nav-folder.mod-root > .nav-folder-title:hover {
+    color: var(--text-normal);
+}
+
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator, body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator {
+    background-color: #3e3471;
+    color: white;
+}
+
+.nav-file-title, .nav-folder-title, .nav-folder-collapse-indicator {
+    color: var(--text-normal);
+}
+
+/* File explorer alternate background 
+.nav-file:nth-child(even) {
+    background-color: var(--background-primary);
+}
+
+.nav-folder:nth-child(even) {
+    background-color: var(--background-primary);
+}
+
+.nav-file:nth-child(odd) {
+    background-color: #262140;
+}
+
+.nav-folder:nth-child(odd) {
+    background-color: #262140;
+}
+
+/**/
+
+/* File explorer menu*/
+.menu-item:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+/* Backlinks Color and Text */
+.search-result-file-matched-text {
+    background-color: #3e3471;
+    color: white;
+}
+
+.search-result-file-title {
+    color: #705dcf;
+}
+
+.search-result-file-matches {
+    color: var(--text-normal);
+}
+
+.search-result-file-title:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+.search-result-file-match:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+/* Folder arrow */
+.nav-folder.is-collapsed .nav-folder-collapse-indicator {
+    color: #705dcf;
+}
+
+.nav-folder-collapse-indicator {
+    color: #705dcf;
+}
+
+/* Tag Selection */
+.tag-pane-tag:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+.theme-light .tag-pane-tag-count {
+    color: var(--text-normal)
+}
+
+/* Title */
+.side-dock-title {
+    color: #705dcf;
+}
+
+/* Ribon */
+.side-dock-ribbon {
+    background-color: #3e3471!important;
+    color: var(--text-muted)
+}
+
+.side-dock-ribbon-tab, .side-dock-ribbon-action {
+    color: white;
+}
+
+.theme-dark .side-dock-ribbon-tab.is-active {
+    color: white;
+}
+
+.theme-dark .side-dock-ribbon-tab.is-before-active {
+    color: white;
+}
+
+.theme-light .side-dock-ribbon-tab.is-active {
+    color: var(--text-normal);
+}
+
+.theme-light .side-dock-ribbon-tab.is-before-active {
+    color: white;
+}
+
+.side-dock-ribbon-tab-inner {
+    color: unset;
+}
+
+.side-dock-ribbon-before.is-before-active .side-dock-ribbon-tab-inner, .side-dock-ribbon-after.is-after-active .side-dock-ribbon-tab-inner, .side-dock-ribbon-tab.is-before-active .side-dock-ribbon-tab-inner, .side-dock-ribbon-tab.is-after-active .side-dock-ribbon-tab-inner {
+    background-color: #3e3471;
+}
+
+.side-dock-ribbon-tab, .side-dock-ribbon-before, .side-dock-ribbon-after, .side-dock-ribbon-tab-inner {
+    transition: none;
+}
+
+/**/
+/* Settings panel Section */
+/**/
+.vertical-tab-nav-item.is-active {
+    background-color: #3e3471;
+    color:white;
+}
+
+.horizontal-tab-nav-item:hover, .vertical-tab-nav-item:hover {
+    background-color: #3e3471;
+    color: white;
+}
+
+.vertical-tab-nav-item.is-active {
+    background-color: #3e3471;
+}
+
+.vertical-tab-nav-item.is-active {
+    border-left-color: #3e3471;
+}
+
+/* Centered editor with side border 
+.markdown-source-view {
+    position: relative;
+    height: 100%;
+    border-right-width: 7rem;
+    border-left-width: 7rem;
+    border-style: solid;
+    border-color: #262140;
+}
+
+/* Graph View */
+
+.graph-view.color-fill {
+    color: #705dcf;
+}
+.graph-view.color-circle {
+    color: #3e3471;
+}
+.graph-view.color-line {
+    color:  #3e3471;
+}
+.graph-view.color-text {
+    color: var(--text-normal);
+}
+.graph-view.color-fill-highlight {
+    color: #3e3471;
+}
+.graph-view.color-line-highlight {
+    color: #705dcf;
+}
+/**/
+
+/* Focus Mode 
+.cm-s-obsidian,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-internal-link,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-url,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-escape-backslash,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-inline-code,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line.HyperMD-codeblock,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-builtin,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-footref,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line pre.HyperMD-footnote span.cm-hmd-footnote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-list,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-quote,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-math,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.hmd-fold-math-placeholder {
+  color: var(--text-faint);
+}
+
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
+.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight {
+  background-color: transparent;
+}
+
+.CodeMirror-activeline {
+  color: var(--text-normal);
+}
+/**/
+
+
+/* Andy Matuschak mode! V2! for 0.7.0! (so... 2.7?) */
+/* Now with my own tweaks 
+
+.mod-root.workspace-split.mod-vertical { 
+  overflow-x:auto; 
+  --header-width: 36px; 
+}
+.mod-root.workspace-split.mod-vertical > div { 
+  min-width: calc(700px + var(--header-width)); 
+  box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.25);
+  position:sticky;
+  left:0;
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-8) {
+    left: calc(var(--header-width) * 0);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 1); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-7) {
+    left: calc(var(--header-width) * 1);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 1); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-6) {
+    left: calc(var(--header-width) * 2);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 2); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-5) {
+    left: calc(var(--header-width) * 3);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 3); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-4) {
+    left: calc(var(--header-width) * 4);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 4); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-3) {
+    left: calc(var(--header-width) * 5);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 5); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-2) {
+    left: calc(var(--header-width) * 6);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 6); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n-1) {
+    left: calc(var(--header-width) * 7);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 7); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+0) {
+    left: calc(var(--header-width) * 8);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 8); 
+}
+
+.mod-root.workspace-split.mod-vertical > div:nth-child(10n+1) {
+    left: calc(var(--header-width) * 9);
+    min-width: calc(100% - var(--size));
+    --size: calc(var(--header-width) * 9); 
+}
+
+.workspace-leaf-content {
+  padding-left: var(--header-width);
+  position: relative;
+}
+
+.view-header {
+  writing-mode: vertical-lr;
+  border-right: 1px solid var(--background-secondary-alt);
+  border-left: 2px solid var(--background-secondary-alt);
+  border-top: none;
+  border-bottom: none;
+  height: auto;
+  width: var(--header-width);
+  position: absolute;
+  left:0;
+  top:0;
+  bottom:0;
+}
+
+.workspace-leaf.mod-active .view-header {
+  border-right: 2px solid var(--interactive-accent);
+  border-bottom: none;
+}
+
+.view-header-title-container {
+  height: unset;
+  padding-left: unset;
+  padding-top: 5px;
+}
+
+.view-header-title-container:after {
+  width: 100%;
+  height: 30px;
+  top:unset;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, var(--background-secondary));
+}
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: linear-gradient(to bottom, transparent, var(--background-primary-alt));
+}
+
+.view-header-icon, .view-actions {
+  padding: 10px 5px;
+}
+.view-action {
+  margin: 8px 0;
+}
+
+.view-content {
+  height: 100%;
+}
+
+.workspace-fake-target-overlay {
+  background-color: var(--background-primary);
+}
+
+/**/

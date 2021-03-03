@@ -25,15 +25,27 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 
 * * [[Obsidian]]: Obsidian not alma uygulaması hakkındaki tanıtım yazım. 
 
+## Friends Accounts
 
+- [TED Account](https://www.ted.com/profiles/25441612) 
+- [Travel Blogs of Hatena](https://profile.hatena.ne.jp/istanbultransferexpert/) 
+- [Istanbul Private Transfer Expert Proven Expert Reviews](https://www.provenexpert.com/istanbulairporttransfer/)
+- [RiseUp Blog](https://we.riseup.net/privatetransfer)
+- [Transfer Expert Wiki](https://www.viki.com/users/transferexpert/about)   
+- [LinkCentre Account](https://www.linkcentre.com/profile/canburaks/)
+- [LinkCentre of Istanbul Transfer Expert](https://www.linkcentre.com/profile/canburaks/)
+- [ApSense Business Network](http://www.apsense.com/user/webmeister/have?id=185327)
+- [ApSense Business Network for Istanbul Cruise Port Transfer](http://www.apsense.com/user/webmeister/have?id=185328)
+- [Dailygram - Istanbul Transport Guide](https://dailygram.com/index.php/blog/848367/istanbul-traveler-transportation-guide/)
+- [UK - Travel Agencies](http://co.uk-www.com/istanbultransferexpert.com)
+- [Transport International](https://www.transport-international.com/professional/istanbul-transfer-expert-6003)
+- [TripAdvisor](https://www.tripadvisor.com/Profile/cbsofyalioglu)
+- [Sony Community](https://us.community.sony.com/s/profile/0054O000009NhSa?language=en_US)
+- [SeoSiteChecUp Test](https://seositecheckup.com/seo-audit/istanbultransferexpert.com)
+- [Nibbler Test](https://nibbler.silktide.com/en_US/reports/istanbultransferexpert.com)
+- [Seeking Alpha](https://seekingalpha.com/user/52932217/comments)
+- [Travel Agencies Turkey - FolkD](https://www.folkd.com/user/transferexpert)
 
-
-<br/>
-<br/>
-
-[...](/notes-tr/istanbulprivatetransfers/index)
-
-[...](/notes-tr/seabluetours/blog-headers)
 
 
 

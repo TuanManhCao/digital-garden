@@ -1,0 +1,9 @@
+{
+  "id": "mrj-backlinks-in-document",
+  "name": "Backlinks in document",
+  "version": "0.0.3",
+  "description": "A hacky workaround which put backlinks section into the document",
+  "isDesktopOnly": false,
+  "author": "MrJackphil",
+  "authorUrl": "https://mrjackphil.com"
+}
