@@ -17,10 +17,10 @@ class MyDocument extends Document {
         //console.log("document: ", this.props)
         return (
         <Html data-wf-page="5fb1bacf34bc79d543fcd389" data-wf-site="5fb1bacf34bc79b9c4fcd388">
+            <meta name="google-site-verification" content="7iZ3AXo66Mm1qElIrjOAcUD6pqBeDQGC63zZfwiGhbE" />
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.2/styles/atom-one-dark.min.css" />
             <Head />
             <script src="https://d3js.org/d3.v3.min.js"></script>
-            <meta name="google-site-verification" content="7iZ3AXo66Mm1qElIrjOAcUD6pqBeDQGC63zZfwiGhbE" />
 
             <body className="body">
             
