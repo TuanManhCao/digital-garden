@@ -34,6 +34,7 @@ export default function Home({ content, graphdata, filenames, ...props }) {
     return (
         <Layout home>
             <Head>
+                <meta name="google-site-verification" content="7iZ3AXo66Mm1qElIrjOAcUD6pqBeDQGC63zZfwiGhbE" />
                 {content.title && <meta name="title" content={content.title} />}
                 {content.canonical && <meta name="canonical_url" content={content.canonical} />}
                 {content.description && <meta name="description" content={content.description} />}
