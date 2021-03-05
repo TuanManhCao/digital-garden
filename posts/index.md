@@ -42,9 +42,13 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 - [TripAdvisor](https://www.tripadvisor.com/Profile/cbsofyalioglu)
 - [Sony Community](https://us.community.sony.com/s/profile/0054O000009NhSa?language=en_US)
 - [SeoSiteChecUp Test](https://seositecheckup.com/seo-audit/istanbultransferexpert.com)
+- [SeoSiteChecUp Test Private Transfer](https://seositecheckup.com/seo-audit/istanbultransferexpert.com/istanbul-private-transfer)
 - [Nibbler Test](https://nibbler.silktide.com/en_US/reports/istanbultransferexpert.com)
 - [Seeking Alpha](https://seekingalpha.com/user/52932217/comments)
 - [Travel Agencies Turkey - FolkD](https://www.folkd.com/user/transferexpert)
+- [Sitelinks](https://www.sitelinks.info/istanbultransferexpert.com/)
+- [Archbee](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/x4wZ-)
+- [Archbee Turkish](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/HajY-)
 
 
 
