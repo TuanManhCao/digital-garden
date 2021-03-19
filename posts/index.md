@@ -5,6 +5,8 @@ title: "Digital Garden"
 This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
 
 ## Friends Accounts
+- [Turkey Travel Links](https://wakelet.com/wake/SR6iY1hM5OxeaseCklZf0)
+- [Blogs to read](https://wakelet.com/wake/ow08JKhdgWiSRY_kdNdPC)
 - [Almanac Docs Transportation](https://almanac.io/docs/ground-transportation-regulations-in-turkey-eij893mbhBRPF6bsFgqZx7kvTFetkKs7)
 - [Almanac Docs Linux Cheatsheet](https://almanac.io/docs/linux-bash-cheatsheet-QzJAzopP6IYjEzo8zTVpbxKMvxAduUBy)
 - [Gumroad Airport Transfer](https://gumroad.com/l/airport-transfer)
