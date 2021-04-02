@@ -4,7 +4,21 @@ title: "Digital Garden"
 
 This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
 
+
+## Travel Links
+## Travel Articles
+- [Is is safe to travel through Istanbul Airport?](https://www.cbsofyalioglu.com/post/is-it-safe-to-travel-through-istanbul-airport/)
+- [Historical Places in Istanbul](https://istanbultransferexpert.com/places/historical-places-in-istanbul/)
+- [Istanbul Airport to City Guide](https://istanbultransferexpert.com/airport-transfer/istanbul-airport-to-city/)
+
+
+## Premium Services
+
 ## Friends Accounts
+- [İzmir Güvenlik Kamera Sistemleri](https://www.provenexpert.com/filiz-guevenlik-zmir-alarm-sistemleri-ve-zmir-kamera-sistemleri/)
+- [Daily Apartments for Rent](https://www.provenexpert.com/daily-apartments-in-izmir-fi-homes/)
+- [Bandcamp Account](https://cbsofyalioglu.bandcamp.com/)
+- [Daily Apartments for Rent in Izmir](https://fi-homes.com)
 - [Turkey Travel Links](https://wakelet.com/wake/SR6iY1hM5OxeaseCklZf0)
 - [Blogs to read](https://wakelet.com/wake/ow08JKhdgWiSRY_kdNdPC)
 - [Almanac Docs Transportation](https://almanac.io/docs/ground-transportation-regulations-in-turkey-eij893mbhBRPF6bsFgqZx7kvTFetkKs7)
@@ -26,7 +40,6 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 - [Nibbler Test](https://nibbler.silktide.com/en_US/reports/istanbultransferexpert.com)
 - [Seeking Alpha](https://seekingalpha.com/user/52932217/comments)
 - [Travel Agencies Turkey - FolkD](https://www.folkd.com/user/transferexpert)
-- [Sitelinks](https://www.sitelinks.info/istanbultransferexpert.com/)
 - [Archbee Travel Links](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/x4wZ-turkey-travel-links)
 - [Archbee Turkish](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/HajY-)
 
