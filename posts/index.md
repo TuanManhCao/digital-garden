@@ -1,13 +1,17 @@
 ---
-title: "Digital Garden"
+title: "My Greatest Bookmark Collections"
+description: "Here are the bookmark collections of me. It includes many travel links especially about Istanbul."
 ---
 
 This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
+[My Diigo Account](https://www.diigo.com/profile/canburaks)
 
-
-## Travel Links
+# Travel Links
 ## Travel Articles
-- [Is is safe to travel through Istanbul Airport?](https://www.cbsofyalioglu.com/post/is-it-safe-to-travel-through-istanbul-airport/)
+Here are the travel articles and notes that I share the most.
+- [Istanbul Travel Experience](https://www.diigo.com/item/note/7bdt1/w9et?k=bc3753acb1a1ce963ceb3b7065378427)
+- [Istanbul Travel Experience Notes](https://www.diigo.com/outliner/j95wlx/outliner?key=bfu2ofwifs)
+
 - [Historical Places in Istanbul](https://istanbultransferexpert.com/places/historical-places-in-istanbul/)
 - [Istanbul Airport to City Guide](https://istanbultransferexpert.com/airport-transfer/istanbul-airport-to-city/)
 
@@ -25,9 +29,7 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 - [Almanac Docs Linux Cheatsheet](https://almanac.io/docs/linux-bash-cheatsheet-QzJAzopP6IYjEzo8zTVpbxKMvxAduUBy)
 - [Gumroad Airport Transfer](https://gumroad.com/l/airport-transfer)
 - [TED Account](https://www.ted.com/profiles/25441612) 
-- [Travel Blogs of Hatena](https://profile.hatena.ne.jp/istanbultransferexpert/) 
 - [Istanbul Private Transfer Expert Proven Expert Reviews](https://www.provenexpert.com/istanbulairporttransfer/)
-- [RiseUp Blog](https://we.riseup.net/privatetransfer)
 - [Transfer Expert Wiki](https://www.viki.com/users/transferexpert/about)   
 - [LinkCentre Account](https://www.linkcentre.com/profile/canburaks/)
 - [LinkCentre of Istanbul Transfer Expert](https://www.linkcentre.com/profile/canburaks/)
@@ -38,7 +40,6 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 - [Sony Community](https://us.community.sony.com/s/profile/0054O000009NhSa?language=en_US)
 - [SeoSiteChecUp Wakelet](https://seositecheckup.com/seo-audit/wakelet.com/wake/ow08JKhdgWiSRY_kdNdPC)
 - [Nibbler Test](https://nibbler.silktide.com/en_US/reports/istanbultransferexpert.com)
-- [Seeking Alpha](https://seekingalpha.com/user/52932217/comments)
 - [Travel Agencies Turkey - FolkD](https://www.folkd.com/user/transferexpert)
 - [Archbee Travel Links](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/x4wZ-turkey-travel-links)
 - [Archbee Turkish](https://app.archbee.io/public/qpZjiWb-Zbl0O3Qr1f8qH/HajY-)
