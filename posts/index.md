@@ -9,6 +9,7 @@ This is my digital backroom. It is intended to be a personal public wiki page. I
 # Travel Links
 ## Travel Articles
 Here are the travel articles and notes that I share the most.
+- [Istanbul Travel Bookmarks](https://papaly.com/johnbaudrillard@hotmail.com/fw6a4/Istanbul-Travel-Options)
 - [Istanbul Transfer Options](https://istanbultransfer.additor.io/page/dNBXmEswKj7o)
 - [Istanbul Travel Experience](https://www.diigo.com/item/note/7bdt1/w9et?k=bc3753acb1a1ce963ceb3b7065378427)
 - [Istanbul Travel Experience Notes](https://www.diigo.com/outliner/j95wlx/outliner?key=bfu2ofwifs)
