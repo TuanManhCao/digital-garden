@@ -1,10 +1,13 @@
 ---
-title: "My Greatest Bookmark Collections"
+title: "My Travel Bookmark Collections"
 description: "Here are the bookmark collections of me. It includes many travel links especially about Istanbul."
 ---
 
 This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
-[My Diigo Account](https://www.diigo.com/profile/canburaks)
+
+There are many hotels in Istanbul that cater to the tourists who come for a luxurious stay and a great shopping experience.The hotels in Istanbul offer different rooms to the people coming for tourism in Turkey and international tourists as well.
+If you are looking for some shopping malls to visit while in Istanbul, then you should head to Beyoglu Taksim square. There are many hotels in Istanbul which are near the Beyoglu Taksim Square, but if you want to save some money, then you should try to go for the budget hotels instead.
+[My Diigo Account](https://www.diigo.com/profile/canburaks), [My Diigo Travel Notes](https://www.diigo.com/item/note/7bdt1/w9et?k=bc3753acb1a1ce963ceb3b7065378427)
 
 # Travel Links
 ## Travel Articles
