@@ -72,7 +72,7 @@ a {text-decoration: none;color:#333 !important}
   background-image: linear-gradient(transparent 0%,transparent calc(40% - 9px),rgba(0, 255, 85, 0.159) calc(50% - 9px));
   background-position: 0px 100%;
 }
-.main a:not(.internal) {
+.main a:not(.internal, footer) {
   color: #131313 ;
   background-color: transparent !important;
   background-image: linear-gradient(transparent 0%,transparent calc(50% - 9px),rgba(75, 58, 225, 0.631) calc(50% - 9px),rgba(0,255,0,0.35) 100%);

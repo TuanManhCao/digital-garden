@@ -51,7 +51,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
 
       <footer>
-        Created with 
+        Created by <a href="https://www.cbsofyalioglu.com/" title="Personal blog about design and development">cbsofyalioglu</a>
       </footer>
     </div>
   )
