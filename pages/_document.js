@@ -12,7 +12,7 @@ class MyDocument extends Document {
         const sidebar = getSinglePost("sidebar")
         return { sidebar, ...initialProps }
     }
-    
+
     render(props) {
         //console.log("document: ", this.props)
         return (
@@ -23,9 +23,9 @@ class MyDocument extends Document {
             <script src="https://d3js.org/d3.v3.min.js"></script>
 
             <body className="body">
-            
+
                 {/* NAVBAR */}
-                <div data-collapse="medium" data-animation="default" 
+                <div data-collapse="medium" data-animation="default"
                     data-duration="400" role="banner" className="navbar w-nav"
                     id="navbar"
                     >
@@ -43,21 +43,21 @@ class MyDocument extends Document {
                     </div>
                 </div>
 
-            
+
                 <section className="section">
                     {/* SIDEBAR */}
-                    <div 
-                        data-w-id="71d5791f-856a-b6c4-e8ee-0ab2729e1de3" 
+                    <div
+                        data-w-id="71d5791f-856a-b6c4-e8ee-0ab2729e1de3"
                         className="sidebar"
                         id="sidebar"
-                        
+
                     >
                         <div dangerouslySetInnerHTML={{__html:this.props.sidebar.data}} />
 
                     </div>
 
                     {/* CONTENT */}
-                    <main className="main parent-main">
+                    <main className="main parent-main" id="main">
                         <Main ppp="" />
                     </main>
                 </section>
