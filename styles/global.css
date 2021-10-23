@@ -12,3 +12,6 @@ body {
   box-sizing: border-box;
 }
 
+#sidebar {
+    padding-left: 16px;
+}

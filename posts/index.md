@@ -3,19 +3,26 @@ title: "Remote Tech Services like Web Design, E-commerce Setup and SEO"
 description: "Here are the bookmark collections of me. It includes many travel links especially about Istanbul."
 ---
 
-I help my clients better integrate with the digital by designing and [developing websites and e-commerce stores](https://webmeister.org). I make them earn more with search engine optimization and growth strategies.
-
-I help my clients to earn more with search engine optimization and growth strategies. I also build beautiful websites and e-commerce stores for them.
-
 This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
 
-I help my clients to earn more with search engine optimization and growth strategies. I also build beautiful websites and e-commerce stores for them. I create solutions for globally known e-commerce platforms like Shopify and Wix as an official partner.
+## Quicklinks
+* __[[Articles (ENG)]]__: Articles written in English.
+* __[[Codesheet]]__ : Code Snippets including Python, JS, CSS, HTML and Bash.
 
+*  __[[Articles (TR)]]__: Articles written in Turkish.
+* * [[Sidekick Browser]]: Harikulade bir kullanıcı deneyimine sahip chromium tarayıcı. 
+* * [[TiddlyWiki]]: Çok işlevli bir not alma uygulaması olan Tiddlywiki hakkındaki incelemem.
+* * [[Zettelkasten Metodu]]: Zettelkasten metodu ile akıllı notlar nasıl alınır?
 
+* * [[Zettelkasten Uygulamaları]]: Zettelkasten metodunu kullanabileceğiniz not-alma uygulamaları.
 
+* * [[Ghost Blog Açma Rehberi]]: GCP üzerinde Ghost blog nasıl açılır?
 
+* * [[En İyi Blog Siteleri]]:Bir blog açmaya karar verdiniz ve henüz platform seçmediyseniz, bu yazıda nelere dikkat edilmesi gerektiğini ve çeşitli blog platformlarını bulacaksınız. Ücretsiz blog sitesi arayanlar, okuyucaları için paywall koymak isteyenler, portfolyo oluşturmak isteyenler için çeşitli alternatifler mevcut.
 
+* * [[Clover Notes]]: Clover not alma uygulamasını beta-tester olarak deneyerek ilk izlenimlerimi paylaştım.
 
+* * [[Obsidian]]: Obsidian not alma uygulaması hakkındaki tanıtım yazım. 
 
 
 

@@ -1,4 +1,4 @@
-/* 
+/*
 
 California Coast has been made possible by the work of:
 
@@ -84,7 +84,7 @@ Disabled features */
   Colors
 
   Most colors in this theme are driven from the following values,
-  meaning that the backgrounds, borders, and various shades are 
+  meaning that the backgrounds, borders, and various shades are
   automatically generated for you.
 
   - Base color is used for the backgrounds, text and borders.
@@ -978,7 +978,7 @@ button,
 .view-header-title:before {
   display: none;
 }
-/* 
+/*
 .empty-state-title,
 .markdown-preview-view h1,
 .HyperMD-header-1,

@@ -2,7 +2,13 @@
 title: "Sidebar"
 ---
 ### [Digital Notes](/)
-[[Social Accounts]]
+
+* [Home](/)
+* [[Articles (TR)]]
+* [[Articles (ENG)]]
+* [[Codesheet]]
+
+
 
 
 

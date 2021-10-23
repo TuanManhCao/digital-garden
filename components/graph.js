@@ -26,7 +26,7 @@ const Graph = ({ el, graphdata, current }) => {
             style: {
               'width': 2,
               "height":200,
-              'line-color': '#5221c4',
+              'line-color': '#ffffff',
               'target-arrow-color': '#ccc',
               'target-arrow-shape': 'triangle',
               'curve-style': 'bezier'
@@ -52,16 +52,16 @@ const Graph = ({ el, graphdata, current }) => {
             //animateFilter: function ( node, i ){ return true; }, // a function that determines whether the node should be animated.  All nodes animated by default on animate enabled.  Non-animated nodes are positioned immediately when the layout starts
             ready: undefined, // callback on layoutready
             stop: undefined, // callback on layoutstop
-            transform: function (node, position ){ return position; } // transform a given node position. Useful for changing flow direction in discrete layouts 
-          
+            transform: function (node, position ){ return position; } // transform a given node position. Useful for changing flow direction in discrete layouts
 
-        
+
+
         },
         zoom: 10,
         hideEdgesOnViewport:false,
         wheelSensitivity:0.2,
     })
-    
+
     cy.nodeHtmlLabel( [{
         query: "node",
         halign:"top",
@@ -83,7 +83,7 @@ const Graph = ({ el, graphdata, current }) => {
 export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
     var jsnx = require('jsnetworkx');
 
-    
+
     //const grouper = (id) => id === "index" ? 1 : (id === "codesheet" ? 2 : 3)
 
 
@@ -112,14 +112,14 @@ export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
     else {
         //console.log("else")
         var indexnode = graphdata.filter(g => g.data.id === "index")[0]
-        indexnode = ["Home", { 
+        indexnode = ["Home", {
             width:30,
             height:30,
             weight:1,
             href:`/`,
             title: "Home",
             fill:"blueviolet",
-            
+
         }]
 
         var currentRawEdges = graphdata.filter(g => g.data.source === current)
@@ -139,7 +139,7 @@ export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
         [
             currentnode,
             ...othernodes,
-        ], 
+        ],
         {color: '#999999', width:40, height:40}
     );
     G.addEdgesFrom(edges);
@@ -150,7 +150,7 @@ export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
         labelStyle:{
             color:"#333",
             fill:function(n){
-                return n.node === current ? "#fff" : "#000"            
+                return n.node === current ? "#fff" : "#000"
             }
         },
         labelAttr:{
@@ -171,10 +171,10 @@ export const Network = ({ el, graphdata, current, routeHandler, allNodes }) => {
             //charge:function(c){ return -80},
         },
         nodeStyle: {
-            fill: function(d) { 
+            fill: function(d) {
                 return "#999"
                 //console.log("group", d.data.group)
-                //return color(d.data.group); 
+                //return color(d.data.group);
             },
             stroke: 'none'
         },
