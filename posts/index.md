@@ -1,36 +1,50 @@
----
-title: "Remote Tech Services like Web Design, E-commerce Setup and SEO"
-description: "Here are the bookmark collections of me. It includes many travel links especially about Istanbul."
----
+Hi there! I'm a note in your vault.
 
-This is my digital backroom. It is intended to be a personal public wiki page. I'll share my notes, codes, bookmarks and other links.
+At the same time, I'm also just a Markdown file sitting on your hard disk. It's all in plain text, so you don't need to worry about losing me in case [[Obsidian]] disappears one day.
 
-## Quicklinks
-* __[[Articles (ENG)]]__: Articles written in English.
-* __[[Codesheet]]__ : Code Snippets including Python, JS, CSS, HTML and Bash.
+## Quick Start
 
-*  __[[Articles (TR)]]__: Articles written in Turkish.
-* * [[Sidekick Browser]]: Harikulade bir kullanıcı deneyimine sahip chromium tarayıcı. 
-* * [[TiddlyWiki]]: Çok işlevli bir not alma uygulaması olan Tiddlywiki hakkındaki incelemem.
-* * [[Zettelkasten Metodu]]: Zettelkasten metodu ile akıllı notlar nasıl alınır?
+If you're in a hurry, here's some quick places to dive in:
 
-* * [[Zettelkasten Uygulamaları]]: Zettelkasten metodunu kullanabileceğiniz not-alma uygulamaları.
-
-* * [[Ghost Blog Açma Rehberi]]: GCP üzerinde Ghost blog nasıl açılır?
-
-* * [[En İyi Blog Siteleri]]:Bir blog açmaya karar verdiniz ve henüz platform seçmediyseniz, bu yazıda nelere dikkat edilmesi gerektiğini ve çeşitli blog platformlarını bulacaksınız. Ücretsiz blog sitesi arayanlar, okuyucaları için paywall koymak isteyenler, portfolyo oluşturmak isteyenler için çeşitli alternatifler mevcut.
-
-* * [[Clover Notes]]: Clover not alma uygulamasını beta-tester olarak deneyerek ilk izlenimlerimi paylaştım.
-
-* * [[Obsidian]]: Obsidian not alma uygulaması hakkındaki tanıtım yazım. 
+- The [[Command palette]] contains most of the commands you need to work with  Obsidian. Just press `Ctrl/Cmd-P` and start typing.
+- How to [[Create notes]].
+- How to create [[Internal link]]
+- How to use Markdown to [[Format your notes]]
+- How to [[embed files]], or embed other notes
+- [[Use hotkeys]]
+- How to [[Working with multiple notes|open multiple files side by side]]
+- Obsidian can be extended with [[Core plugins|plugins]]. Several are available by default, and can be enabled or disabled according to your needs.
 
 
+If you want a more thorough introduction, including a bit about our philosophy, check out [[Obsidian]].
 
+And if you'd like a gentle introduction, or just want to get started but don't know how, head over to [[Basic note taking]].
 
+If you are a [Catalyst supporter](https://obsidian.md/pricing), and want to turn on Insider Builds, see [[Insider builds]].
 
+## Workflows
 
+Obsidian is a tool that can be used in many ways, from a simple list of notes to a very powerful knowledge management system. We suggest you start at your own pace, and build it into the tool you need.
 
+Here are a few ways to get started:
 
+If you want to just start taking notes, check out [[Basic note taking]]
 
+If you already have a collection of notes in markdown format, just choose them for your Vault. Choose "Vault" in the lower left and select the directory your notes are in.
 
+If you have notes from Roam Research, Notion, or other systems, [[Import data|here's how to import them]].
 
+If you'd like to know more about Obsidian, you can [[Obsidian|read about our story]].
+
+By the way, you can feel free to edit these help docs, but when you open it again, they will be overwritten. So, don't put anything in them you want to keep.
+
+## I have questions.
+
+Then you should join our [community!](https://obsidian.md/community). We have active Discord and Forums, and the community is generally quite helpful.
+
+here the image
+![image](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
+
+![[image.png]]
+
+here the image
