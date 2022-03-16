@@ -2,7 +2,7 @@
 /.obsidian
 /.idea
 /.vscode
-
+/posts/.obsidian/
 
 # dependencies
 /node_modules
