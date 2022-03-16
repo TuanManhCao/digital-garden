@@ -7,33 +7,10 @@ export const siteTitle = 'Digital Backroom - An Internet Archive'
 
 export default function Layout({ children, home }) {
     const [isOpen, setIsOpen] = useState(null)
-    const toggle = () => setIsOpen(!isOpen)
-
-    const sidebarposition = isOpen ? "0px" : "-250px"
-    //console.log("effect: ", isOpen, sidebarposition)
-
-  useEffect(()=>{
-    const navbarButtonEl = document.getElementById("nav-button")
-    //navbarButtonEl.addEventListener("click", function(){console.log("asd"); setIsOpen(!isOpen); });
-    navbarButtonEl.addEventListener("click", () => setIsOpen(!isOpen));
-    return navbarButtonEl.removeEventListener("click", () => setIsOpen(!isOpen))
-  },[isOpen])
-
-  useEffect(() => {
-    const sidebarEl = document.getElementById("sidebar");
-    //console.log("sidebar position: ", sidebarposition)
-    //if (isOpen){sidebarEl.classList.add("open"); sidebarEl.classList.remove("close");}
-    //else {sidebarEl.classList.remove("open"); sidebarEl.classList.add("close")}
-    
-    // if (isOpen){sidebarEl.style.left = sidebarposition;}
-    // else {sidebarEl.style.left = sidebarposition;}
-    
-  },[isOpen])
 
   return (
     <div >
       <Head>
-        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="A Digital Backroom of Can Burak Sofyalioglu"
