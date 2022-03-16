@@ -9,8 +9,8 @@ class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
         //console.log("doc", initialProps)
-        const sidebar = getSinglePost("sidebar")
-        return { sidebar, ...initialProps }
+
+        return {  ...initialProps }
     }
 
     render(props) {
@@ -45,16 +45,7 @@ class MyDocument extends Document {
 
 
                 <section className="section">
-                    {/* SIDEBAR */}
-                    <div
-                        data-w-id="71d5791f-856a-b6c4-e8ee-0ab2729e1de3"
-                        className="sidebar"
-                        id="sidebar"
 
-                    >
-                        <div dangerouslySetInnerHTML={{__html:this.props.sidebar.data}} />
-
-                    </div>
 
                     {/* CONTENT */}
                     <main className="main parent-main" id="main">
@@ -70,11 +61,11 @@ class MyDocument extends Document {
 }
 
 export function getStaticProps() {
-    const sidebarData = getSinglePost("sidebar.md");
+    // const sidebarData = getSinglePost("sidebar.md");
     console.log("index response: ", contentData, sidebarData)
     return {
         props: {
-            sidebar:sidebarData
+            // sidebar:sidebarData
         },
     };
 }

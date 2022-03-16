@@ -25,8 +25,8 @@ export default function Layout({ children, home }) {
     //if (isOpen){sidebarEl.classList.add("open"); sidebarEl.classList.remove("close");}
     //else {sidebarEl.classList.remove("open"); sidebarEl.classList.add("close")}
     
-    if (isOpen){sidebarEl.style.left = sidebarposition;}
-    else {sidebarEl.style.left = sidebarposition;}
+    // if (isOpen){sidebarEl.style.left = sidebarposition;}
+    // else {sidebarEl.style.left = sidebarposition;}
     
   },[isOpen])
 
