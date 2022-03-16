@@ -39,15 +39,13 @@ export default function Home({ content, graphdata, filenames, ...props }) {
                 {content.canonical && <meta name="canonical_url" content={content.canonical} />}
                 {content.description && <meta name="description" content={content.description} />}
             </Head>
-            <img src="https://cbsofyalioglu.fra1.digitaloceanspaces.com/cbs/digital-garden.jpg"  />
+
             <section>
                 <div dangerouslySetInnerHTML={{__html: content.data}} />
             </section>
             <hr/>
 
-            <div id="graph-box" ref={ref}>
 
-            </div>
         </Layout>
     );
 

@@ -70,15 +70,13 @@ export default function Home({ note, graphdata, ...props }) {
                 {note.title && <h1>{note.title}</h1>}
 
                 <div 
-                    className="article-body" 
+                    className="article-body"
                     dangerouslySetInnerHTML={{__html:note.data}}>
 
                 </div>
             </section>
             <hr/>
-            <div id="graph-box" ref={ref}>
 
-            </div>
         </Layout>
     );
 }
