@@ -1,8 +1,0 @@
-{
-  "id": "cm-editor-syntax-highlight-obsidian",
-  "name": "Editor Syntax Highlight",
-  "author": "death_au",
-  "description": "Show syntax highlighing in code blocks the editor",
-  "isDesktopOnly": false,
-  "version": "0.1.1"
-}
