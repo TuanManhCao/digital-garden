@@ -1,50 +1,52 @@
-Hi there! I'm a note in your vault.
+## About this site
+Welcome to Obsidian's official help vault! This page contains a quick index to the things that you may be interested in.
 
-At the same time, I'm also just a Markdown file sitting on your hard disk. It's all in plain text, so you don't need to worry about losing me in case [[Obsidian]] disappears one day.
+See public hosted version: https://publish.obsidian.md/help
 
-## Quick Start
+If you found mistakes or missing information, you can contribute to this site here: https://github.com/obsidianmd/obsidian-docs/
 
-If you're in a hurry, here's some quick places to dive in:
+## Other languages
 
-- The [[Command palette]] contains most of the commands you need to work with  Obsidian. Just press `Ctrl/Cmd-P` and start typing.
-- How to [[Create notes]].
-- How to create [[Internal link]]
-- How to use Markdown to [[Format your notes]]
-- How to [[embed files]], or embed other notes
-- [[Use hotkeys]]
-- How to [[Working with multiple notes|open multiple files side by side]]
-- Obsidian can be extended with [[Core plugins|plugins]]. Several are available by default, and can be enabled or disabled according to your needs.
+This help site is also available in other languages:
 
+- [Italiano](https://publish.obsidian.md/help-it)
+- [中文](https://publish.obsidian.md/help-zh)
+- [日本語](https://publish.obsidian.md/help-ja)
+- [Dansk](https://publish.obsidian.md/help-da)
+- [Русский](https://publish.obsidian.md/help-ru)
+- [Tiếng Việt](https://publish.obsidian.md/help-vi)
 
-If you want a more thorough introduction, including a bit about our philosophy, check out [[Obsidian]].
+## Credits
 
-And if you'd like a gentle introduction, or just want to get started but don't know how, head over to [[Basic note taking]].
+[[Credits|Our credits page]] lists all the amazing people who made Obsidian possible.
 
-If you are a [Catalyst supporter](https://obsidian.md/pricing), and want to turn on Insider Builds, see [[Insider builds]].
+To read more about the makers, see the [about page](https://obsidian.md/about) on our official website.
 
-## Workflows
+## Obsidian
 
-Obsidian is a tool that can be used in many ways, from a simple list of notes to a very powerful knowledge management system. We suggest you start at your own pace, and build it into the tool you need.
+### About the app
 
-Here are a few ways to get started:
+- See [[Obsidian|our philosophy for the app]].
 
-If you want to just start taking notes, check out [[Basic note taking]]
+### Getting started
 
-If you already have a collection of notes in markdown format, just choose them for your Vault. Choose "Vault" in the lower left and select the directory your notes are in.
+- Looking for some functionality? Try the  [[command palette]], which contains all available actions you need to work with Obsidian. Just press `Ctrl/Cmd-P` and start typing.
+- Learn our flavor of Markdown with [[Format your notes|how to format your notes]].
+- Check out some tips on [[Create notes|creating new notes]].
+- Check out some tips on [[Internal link|creating internal links]].
+- Learn how to [[Embed files|embed other notes or attachments]].
+- See the [[Use hotkeys|default keyboard shortcuts]].
 
-If you have notes from Roam Research, Notion, or other systems, [[Import data|here's how to import them]].
+### Official plugins
 
-If you'd like to know more about Obsidian, you can [[Obsidian|read about our story]].
+![[Core plugins#Current list of official plugins]]
 
-By the way, you can feel free to edit these help docs, but when you open it again, they will be overwritten. So, don't put anything in them you want to keep.
+### Advanced guides
 
-## I have questions.
-
-Then you should join our [community!](https://obsidian.md/community). We have active Discord and Forums, and the community is generally quite helpful.
-
-here the image
-![image](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
-
-![[image.png]]
-
-here the image
+- [[Working with tags]]
+- [[Working with backlinks]]
+- [[Working with multiple notes]]
+- [[Pane layout]]
+- [[Working with multiple vaults]]
+- [[Working with multiple cursors]]
+- [[Using obsidian URI]]
