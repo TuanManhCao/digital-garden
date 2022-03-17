@@ -1,27 +1,27 @@
 import Head from "next/head";
-import { useRouter } from 'next/router'
-import { useEffect,useRef } from "react";
-import Layout, { siteTitle } from "../components/layout";
-import { getSinglePost, getGraphData } from "../lib/post";
-import { Network } from "../components/graph";
+import {useRouter} from 'next/router'
+import {useEffect, useRef} from "react";
+import Layout, {siteTitle} from "../components/layout";
+import {getSinglePost, getGraphData} from "../lib/post";
+import {Network} from "../components/graph";
 
 
-export default function Home({ content, graphdata, filenames, ...props }) {
-   //console.log("Index Page Props: ", content /* backlinks, filenames*/)
+export default function Home({content, graphdata, filenames, ...props}) {
+    //console.log("Index Page Props: ", content /* backlinks, filenames*/)
     const ref = useRef(null);
     const router = useRouter()
     const routeQuery = router.query.id
     const routeHandler = (r) => router.push(r)
     useEffect(() => {
-        if (ref && ref.current){
+        if (ref && ref.current) {
 
             const G = Network({
-                el:ref.current,
+                el: ref.current,
                 graphdata,
-                current:"index",
+                current: "index",
                 routeQuery,
                 routeHandler,
-                allNodes:false // If true then shows every markdown file as node
+                allNodes: false // If true then shows every markdown file as node
             })
         }
     }, [])
@@ -29,8 +29,14 @@ export default function Home({ content, graphdata, filenames, ...props }) {
 
     return (
         <Layout home>
+            <Head>
+                <link rel="preconnect" href="https://fonts.googleapis.com"/>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
+                <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+                      rel="stylesheet"/>
+            </Head>
             <section>
-                <div dangerouslySetInnerHTML={{__html: content.data}} />
+                <div dangerouslySetInnerHTML={{__html: content.data}}/>
             </section>
         </Layout>
     );
@@ -42,8 +48,8 @@ export function getStaticProps() {
     const graphdata = getGraphData();
     return {
         props: {
-            content:contentData,
-            graphdata:graphdata, 
+            content: contentData,
+            graphdata: graphdata,
         },
     };
 }

@@ -1,0 +1,89 @@
+a {
+    color: var(--text-accent);
+    outline: none;
+}
+a:hover {
+    color: var(--text-accent-hover);
+}
+
+
+.markdown-rendered {
+    font-size: 18px;
+    line-height: 1.6em;
+    width: 740px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-family:var(--default-font);
+    margin: auto;
+    padding: 20px;
+}
+
+:root {
+    --default-font: 'Inter', sans-serif;
+}
+
+.theme-light {
+    --background-primary: rgba(222, 222, 222, 0.1);
+    --background-primary-alt: #f5f6f8;
+    --background-secondary: #f2f3f5;
+    --background-secondary-alt: #e3e5e8;
+    --background-modifier-border: #ddd;
+    --background-modifier-form-field: #fff;
+    --background-modifier-form-field-highlighted: #fff;
+    --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
+    --background-modifier-success: #A4E7C3;
+    --background-modifier-error: #990000;
+    --background-modifier-error-rgb: 230, 135, 135;
+    --background-modifier-error-hover: #bb0000;
+    --background-modifier-cover: rgba(0, 0, 0, 0.8);
+    --text-accent: #705dcf;
+    --text-accent-hover: #7a6ae6;
+    --text-normal: #2e3338;
+    --text-muted: #888888;
+    --text-muted-rgb: 136, 136, 136;
+    --text-faint: #999999;
+    --text-error: #800000;
+    --text-error-hover: #990000;
+    --text-highlight-bg: rgba(255, 255, 0, 0.4);
+    --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+    --text-selection: rgb(204 232 255);
+    --text-on-accent: #f2f2f2;
+    --interactive-normal: #f2f3f5;
+    --interactive-hover: #e9e9e9;
+    --interactive-accent: #7b6cd9;
+    --interactive-accent-rgb: 123, 108, 217;
+    --interactive-accent-hover: #8273e6;
+    --interactive-success: #197300;
+    --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+    --scrollbar-bg: rgba(0, 0, 0, 0.05);
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+    --highlight-mix-blend-mode: darken;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+    margin: 15px 0;
+}
+.markdown-rendered h1 {
+    font-size: 2em;
+}
+.markdown-rendered h2 {
+    font-size: 1.6em;
+}
+.markdown-rendered h3 {
+    font-size: 1.37em;
+}
+.markdown-rendered h4 {
+    font-size: 1.25em;
+}
+.markdown-rendered h5,
+.markdown-rendered h6 {
+    font-size: 1.12em;
+}
+.markdown-rendered h6 {
+    color: var(--text-muted);
+}
