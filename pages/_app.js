@@ -1,5 +1,5 @@
 import '../styles/global.css'
-import '../styles/webflow-layout.css'
+import '../styles/style.css'
 
 
 export default function App({ Component, pageProps }) {

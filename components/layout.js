@@ -1,12 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { useWindowWidth } from "../lib/hooks";
-const name = '[Can Burak Sofyalioglu]'
 export const siteTitle = 'Digital Backroom - An Internet Archive'
 
 export default function Layout({ children, home }) {
-    const [isOpen, setIsOpen] = useState(null)
 
   return (
     <div >

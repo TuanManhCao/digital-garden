@@ -5,7 +5,6 @@ import { useEffect,useRef } from "react";
 import Layout, { siteTitle } from "../../components/layout";
 import { getPostListData, getSinglePost, getGraphData} from "../../lib/post";
 import { Network } from "../../components/graph";
-import Cytoscape from "cytoscape";
 
 
 export default function Home({ note, graphdata, ...props }) {
@@ -57,22 +56,12 @@ export default function Home({ note, graphdata, ...props }) {
         <Layout home>
             <Head>
                 {note.title && <meta name="title" content={note.title} />}
-                {note.canonical && <meta name="canonical_url" content={note.canonical} />}
-                {note.description && <meta name="description" content={note.description} />}
-
             </Head>
             <section
             >
-                {/* COVER IMAGE */}
-                {note.cover && <img src={note.cover}  />}
-
-                {/* TITLE */}
-                {note.title && <h1>{note.title}</h1>}
-
-                <div 
+                <div
                     className="article-body"
                     dangerouslySetInnerHTML={{__html:note.data}}>
-
                 </div>
             </section>
             <hr/>
