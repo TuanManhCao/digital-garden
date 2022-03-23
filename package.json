@@ -12,6 +12,7 @@
     "cytoscape-d3-force": "^1.1.4",
     "cytoscape-node-html-label": "^1.2.1",
     "d3": "^6.2.0",
+    "directory-tree": "^3.2.2",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.2",
     "jsnetworkx": "^0.3.4",
@@ -19,6 +20,7 @@
     "path": "^0.12.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-folder-tree": "^5.0.3",
     "remark": "^13.0.0",
     "remark-collapse": "^0.1.2",
     "remark-external-links": "^8.0.0",
@@ -36,6 +38,7 @@
     "cytoscape": "^3.17.0",
     "remark-frontmatter": "^3.0.0",
     "remark-react": "^8.0.0",
-    "remark-stringify": "^9.0.0"
+    "remark-stringify": "^9.0.0",
+    "uuid": "^8.3.2"
   }
 }
