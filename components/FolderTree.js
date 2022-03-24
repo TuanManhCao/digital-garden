@@ -15,11 +15,13 @@ export default function FolderTree(props) {
     );
 
     const router = useRouter()
+    // const childrenNodeIds = props.tree.children.map(aNode => {return aNode.id})
+    const expandedNodes = [props.tree.id]
     return (
         <TreeView
             aria-label="rich object"
             defaultCollapseIcon={<ExpandMoreIcon />}
-            defaultExpanded={['root']}
+            defaultExpanded={expandedNodes}
             defaultExpandIcon={<ChevronRightIcon />}
             onNodeSelect = {(event, nodIds) => {
                 const currentNode = props.flattenNodes.find(aNode => {return aNode.id === nodIds})
