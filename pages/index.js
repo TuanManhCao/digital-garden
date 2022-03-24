@@ -1,5 +1,5 @@
 import Layout, {siteTitle} from "../components/layout";
-import {getSinglePost, getGraphData, getDirectoryData, convertObject, getFlattenArray} from "../lib/post";
+import {getSinglePost, getGraphData, getDirectoryData, convertObject, getFlattenArray} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 
 export default function Home({content, graphdata, filenames, tree,flattenNodes, ...props}) {

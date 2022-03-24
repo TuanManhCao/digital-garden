@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect,useRef } from "react";
 import Layout, { siteTitle } from "../../components/layout";
-import { getPostListData, getSinglePost, getGraphData} from "../../lib/post";
+import { getPostListData, getSinglePost, getGraphData} from "../../lib/utils";
 import { Network } from "../../components/graph";
 
 
