@@ -8,6 +8,12 @@ a:hover {
 
 .container {
     display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -22,8 +28,19 @@ a:hover {
 }
 
 .nav-bar {
-    width: 400px;
-    padding: 20px;
+    width: 300px;
+    flex: 0 0 300px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    background-color: var(--background-primary-alt);
+    border-right: 1px solid var(--background-secondary-alt);
+    font-family:var(--default-font);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 0;
+    padding-top: 20px;
+    flex-direction: column;
 }
 :root {
     --default-font: 'Inter', sans-serif;
