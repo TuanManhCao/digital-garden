@@ -29,7 +29,7 @@ export default function FolderTree(props) {
                     router.push(currentNode.routePath)
                 }
             }}
-            sx={{ height: 110, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
+            sx={{ flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
         >
             {renderTree(props.tree)}
         </TreeView>

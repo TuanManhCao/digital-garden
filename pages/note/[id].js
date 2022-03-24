@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect,useRef } from "react";
 import Layout, { siteTitle } from "../../components/layout";
-import { getPostListData, getSinglePost, getGraphData} from "../../lib/utils";
+import {getPostListData, getSinglePost, getGraphData, convertObject, getDirectoryData} from "../../lib/utils";
 import { Network } from "../../components/graph";
+import FolderTree from "../../components/FolderTree";
+import {getFlattenArray} from "../../lib/utils";
 
-
-export default function Home({ note, graphdata, ...props }) {
+export default function Home({ note, graphdata,tree, flattenNodes, ...props }) {
     var jsnx = require('jsnetworkx');
 
     //console.log("Note Page: ")
@@ -57,14 +58,17 @@ export default function Home({ note, graphdata, ...props }) {
             <Head>
                 {note.title && <meta name="title" content={note.title} />}
             </Head>
-            <section
-            >
+            <div className = 'container'>
+                <nav className="nav-bar">
+                    <FolderTree tree={tree} flattenNodes={flattenNodes}/>
+                </nav>
                 <div
-                    className="article-body"
+                    className="markdown-rendered"
                     dangerouslySetInnerHTML={{__html:note.data}}>
                 </div>
-            </section>
-            <hr/>
+            </div>
+
+
 
         </Layout>
     );
@@ -84,12 +88,15 @@ export async function getStaticProps({ params }) {
     //console.log("params2", note)
     const graphdata = getGraphData();
     //console.log("params3", params)
-    
+    const tree = convertObject(getDirectoryData());
+    const flattenNodes = getFlattenArray(tree)
     //console.log("note: ", params)
     return {
         props: {
             note,
-            graphdata:graphdata, 
+            graphdata:graphdata,
+            tree: tree,
+            flattenNodes: flattenNodes
         },
     };
 }
