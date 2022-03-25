@@ -7,6 +7,8 @@ import {getPostListData, getSinglePost, getGraphData, convertObject, getDirector
 import { Network } from "../../components/graph";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 export default function Home({ note, graphdata,tree, flattenNodes, ...props }) {
     var jsnx = require('jsnetworkx');
@@ -62,10 +64,13 @@ export default function Home({ note, graphdata,tree, flattenNodes, ...props }) {
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
-                <div
-                    className="markdown-rendered"
-                    dangerouslySetInnerHTML={{__html:note.data}}>
-                </div>
+                <main className="markdown-rendered">
+                    <Alert severity="info">
+                        <AlertTitle>Want to know more?</AlertTitle>
+                        🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a href="https://twitter.com/tuancm">@tuancm</a></span>
+                    </Alert>
+                    <div dangerouslySetInnerHTML={{__html: note.data}}/>
+                </main>
             </div>
 
 
