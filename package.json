@@ -9,6 +9,13 @@
     "deploy": "yarn build && git add . && git commit -m '...' && git push"
   },
   "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/server": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/lab": "latest",
+    "@mui/material": "latest",
     "cytoscape-d3-force": "^1.1.4",
     "cytoscape-node-html-label": "^1.2.1",
     "d3": "^6.2.0",
@@ -31,14 +38,7 @@
     "remark-wiki-link": "^1.0.0",
     "to-vfile": "^6.1.0",
     "unified": "^9.2.0",
-    "vfile-reporter": "^6.0.1",
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
-    "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
-    "@mui/lab": "latest"
+    "vfile-reporter": "^6.0.1"
   },
   "devDependencies": {
     "bimap": "^0.0.15",

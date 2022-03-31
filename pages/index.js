@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 import {getSinglePost, getDirectoryData, convertObject, getFlattenArray} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
-import MDContent from "../components/MDContent";
+import MDContainer from "../components/MDContainer";
 
 export default function Home({content, tree, flattenNodes}) {
 
@@ -11,7 +11,7 @@ export default function Home({content, tree, flattenNodes}) {
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
-                <MDContent content={note.data}/>
+                <MDContainer post={content.data}/>
             </div>
         </Layout>
     );
