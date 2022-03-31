@@ -3,12 +3,11 @@ import Layout from "../../components/layout";
 import {getPostListData, getSinglePost, getGraphData, convertObject, getDirectoryData} from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
+import MDContent from "../../components/MDContent";
 
-export default function Home({ note, graphdata,tree, flattenNodes, ...props }) {
+export default function Home({ note, graphdata,tree, flattenNodes}) {
     return (
-        <Layout home>
+        <Layout>
             <Head>
                 {note.title && <meta name="title" content={note.title} />}
             </Head>
@@ -16,13 +15,7 @@ export default function Home({ note, graphdata,tree, flattenNodes, ...props }) {
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
-                <main className="markdown-rendered">
-                    <Alert severity="info">
-                        <AlertTitle>Want to know more?</AlertTitle>
-                        🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a href="https://twitter.com/tuancm">@tuancm</a></span>
-                    </Alert>
-                    <div dangerouslySetInnerHTML={{__html: note.data}}/>
-                </main>
+                <MDContent content={note.data}/>
             </div>
         </Layout>
     );
