@@ -5,7 +5,6 @@ module.exports = {
             fs: false,
             buffer: false
         };
-
         return config;
     },
 }

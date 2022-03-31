@@ -1,10 +1,10 @@
-import Layout, {siteTitle} from "../components/layout";
-import {getSinglePost, getGraphData, getDirectoryData, convertObject, getFlattenArray} from "../lib/utils";
+import Layout from "../components/layout";
+import {getSinglePost, getDirectoryData, convertObject, getFlattenArray} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
-export default function Home({content, graphdata, filenames, tree, flattenNodes, ...props}) {
+export default function Home({content, tree, flattenNodes}) {
 
     return (
         <Layout home>
@@ -28,12 +28,10 @@ export default function Home({content, graphdata, filenames, tree, flattenNodes,
 export function getStaticProps() {
     const tree = convertObject(getDirectoryData());
     const contentData = getSinglePost("index");
-    const graphdata = getGraphData();
     const flattenNodes = getFlattenArray(tree)
     return {
         props: {
             content: contentData,
-            graphdata: graphdata,
             tree: tree,
             flattenNodes: flattenNodes
         },
