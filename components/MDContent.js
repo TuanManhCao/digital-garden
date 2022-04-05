@@ -2,8 +2,9 @@ import React from 'react';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import {useRouter} from 'next/router'
+import {Transformer} from "../lib/transformer";
 
-function MDContent({content, handleOpenNewContent}) {
+function MDContent({content,fileNames,  handleOpenNewContent}) {
 
     function handleInternalLinkClick() {
         //Processing fetching

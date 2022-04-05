@@ -1,11 +1,19 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
-import {getPostListData, getSinglePost, getGraphData, convertObject, getDirectoryData} from "../../lib/utils";
+import {
+    getPostListData,
+    getSinglePost,
+    getGraphData,
+    convertObject,
+    getDirectoryData,
+    getAllFileNames
+} from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
 import MDContainer from "../../components/MDContainer";
+import {Transformer} from "../../lib/transformer";
 
-export default function Home({ note, graphdata,tree, flattenNodes}) {
+export default function Home({ note, fileNames,tree, flattenNodes}) {
     return (
         <Layout>
             <Head>
@@ -15,7 +23,7 @@ export default function Home({ note, graphdata,tree, flattenNodes}) {
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
-                <MDContainer post={note.data}/>
+                <MDContainer post={note.data} fileNames = {fileNames}/>
             </div>
         </Layout>
     );
@@ -32,12 +40,13 @@ export async function getStaticProps({ params }) {
     const note = getSinglePost(params.id);
     const tree = convertObject(getDirectoryData());
     const flattenNodes = getFlattenArray(tree)
-
+    const fileNames = getAllFileNames()
     return {
         props: {
             note,
             tree: tree,
-            flattenNodes: flattenNodes
+            flattenNodes: flattenNodes,
+            fileNames: fileNames
         },
     };
 }
