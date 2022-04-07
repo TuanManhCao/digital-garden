@@ -12,7 +12,7 @@ function BackLinks({linkList}) {
                 ?
                 linkList.map(aLink =>
                     <li>
-                     <Link href={aLink.link}>
+                     <Link href={aLink.slug}>
                          <a>
                              {aLink.title}
                          </a>

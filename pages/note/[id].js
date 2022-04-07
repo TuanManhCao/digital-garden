@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import {
-    getPostListData,
+    getContentPaths,
     getSinglePost,
-    getGraphData,
     convertObject,
     getDirectoryData,
-    getAllFileNames
+    constructBackLinks, getFileNames
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
@@ -29,7 +28,7 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes}) {
 }
 
 export async function getStaticPaths() {
-    const allPostsData = getPostListData();
+    const allPostsData = getContentPaths();
     const paths = allPostsData.map(p => ({params: {id: p}}))
     return {
         paths,
@@ -37,11 +36,17 @@ export async function getStaticPaths() {
     };
 }
 
+const {nodes, edges} = constructBackLinks()
+
 export function getStaticProps({params}) {
     const note = getSinglePost(params.id);
     const tree = convertObject(getDirectoryData());
     const flattenNodes = getFlattenArray(tree)
-    const fileNames = getAllFileNames()
+    // const fileNames = getAllFileNames()
+    const { fileNames} = getFileNames(params.id)
+
+    const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)
+    const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
 
     return {
         props: {
@@ -49,7 +54,7 @@ export function getStaticProps({params}) {
             tree: tree,
             flattenNodes: flattenNodes,
             fileNames: fileNames,
-            backLinks: note.backLinks
+            backLinks: internalLinks
         },
     };
 }
