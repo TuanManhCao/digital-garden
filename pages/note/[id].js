@@ -10,43 +10,46 @@ import {
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
-import MDContainer from "../../components/MDContainer";
-import {Transformer} from "../../lib/transformer";
+import MDContent from "../../components/MDContent";
 
-export default function Home({ note, fileNames,tree, flattenNodes}) {
+export default function Home({note, backLinks, fileNames, tree, flattenNodes}) {
     return (
         <Layout>
             <Head>
-                {note.title && <meta name="title" content={note.title} />}
+                {note.title && <meta name="title" content={note.title}/>}
             </Head>
-            <div className = 'container'>
+            <div className='container'>
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
-                <MDContainer post={note.data} fileNames = {fileNames}/>
+                <MDContent content={note.data} fileNames={fileNames} handleOpenNewContent={null} backLinks={backLinks}/>
             </div>
         </Layout>
     );
 }
+
 export async function getStaticPaths() {
     const allPostsData = getPostListData();
-    const paths = allPostsData.map(p => ({params: {id:p}}))
+    const paths = allPostsData.map(p => ({params: {id: p}}))
     return {
-      paths,
-      fallback:false
+        paths,
+        fallback: false
     };
-  }
-export async function getStaticProps({ params }) {
+}
+
+export function getStaticProps({params}) {
     const note = getSinglePost(params.id);
     const tree = convertObject(getDirectoryData());
     const flattenNodes = getFlattenArray(tree)
     const fileNames = getAllFileNames()
+
     return {
         props: {
             note,
             tree: tree,
             flattenNodes: flattenNodes,
-            fileNames: fileNames
+            fileNames: fileNames,
+            backLinks: note.backLinks
         },
     };
 }
