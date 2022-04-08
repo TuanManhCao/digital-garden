@@ -18,7 +18,7 @@ function BackLinks({linkList}) {
                         <Link href={aLink.slug}>
                             <a >
                                     <p className="backlink-title">{aLink.title}</p>
-                                    <p className="backlink-preview">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum  </p>
+                                    <p className="backlink-preview">{aLink.shortSummary} </p>
                             </a>
                         </Link>
 
@@ -50,8 +50,8 @@ function MDContent({content, fileNames, backLinks, handleOpenNewContent}) {
                 href="https://twitter.com/tuancm">@tuancm</a></span>
             </Alert>
             <div dangerouslySetInnerHTML={{__html: content}}/>
-            <button onClick={handleInternalLinkClick}>Click me</button>
-            <hr/>
+            {/*<button onClick={handleInternalLinkClick}>Click me</button>*/}
+            {/*<hr/>*/}
             <div>
                 <BackLinks linkList={backLinks}/>
             </div>

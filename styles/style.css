@@ -12,14 +12,13 @@ a:hover {
     height: 100%;
     overflow: hidden;
     position: relative;
-    display: flex;
     flex-direction: row;
     justify-content: center;
 }
 /* Foooter section BEGIN */
 .note-footer {
     display: block;
-    background-color: rgba(238, 238, 238, 0.8);
+    background-color: rgba(238, 238, 238, 0.5);
     border-radius: 16px;
     margin-top: 24px;
     padding: 16px;
@@ -55,7 +54,7 @@ a:hover {
 }
 
 .backlink-container .backlink:hover {
-    background-color: rgba(180, 177, 177, 0.3);
+    background-color: rgba(199, 199, 199, 0.3);
 }
 
 .backlink-container  .backlink-title {
