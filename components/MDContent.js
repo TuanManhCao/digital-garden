@@ -6,22 +6,29 @@ import Link from 'next/link'
 
 function BackLinks({linkList}) {
 
-    return (<ul>
-        {
-            (linkList != null && linkList.length > 0)
+    return (<div className="note-footer">
+            {(linkList != null && linkList.length > 0)
                 ?
-                linkList.map(aLink =>
-                    <li>
-                     <Link href={aLink.slug}>
-                         <a>
-                             {aLink.title}
-                         </a>
-                     </Link>
-                    </li>
-                )
-                : <h1>No Back link found</h1>
-        }
-    </ul>);
+                <>
+                    <h3 className="backlink-heading">Link to this note</h3>
+
+                    <div className="backlink-container">
+                    {linkList.map(aLink =>
+                    <div className="backlink">
+                        <Link href={aLink.slug}>
+                            <a >
+                                    <p className="backlink-title">{aLink.title}</p>
+                                    <p className="backlink-preview">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum  </p>
+                            </a>
+                        </Link>
+
+                    </div>
+                    )}
+                    </div>
+                </>
+
+                : <></>}
+    </div>);
 }
 
 function MDContent({content, fileNames, backLinks, handleOpenNewContent}) {

@@ -16,6 +16,69 @@ a:hover {
     flex-direction: row;
     justify-content: center;
 }
+/* Foooter section BEGIN */
+.note-footer {
+    display: block;
+    background-color: rgba(238, 238, 238, 0.8);
+    border-radius: 16px;
+    margin-top: 24px;
+    padding: 16px;
+}
+
+.backlink-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    /*background-color: #f8bbbb;*/
+    flex-direction: row;
+    display: flex;
+}
+
+.note-footer .backlink-heading {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.backlink-container .backlink {
+    /*background-color: #f8f2f2;*/
+    margin: 8px;
+    height: 118px;
+    width: 318px;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    /*padding-bottom: 8px;*/
+}
+
+.backlink-container .backlink:hover {
+    background-color: rgba(180, 177, 177, 0.3);
+}
+
+.backlink-container  .backlink-title {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.backlink-container a{
+    text-decoration: none;
+    color: var(--text-muted);
+}
+
+.backlink-container  .backlink-preview {
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+}
+.backlink-container p {
+    margin: 12px 0px;
+}
+/* Foooter section END */
 
 .markdown-rendered {
     font-size: 18px;
