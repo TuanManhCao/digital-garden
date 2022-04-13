@@ -43,8 +43,9 @@ a:hover {
 
 .backlink-container .backlink {
     /*background-color: #f8f2f2;*/
-    margin: 8px;
-    height: 118px;
+    margin: 8px -8px 0px;
+    padding: 8px;
+    height: 116px;
     width: 318px;
     text-decoration: none;
     display: block;
@@ -58,8 +59,8 @@ a:hover {
 }
 
 .backlink-container  .backlink-title {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 18px;
     font-weight: 600;
     text-decoration: none;
 }

@@ -7,27 +7,24 @@ import Link from 'next/link'
 function BackLinks({linkList}) {
 
     return (<div className="note-footer">
-            {(linkList != null && linkList.length > 0)
-                ?
-                <>
-                    <h3 className="backlink-heading">Link to this note</h3>
-
-                    <div className="backlink-container">
+        {(linkList != null && linkList.length > 0)
+            ?
+            <>
+                <h3 className="backlink-heading">Link to this note</h3>
+                <div className="backlink-container">
                     {linkList.map(aLink =>
-                    <div className="backlink">
-                        <Link href={aLink.slug}>
-                            <a >
+                        <div className="backlink">
+                            <Link href={aLink.slug}>
+                                <a>
                                     <p className="backlink-title">{aLink.title}</p>
                                     <p className="backlink-preview">{aLink.shortSummary} </p>
-                            </a>
-                        </Link>
-
-                    </div>
+                                </a>
+                            </Link>
+                        </div>
                     )}
-                    </div>
-                </>
-
-                : <></>}
+                </div>
+            </>
+            : <></>}
     </div>);
 }
 
