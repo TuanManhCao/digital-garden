@@ -13,7 +13,7 @@ function BackLinks({linkList}) {
                 <h3 className="backlink-heading">Link to this note</h3>
                 <div className="backlink-container">
                     {linkList.map(aLink =>
-                        <div className="backlink">
+                        <div key={aLink.slug} className="backlink">
                             <Link href={aLink.slug}>
                                 <a>
                                     <p className="backlink-title">{aLink.title}</p>
