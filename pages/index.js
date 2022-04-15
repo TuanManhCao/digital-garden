@@ -19,9 +19,10 @@ export default function Home({graphData, content, tree, flattenNodes}) {
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
                 <MDContainer post={content.data}/>
+                <DynamicGraph graph={graphData}/>
             </div>
-            <hr/>
-            <DynamicGraph graph={graphData}/>
+
+
         </Layout>
     );
 
@@ -31,7 +32,7 @@ export function getStaticProps() {
     const tree = convertObject(getDirectoryData());
     const contentData = getSinglePost("index");
     const flattenNodes = getFlattenArray(tree)
-    const graphData = getGraphData();
+    const graphData = getGraphData("index");
     return {
         props: {
             content: contentData,

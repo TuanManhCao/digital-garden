@@ -5,13 +5,22 @@ import {
     getSinglePost,
     convertObject,
     getDirectoryData,
-    constructBackLinks, getFileNames
+    constructBackLinks, getFileNames, getGraphData
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
 import MDContent from "../../components/MDContent";
 
-export default function Home({note, backLinks, fileNames, tree, flattenNodes}) {
+import dynamic from 'next/dynamic'
+
+
+
+const DynamicGraph = dynamic(
+    () => import('../../components/Graph'),
+    { loading: () => <p>Loading ...</p>, ssr: false }
+)
+
+export default function Home({note, backLinks, fileNames, tree, flattenNodes, graphData}) {
     return (
         <Layout>
             <Head>
@@ -22,7 +31,9 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes}) {
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
                 <MDContent content={note.data} fileNames={fileNames} handleOpenNewContent={null} backLinks={backLinks}/>
+                <DynamicGraph graph={graphData}/>
             </div>
+
         </Layout>
     );
 }
@@ -30,6 +41,7 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes}) {
 export async function getStaticPaths() {
     const allPostsData = getContentPaths();
     const paths = allPostsData.map(p => ({params: {id: p}}))
+
     return {
         paths,
         fallback: false
@@ -48,13 +60,15 @@ export function getStaticProps({params}) {
     const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)
     const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
 
+    const graphData = getGraphData(params.id)
     return {
         props: {
             note,
             tree: tree,
             flattenNodes: flattenNodes,
             fileNames: fileNames,
-            backLinks: internalLinks
+            backLinks: internalLinks,
+            graphData: graphData
         },
     };
 }

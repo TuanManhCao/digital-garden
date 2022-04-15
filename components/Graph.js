@@ -84,7 +84,7 @@ function Graph({graph}) {
     return (
         <>
             <div>
-                <h1>Cytoscape example</h1>
+                <h3>Links to this notes</h3>
                 <div
                     style={{
                         border: "1px solid",
