@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import {
-    getContentPaths,
+    getAllSlugs,
     getSinglePost,
     convertObject,
     getDirectoryData,
-    constructBackLinks, getFileNames, getGraphData
+    constructBackLinks, getGraphData
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
@@ -39,7 +39,7 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes, gr
 }
 
 export async function getStaticPaths() {
-    const allPostsData = getContentPaths();
+    const allPostsData = getAllSlugs();
     const paths = allPostsData.map(p => ({params: {id: p}}))
 
     return {
@@ -54,8 +54,6 @@ export function getStaticProps({params}) {
     const note = getSinglePost(params.id);
     const tree = convertObject(getDirectoryData());
     const flattenNodes = getFlattenArray(tree)
-    // const fileNames = getAllFileNames()
-    const { fileNames} = getFileNames(params.id)
 
     const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)
     const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
@@ -66,7 +64,6 @@ export function getStaticProps({params}) {
             note,
             tree: tree,
             flattenNodes: flattenNodes,
-            fileNames: fileNames,
             backLinks: internalLinks,
             graphData: graphData
         },

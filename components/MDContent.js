@@ -28,7 +28,7 @@ function BackLinks({linkList}) {
     </div>);
 }
 
-function MDContent({content, fileNames, backLinks, handleOpenNewContent}) {
+function MDContent({content, backLinks, handleOpenNewContent}) {
 
     function handleInternalLinkClick() {
         //Processing fetching
@@ -36,8 +36,7 @@ function MDContent({content, fileNames, backLinks, handleOpenNewContent}) {
         //TODO: handle clicking on internal link, go fetching md content from file then passing it up to parent
         handleOpenNewContent(content)
     }
-
-    const router = useRouter();
+    useRouter();
     return (
 
         <div className="markdown-rendered">
