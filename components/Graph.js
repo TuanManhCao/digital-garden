@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 // import cytoscape from 'cytoscape';
 // import cola from 'cytoscape-cola';
 
@@ -36,8 +36,8 @@ const styleSheet = [{
         "background-color": "#666",
         "font-size": "10px",
         "width": "20px",
-        "height": "20px"
-        //"label": el => el.data("id") === current ? "" : el.data('title') ? el.data("title").slice(0,16) : el.data("id")
+        "height": "20px",
+        "label":"data(label)"
     }
 }, {
     selector: "label",
