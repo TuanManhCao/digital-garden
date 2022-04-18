@@ -6,7 +6,7 @@ function MDContainer({post, fileNames}) {
     const [posts, setPosts] = useState([post]);
 
     function handleClick(content) {
-        console.log(content)
+        // console.log(content)
         setPosts(prevPosts => {
             return [...prevPosts, content]
         })
