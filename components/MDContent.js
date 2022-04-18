@@ -14,12 +14,12 @@ function BackLinks({linkList}) {
                 <div className="backlink-container">
                     {linkList.map(aLink =>
                         <div key={aLink.slug} className="backlink">
-                            <Link href={aLink.slug}>
-                                <a>
+                            {/*<Link href={aLink.slug}>*/}
+                                <a href={aLink.slug} >
                                     <p className="backlink-title">{aLink.title}</p>
                                     <p className="backlink-preview">{aLink.shortSummary} </p>
                                 </a>
-                            </Link>
+                            {/*</Link>*/}
                         </div>
                     )}
                 </div>
