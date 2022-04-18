@@ -94,7 +94,6 @@ a:hover {
     width: 300px;
     flex: 0 0 300px;
     position: relative;
-    height: 100%;
     display: flex;
     background-color: var(--background-primary-alt);
     border-right: 1px solid var(--background-secondary-alt);
@@ -180,4 +179,18 @@ a:hover {
 }
 .markdown-rendered h6 {
     color: var(--text-muted);
+}
+.right-bar-container{
+    display: block;
+}
+
+@media screen and (max-width: 1100px) {
+    .right-bar-container {
+        display: none;
+    }
+}
+@media screen and (max-width: 800px) {
+    .nav-bar {
+        display: none;
+    }
 }
