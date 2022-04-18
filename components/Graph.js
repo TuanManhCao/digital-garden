@@ -51,7 +51,7 @@ const styleSheet = [{
             'line-color': '#9a9a9a',
             'target-arrow-color': '#ccc',
             // 'target-arrow-shape': 'triangle',
-            'curve-style': 'bezier'
+            'curve-style': 'straight'
         }
     }];
 
@@ -94,11 +94,12 @@ function Graph({graph}) {
 
                             cy.on("tap", "node", evt => {
                                 var node = evt.target;
-                                console.log("EVT", evt);
-                                console.log("TARGET", node.data());
-                                console.log("TARGET TYPE", typeof node[0]);
+                                let nodeData = node.data();
+                                if (typeof nodeData.id === 'string') {
+                                    const routerPath = '/note/' + node.data().id
+                                    router.push(routerPath)
+                                }
                             });
-
                         }}
                     />
                 </div>
