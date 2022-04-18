@@ -1,8 +1,7 @@
 
 The Workspaces plugin lets you save and load "workspaces". Each workspace includes pane layout, sidebar state (expanded or collapsed), and file open states.
 
-![[Pasted image 19.png]]
-
+![](/images/Pasted%20image%2019.png)
 ### Save a workspace
 
 Either click on the workspace icon in the ribbon to open "Manage workspaces".

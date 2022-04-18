@@ -22,11 +22,9 @@ Also of note, the makers of nvUltra, another markdown-based note-taking program,
 If you have data in Roam, it's easy to export and play around with it in Obsidian.
 
 > 1. Choose "Export all" in the menu:
-> ![[Pasted image.png]]
-
+![](/images/Pasted%20image.png)
 > 2. Click the blue "Export all" button:
-> ![[Pasted image 1.png]]
-
+![](/images/Pasted%20image%201.png)
 > 3. Unzip the "Roam-Export-xxxxxxxxxxxxx.zip" into a folder.
 
 > 4. Click on the vault icon (the tooltip should say "Open another vault") on the bottom left corner in the app, and select "Open folder as vault".

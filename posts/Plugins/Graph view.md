@@ -2,8 +2,7 @@ Shows a graph representation of the [[Internal link|internal links]] between you
 
 Notes with more notes referencing it appear as bigger nodes on the graph.
 
-![[Pasted image 10.png]]
-
+![](/images/Pasted%20image%2010.png)
 ### Visualization tips
 
 - You can hover each node to highlight its connections, fading everything else.

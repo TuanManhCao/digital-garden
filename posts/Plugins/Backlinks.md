@@ -4,6 +4,6 @@ After enabling it, you'll see the backlink count in the status bar.
 
 In the right side bar (if it's expanded), you should also see a panel that shows where the current note gets linked:
 
-![[Pasted image 9.png]]
+![](/images/Pasted%20image%209.png)
 
 Upon expanding the "Unlinked mentions" section, you can also see where the name of the note gets mentioned, but not explicitly linked (in other words, mentioned without the square brackets).

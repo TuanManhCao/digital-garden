@@ -24,8 +24,7 @@ In the future, we'll consider more user-friendly ways to manage aliases than man
 
 Once you've set aliases for a file, you can write `[[alias]]` to link to the original page. A redirect icon will show up in the auto-complete list like so:
 
-![[Insert alises.png]]
-
+![](/images/Insert%20alises.png)
 An internal link with display text will get inserted like so: `[[Add aliases to note|alias]]`.
 
 Note: the link to alias is **NOT** inserted as `[[alias]]` for interoperability, so that other software can recognize it as well.

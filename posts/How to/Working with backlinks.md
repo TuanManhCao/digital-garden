@@ -2,8 +2,7 @@ Backlinks are one of the most powerful features of Obsidian. As a result, they c
 
 The Backlinks panel has two sections, Linked mentions and Unlinked mentions.
 
-![[Backlinks.png]]
-
+![](/images/Backlinks.png)
 As you can see, from this document, there is currently one entry in each section. Under Linked mentions you can see that I made a link to this document in the [[Linked pane]] note. But, you can also see under Unlinked mentions that I wrote the name of this note but did not make it a link.
 
 This can be a very powerful way of seeing connections between your notes that you did not know you were making when you wrote them. If, for example, you have a note named for a concept that comes up often in your field, you will be able to see easily when it is mentioned in other notes, and thus understand relationships between ideas you might not have otherwise.

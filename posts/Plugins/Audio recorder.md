@@ -2,7 +2,8 @@ Audio recorder is a plugin that lets you make a recording without leaving Obsidi
 
 To use, simply click on the microphone icon in the left panel:
 
-![[Pasted image 8.png]]
+![](/images/Pasted%20image%208.png)
+
 
 The microphone will become colored while it's actively recording.
 
