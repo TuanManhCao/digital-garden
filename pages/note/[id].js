@@ -13,8 +13,6 @@ import MDContent from "../../components/MDContent";
 
 import dynamic from 'next/dynamic'
 
-
-
 const DynamicGraph = dynamic(
     () => import('../../components/Graph'),
     { loading: () => <p>Loading ...</p>, ssr: false }
