@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import {getSinglePost, getDirectoryData, convertObject, getFlattenArray, getGraphData} from "../lib/utils";
+import {getSinglePost, getDirectoryData, convertObject, getFlattenArray, getLocalGraphData} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 import MDContainer from "../components/MDContainer";
 import dynamic from 'next/dynamic'
@@ -32,7 +32,7 @@ export function getStaticProps() {
     const tree = convertObject(getDirectoryData());
     const contentData = getSinglePost("index");
     const flattenNodes = getFlattenArray(tree)
-    const graphData = getGraphData("index");
+    const graphData = getLocalGraphData("index");
     return {
         props: {
             content: contentData,

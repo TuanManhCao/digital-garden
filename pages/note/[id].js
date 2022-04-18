@@ -5,7 +5,7 @@ import {
     getSinglePost,
     convertObject,
     getDirectoryData,
-    constructBackLinks, getGraphData
+    constructGraphData, getLocalGraphData
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
     };
 }
 
-const {nodes, edges} = constructBackLinks()
+const {nodes, edges} = constructGraphData()
 
 export function getStaticProps({params}) {
     const note = getSinglePost(params.id);
@@ -56,7 +56,7 @@ export function getStaticProps({params}) {
     const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)
     const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
 
-    const graphData = getGraphData(params.id)
+    const graphData = getLocalGraphData(params.id)
     return {
         props: {
             note,
