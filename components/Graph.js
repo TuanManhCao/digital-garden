@@ -57,8 +57,8 @@ const styleSheet = [{
 
 function Graph({graph}) {
 
-    const [width, setWith] = useState("400px");
-    const [height, setHeight] = useState("400px");
+    const [width, setWidth] = useState("300px");
+    const [height, setHeight] = useState("300px");
     const [graphData, setGraphData] = useState({
         nodes: graph.nodes,
         edges: graph.edges
@@ -66,9 +66,12 @@ function Graph({graph}) {
 
     let myCyRef;
     const router = useRouter()
+    //TODO: Listen to query change/ graphdata change to update state of this component
+    // Can use this: https://github.com/vercel/next.js/discussions/12661
+
     return (
         <>
-            <div>
+            <div className="right-bar-container">
                 <h3>Links to this notes</h3>
                 <div
                     style={{
