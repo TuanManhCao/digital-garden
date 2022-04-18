@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 // import cytoscape from 'cytoscape';
 // import cola from 'cytoscape-cola';
-
+import {useRouter} from 'next/router'
 
 import CytoscapeComponent from "react-cytoscapejs";
 
@@ -65,7 +65,7 @@ function Graph({graph}) {
     });
 
     let myCyRef;
-
+    const router = useRouter()
     return (
         <>
             <div>
@@ -96,8 +96,8 @@ function Graph({graph}) {
                                 var node = evt.target;
                                 let nodeData = node.data();
                                 if (typeof nodeData.id === 'string') {
-                                    const routerPath = '/note/' + node.data().id
-                                    router.push(routerPath)
+                                    router.path = '/note/' + node.data().id
+                                    router.reload()
                                 }
                             });
                         }}
