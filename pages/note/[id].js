@@ -10,7 +10,6 @@ import {
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
 import MDContent from "../../components/MDContent";
-// import
 import dynamic from 'next/dynamic'
 
 const DynamicGraph = dynamic(
@@ -19,16 +18,6 @@ const DynamicGraph = dynamic(
 )
 
 export default function Home({note, backLinks, fileNames, tree, flattenNodes, graphData}) {
-
-    // const router = useRouter();
-    //
-    // useEffect(() => {
-    //     if (isMenuOpen) {
-    //         setMenuOpen(!isMenuOpen);
-    //     }
-    // }, [router.asPath]);
-    //
-
 
     return (
         <Layout>
@@ -40,7 +29,7 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes, gr
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
                 <MDContent content={note.data} fileNames={fileNames} handleOpenNewContent={null} backLinks={backLinks}/>
-                <DynamicGraph graph={graphData || null }/>
+                <DynamicGraph graph={graphData}/>
             </div>
 
         </Layout>
