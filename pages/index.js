@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import {getSinglePost, getDirectoryData, convertObject, getFlattenArray, getGraphData} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 import MDContainer from "../components/MDContainer";
