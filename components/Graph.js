@@ -96,8 +96,8 @@ function Graph({graph}) {
                                 var node = evt.target;
                                 let nodeData = node.data();
                                 if (typeof nodeData.id === 'string') {
-                                    router.path = '/note/' + node.data().id
-                                    router.reload()
+                                    const path = '/note/' + node.data().id
+                                    router.push(path)
                                 }
                             });
                         }}
