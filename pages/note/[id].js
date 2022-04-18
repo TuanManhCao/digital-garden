@@ -55,14 +55,14 @@ export function getStaticProps({params}) {
 
     const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)
     const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
-
+    const backLinks = [...new Set(internalLinks)]
     const graphData = getLocalGraphData(params.id)
     return {
         props: {
             note,
             tree: tree,
             flattenNodes: flattenNodes,
-            backLinks: internalLinks,
+            backLinks: backLinks.filter(link => link.slug !== params.id),
             graphData: graphData
         },
     };
