@@ -54,6 +54,11 @@ a:hover {
     /*padding-bottom: 8px;*/
 }
 
+.note-footer .no-backlinks {
+    color: var(--text-muted);
+
+}
+
 .backlink-container .backlink:hover {
     background-color: rgba(199, 199, 199, 0.3);
 }
@@ -144,6 +149,7 @@ a:hover {
     --scrollbar-bg: rgba(0, 0, 0, 0.05);
     --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
     --highlight-mix-blend-mode: darken;
+    --dark: #141021;
 }
 
 .markdown-rendered img:not([width]),
@@ -182,6 +188,38 @@ a:hover {
 }
 .right-bar-container{
     display: block;
+    padding: 0em 1em;
+}
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+}
+
+footer ul li{
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 1em
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0;
+    width: 25%;
+    margin: 2em auto;
+    height: 2px;
+    border-radius: 1px;
+    color: var(--dark);
+    background-color: var(--dark);
 }
 
 @media screen and (max-width: 1400px) {
