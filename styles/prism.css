@@ -1,5 +1,9 @@
 /* PrismJS 1.28.0
 https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+pre {
+    background-color: #f5f2f0
+}
+
 code[class*=language-], pre[class*=language-] {
     color: #000;
     background: 0 0;
