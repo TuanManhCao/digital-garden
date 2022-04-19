@@ -110,7 +110,7 @@ a:hover {
     flex-direction: column;
 }
 :root {
-    --default-font: 'Inter', sans-serif;
+    --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
 }
 
 .theme-light {
@@ -194,6 +194,9 @@ a:hover {
 footer {
     margin-top: 2em;
     text-align: center;
+    background-color: rgb(231, 242, 250);
+    border-radius: 8px;
+    padding: 4px;
 }
 
 footer ul li{

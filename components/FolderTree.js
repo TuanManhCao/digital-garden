@@ -7,7 +7,15 @@ import { useRouter } from 'next/router'
 
 export default function FolderTree(props) {
     const renderTree = (nodes) => (
-        <TreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}>
+        <TreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}
+                  sx={{'& .MuiTreeItem-label': {
+                          fontSize: '1rem',
+                          paddingLeft: '6px',
+                          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,',
+                          lineHeight: 2.0
+                      },
+                  }}
+        >
             {Array.isArray(nodes.children)
                 ? nodes.children.map((node) => renderTree(node))
                 : null}
