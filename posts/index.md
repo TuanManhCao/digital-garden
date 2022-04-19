@@ -1,52 +1,43 @@
-## About this site
-Welcome to Obsidian's official help vault! This page contains a quick index to the things that you may be interested in.
+## What is MindStone?
+If you're looking for a [Obsidian Publish](https://obsidian.md/publish) alternative  you've come to the right place.
 
-See public hosted version: https://publish.obsidian.md/help
+MindStone features:
+- Drop in support for Obsidian Vault, This project is actually based on Obisidian Help Vault that come with the app [Start here](Start%20here.md)
+- Write your content in Obsidian, publish by doing `git commit` && `git push` 
+- Support Folder/File navigation side bar
+- Native support for Obsidian Wiki Link style `[[Some Note]]`
+- Interactive Graph to visualize your content connections
 
-If you found mistakes or missing information, you can contribute to this site here: https://github.com/obsidianmd/obsidian-docs/
 
-## Other languages
+For developer who want to customize:
+- This project is built with web technology: `NextJS, ReactJS`. And use powerful `unifiedJS` framework to process markdown with hundreds of high quality plugin which allow extending of the project easier in the future
+- 
 
-This help site is also available in other languages:
+See the  app in action 
+- Youtube video
 
-- [Italiano](https://publish.obsidian.md/help-it)
-- [中文](https://publish.obsidian.md/help-zh)
-- [日本語](https://publish.obsidian.md/help-ja)
-- [Dansk](https://publish.obsidian.md/help-da)
-- [Русский](https://publish.obsidian.md/help-ru)
-- [Tiếng Việt](https://publish.obsidian.md/help-vi)
 
-## Credits
+## Known issues
 
-[[Credits|Our credits page]] lists all the amazing people who made Obsidian possible.
+This an early version of MindStone, which mean there are bugs and issues. Below are some known issues, that I plan to work on:
+- Image link in wiki link style is not supported yet. `![[Image_link.png]]` will not work yet.  see work around below
+- Graphview does not load when clicking on side-bar or click node on graphview, browser reload will refresh it state
+- Graph view layout and interaction is still very rough. More UI/UX improvements are needed.
+- Transclusion is not working yet.
 
-To read more about the makers, see the [about page](https://obsidian.md/about) on our official website.
 
-## Obsidian
+## Improvements
 
-### About the app
+Future features I have in mind
+- [ ] Page Preview like Obsidian Core plugin
+- [ ] Full text search with `Cmd + K`
+- [ ] Andy Sliding Pane 
+- [ ] Infinite canvas for browsing through notes and connections
 
-- See [[Obsidian|our philosophy for the app]].
 
-### Getting started
 
-- Looking for some functionality? Try the  [[command palette]], which contains all available actions you need to work with Obsidian. Just press `Ctrl/Cmd-P` and start typing.
-- Learn our flavor of Markdown with [[Format your notes|how to format your notes]].
-- Check out some tips on [[Create notes|creating new notes]].
-- Check out some tips on [[Internal link|creating internal links]].
-- Learn how to [[Embed files|embed other notes or attachments]].
-- See the [[Use hotkeys|default keyboard shortcuts]].
+If you find this sotware useful, please share it with other and contribute improvement to this repo. 
 
-### Official plugins
+And of course, you can buy me some Ko-fi if it help you save some time and money. 
 
-![[Core plugins#Current list of official plugins]]
 
-### Advanced guides
-
-- [[Working with tags]]
-- [[Working with backlinks]]
-- [[Working with multiple notes]]
-- [[Pane layout]]
-- [[Working with multiple vaults]]
-- [[Working with multiple cursors]]
-- [[Using obsidian URI]]
