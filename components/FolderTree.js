@@ -3,23 +3,28 @@ import TreeView from '@mui/lab/TreeView';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeItem from '@mui/lab/TreeItem';
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
+import {styled} from '@mui/material/styles';
+
+const TCTreeItem = styled(TreeItem)(({theme}) => ({
+    '& .MuiTreeItem-content': {
+        '& .MuiTreeItem-label': {
+            fontSize: '1rem',
+            paddingLeft: '6px',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,',
+            lineHeight: 1.8,
+        },
+    },
+}))
+
 
 export default function FolderTree(props) {
     const renderTree = (nodes) => (
-        <TreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}
-                  sx={{'& .MuiTreeItem-label': {
-                          fontSize: '1rem',
-                          paddingLeft: '6px',
-                          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,',
-                          lineHeight: 2.0
-                      },
-                  }}
-        >
+        <TCTreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}>
             {Array.isArray(nodes.children)
                 ? nodes.children.map((node) => renderTree(node))
                 : null}
-        </TreeItem>
+        </TCTreeItem>
     );
 
     const router = useRouter()
@@ -28,11 +33,13 @@ export default function FolderTree(props) {
     return (
         <TreeView
             aria-label="rich object"
-            defaultCollapseIcon={<ExpandMoreIcon />}
+            defaultCollapseIcon={<ExpandMoreIcon/>}
             defaultExpanded={expandedNodes}
-            defaultExpandIcon={<ChevronRightIcon />}
-            onNodeSelect = {(event, nodIds) => {
-                const currentNode = props.flattenNodes.find(aNode => {return aNode.id === nodIds})
+            defaultExpandIcon={<ChevronRightIcon/>}
+            onNodeSelect={(event, nodIds) => {
+                const currentNode = props.flattenNodes.find(aNode => {
+                    return aNode.id === nodIds
+                })
                 // console.log(event)
                 // console.log(currentNode)
                 if (currentNode != null && currentNode.routePath != null) {
@@ -40,7 +47,7 @@ export default function FolderTree(props) {
                     // router.reload()
                 }
             }}
-            sx={{ flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
+            sx={{flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
         >
             {renderTree(props.tree)}
         </TreeView>
