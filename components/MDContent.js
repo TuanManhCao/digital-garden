@@ -2,29 +2,29 @@ import React from 'react';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import {useRouter} from 'next/router'
-import Link from 'next/link'
 
 function BackLinks({linkList}) {
 
     return (<div className="note-footer">
+            <h3 className="backlink-heading">Link to this note</h3>
         {(linkList != null && linkList.length > 0)
             ?
             <>
-                <h3 className="backlink-heading">Link to this note</h3>
+
                 <div className="backlink-container">
                     {linkList.map(aLink =>
                         <div key={aLink.slug} className="backlink">
                             {/*<Link href={aLink.slug}>*/}
-                                <a href={aLink.slug} >
-                                    <p className="backlink-title">{aLink.title}</p>
-                                    <p className="backlink-preview">{aLink.shortSummary} </p>
-                                </a>
+                            <a href={aLink.slug}>
+                                <p className="backlink-title">{aLink.title}</p>
+                                <p className="backlink-preview">{aLink.shortSummary} </p>
+                            </a>
                             {/*</Link>*/}
                         </div>
                     )}
                 </div>
             </>
-            : <></>}
+            : <> <p className="no-backlinks"> No backlinks found</p> </>}
     </div>);
 }
 
@@ -36,6 +36,7 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
         //TODO: handle clicking on internal link, go fetching md content from file then passing it up to parent
         handleOpenNewContent(content)
     }
+
     useRouter();
     return (
 
@@ -51,6 +52,14 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
             <div>
                 <BackLinks linkList={backLinks}/>
             </div>
+            <hr/>
+            <footer>
+                <p>Made by Tuan Cao using <a href="https://github.com/TuanManhCao/digital-garden">Mind Stone</a>, © 2022</p>
+                <ul>
+                    <li><a href="https://twitter.com/tuancm">Twitter</a></li>
+                    <li><a href="https://github.com/tuanmanhcao">Github</a></li>
+                </ul>
+            </footer>
         </div>
     );
 }

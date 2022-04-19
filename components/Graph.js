@@ -34,7 +34,7 @@ const styleSheet = [{
     selector: "node",
     style: {
         "background-color": "#666",
-        "font-size": "10px",
+        "font-size": "12px",
         "width": "20px",
         "height": "20px",
         "label":"data(label)"
@@ -48,7 +48,7 @@ const styleSheet = [{
         style: {
             'width': 2,
             "height": 200,
-            'line-color': '#9a9a9a',
+            'line-color': '#b2b2b2',
             'target-arrow-color': '#ccc',
             // 'target-arrow-shape': 'triangle',
             'curve-style': 'straight'
@@ -72,11 +72,12 @@ function Graph({graph}) {
     return (
         <>
             <div className="right-bar-container">
-                <h3>Links to this notes</h3>
+                <h3>Interactive Graph</h3>
                 <div
                     style={{
-                        border: "1px solid",
-                        backgroundColor: "#f5f6fe"
+                        border: "1px solid #ddd",
+                        backgroundColor: "#f5f6fe",
+                        borderRadius:"8px"
                     }}
                 >
                     <CytoscapeComponent
