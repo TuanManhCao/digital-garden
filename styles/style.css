@@ -1,7 +1,13 @@
+:root {
+    --default-font: 'Open Sans', sans-serif;
+    --font-monospace: 'Source Code Pro', monospace;
+}
+
 a {
     color: var(--text-accent);
     outline: none;
 }
+
 a:hover {
     color: var(--text-accent-hover);
 }
@@ -14,6 +20,7 @@ a:hover {
     position: relative;
     flex-direction: row;
 }
+
 /* Foooter section BEGIN */
 .note-footer {
     display: block;
@@ -61,26 +68,28 @@ a:hover {
     background-color: rgba(199, 199, 199, 0.3);
 }
 
-.backlink-container  .backlink-title {
+.backlink-container .backlink-title {
     font-size: 14px;
     line-height: 18px;
     font-weight: 600;
     text-decoration: none;
 }
 
-.backlink-container a{
+.backlink-container a {
     text-decoration: none;
     color: var(--text-muted);
 }
 
-.backlink-container  .backlink-preview {
+.backlink-container .backlink-preview {
     font-size: 12px;
     line-height: 16px;
     overflow: hidden;
 }
+
 .backlink-container p {
     margin: 12px 0px;
 }
+
 /* Foooter section END */
 
 .markdown-rendered {
@@ -89,8 +98,17 @@ a:hover {
     width: 740px;
     background-color: var(--background-primary);
     color: var(--text-normal);
-    font-family:var(--default-font);
+    font-family: var(--default-font);
     padding: 15px 30px;
+}
+
+.markdown-rendered code {
+    color: #a20000c9;
+    font-family: var(--font-monospace);
+    background-color: #f5f2f0;
+    border-radius: 4px;
+    font-size: 0.85em;
+    padding: 4px 8px;
 }
 
 .nav-bar {
@@ -100,16 +118,14 @@ a:hover {
     display: flex;
     background-color: var(--background-primary-alt);
     border-right: 1px solid var(--background-secondary-alt);
-    font-family:var(--default-font);
+    font-family: var(--default-font);
     font-size: 14px;
     line-height: 1.6;
     min-height: 0;
     padding-top: 20px;
     flex-direction: column;
 }
-:root {
-    --default-font: 'Open Sans', sans-serif;
-}
+
 
 .theme-light {
     --background-primary: white;
@@ -165,31 +181,38 @@ a:hover {
 .markdown-rendered h6 {
     margin: 15px 0;
 }
+
 .markdown-rendered h1 {
     font-size: 2.0em;
     font-weight: 800;
 }
+
 .markdown-rendered h2 {
     font-size: 1.6em;
     font-weight: 800;
 }
+
 .markdown-rendered h3 {
     font-size: 1.4em;
     font-weight: 700;
 }
+
 .markdown-rendered h4 {
     font-size: 1.2em;
     font-weight: 600;
 }
+
 .markdown-rendered h5,
 .markdown-rendered h6 {
     font-size: 1em;
     font-weight: 500;
 }
+
 .markdown-rendered h6 {
     color: var(--text-muted);
 }
-.right-bar-container{
+
+.right-bar-container {
     display: block;
     padding: 0em 1em;
 }
@@ -202,7 +225,7 @@ footer {
     padding: 4px;
 }
 
-footer ul li{
+footer ul li {
     margin: auto;
     text-align: center;
     list-style-type: none;
@@ -233,6 +256,7 @@ hr {
         display: none;
     }
 }
+
 @media screen and (max-width: 800px) {
     .nav-bar {
         display: none;
