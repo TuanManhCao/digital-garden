@@ -173,13 +173,6 @@ a:hover {
     outline: none;
 }
 
-.markdown-rendered img:not([width]),
-.markdown-rendered audio,
-.markdown-rendered video {
-    max-width: 100%;
-    outline: none;
-}
-
 .markdown-rendered h1,
 .markdown-rendered h2,
 .markdown-rendered h3,
