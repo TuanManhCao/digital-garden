@@ -12,7 +12,7 @@ const TCTreeItem = styled(TreeItem)(({theme}) => ({
             fontSize: '1rem',
             paddingLeft: '6px',
             fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,',
-            lineHeight: 1.8,
+            lineHeight: 2.0,
         },
     },
 }))
