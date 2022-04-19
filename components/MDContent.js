@@ -54,11 +54,7 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
             </div>
             <hr/>
             <footer>
-                <p>Made by Tuan Cao using <a href="https://github.com/TuanManhCao/digital-garden">Mind Stone</a>, © 2022</p>
-                <ul>
-                    <li><a href="https://twitter.com/tuancm">Twitter</a></li>
-                    <li><a href="https://github.com/tuanmanhcao">Github</a></li>
-                </ul>
+                <p>Powered by  <a href="https://github.com/TuanManhCao/digital-garden">Mind Stone</a>, © 2022</p>
             </footer>
         </div>
     );

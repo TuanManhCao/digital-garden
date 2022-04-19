@@ -13,7 +13,6 @@ a:hover {
     overflow: hidden;
     position: relative;
     flex-direction: row;
-    justify-content: center;
 }
 /* Foooter section BEGIN */
 .note-footer {
@@ -28,7 +27,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    /*background-color: #f8bbbb;*/
     flex-direction: row;
     display: flex;
 }
@@ -110,12 +108,12 @@ a:hover {
     flex-direction: column;
 }
 :root {
-    --default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+    --default-font: 'Open Sans', sans-serif;
 }
 
 .theme-light {
-    --background-primary: rgba(222, 222, 222, 0.1);
-    --background-primary-alt: #f5f6f8;
+    --background-primary: white;
+    --background-primary-alt: #f1f4fa;
     --background-secondary: #f2f3f5;
     --background-secondary-alt: #e3e5e8;
     --background-modifier-border: #ddd;
@@ -127,10 +125,10 @@ a:hover {
     --background-modifier-error-rgb: 230, 135, 135;
     --background-modifier-error-hover: #bb0000;
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
-    --text-accent: #705dcf;
-    --text-accent-hover: #7a6ae6;
-    --text-normal: #2e3338;
-    --text-muted: #888888;
+    --text-accent: rgba(201, 19, 133, 0.77);;
+    --text-accent-hover: #1ea2cc;
+    --text-normal: #232324;
+    --text-muted: #8e8e90;
     --text-muted-rgb: 136, 136, 136;
     --text-faint: #999999;
     --text-error: #800000;
@@ -168,20 +166,25 @@ a:hover {
     margin: 15px 0;
 }
 .markdown-rendered h1 {
-    font-size: 2em;
+    font-size: 2.0em;
+    font-weight: 800;
 }
 .markdown-rendered h2 {
     font-size: 1.6em;
+    font-weight: 800;
 }
 .markdown-rendered h3 {
-    font-size: 1.37em;
+    font-size: 1.4em;
+    font-weight: 700;
 }
 .markdown-rendered h4 {
-    font-size: 1.25em;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 .markdown-rendered h5,
 .markdown-rendered h6 {
-    font-size: 1.12em;
+    font-size: 1em;
+    font-weight: 500;
 }
 .markdown-rendered h6 {
     color: var(--text-muted);
@@ -225,7 +228,7 @@ hr {
     background-color: var(--dark);
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .right-bar-container {
         display: none;
     }
