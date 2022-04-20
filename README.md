@@ -26,8 +26,7 @@ Steps to run it on your local machine:
 4. Go to root folder of your project, run `yarn && yarn run dev`
 5. Open this link in your browser http://localhost:3000/ 
 
-If you prefer video content have a look at my walk through video in here
-**Youtube**
+If you prefer video content have a look at my 📺 [walk through video](https://youtu.be/7_SmWA-_Wx8)
 
 ### Publish to the internet
 
@@ -40,8 +39,7 @@ Your normal workflow for publishing content, after initial setup is:
 1. Simply writing your content in Obisidian (or your favourite Markdown editor)
 2. Commit your changes and Push it to your Github repo
 
-
-If you prefer video content, watch my walk through video here 
+If you prefer video content, watch my 📺 [walk through video](https://youtu.be/n8QDO6l64aw) here 
 
 ## Future development 
 
