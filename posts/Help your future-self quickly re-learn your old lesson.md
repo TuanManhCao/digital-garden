@@ -1,0 +1,1 @@
+Through experience, I found that re-reading or re-visiting old articles, videos that I have watched or read always help me recall what I learned faster. This is well-known fact in science: [Spaced Repitition](https://notes.andymatuschak.org/z4eXdSMJFv2qVGXSUEKH4vdcHBrLHcFY1ZGfC?stackedNotes=z5rVJfPsyCU3pHBbhwef9DNR5fohTHCQFJWir#:~:text=Each%20time%20you,a%20given%20day.)
