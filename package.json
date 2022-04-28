@@ -44,6 +44,7 @@
     "remark-wiki-link": "^1.0.0",
     "to-vfile": "^6.1.0",
     "unified": "^9.2.0",
+    "unist-util-visit": "^4.1.0",
     "vfile-reporter": "^6.0.1"
   },
   "devDependencies": {
