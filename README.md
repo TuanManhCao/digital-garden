@@ -23,8 +23,9 @@ Steps to run it on your local machine:
 1. Clone this [Github repo](https://github.com/TuanManhCao/digital-garden)
 2. Install [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) package manager 
 3. Copy all of your **markdown** file (`.md` only) and folder to `/posts/` **except** `/posts/index.md` file
-4. Go to root folder of your project, run `yarn && yarn run dev`
-5. Open this link in your browser http://localhost:3000/ 
+4. Copy all of your images from your Obsidian Vault to `/public/images/` folder 
+5. Go to root folder of your project, run `yarn && yarn run dev`
+6. Open this link in your browser http://localhost:3000/ 
 
 If you prefer video content have a look at my 📺 [walk through video](https://youtu.be/7_SmWA-_Wx8)
 
@@ -52,7 +53,6 @@ These are just some basic features for MindStone v1, many more are coming (if I 
 
 ### Some know issues
 This an early version of MindStone, which mean there are bugs and issues. Below are some known issues, that I plan to work on:
-- Image link in wiki link style is not supported yet. `![[Image_link.png]]` will not work yet.  see work around below
 - Graphview does not load when clicking on side-bar or click node on graphview, browser reload will refresh it state
 - Graph view layout and interaction is still very rough. More UI/UX improvements are needed.
 - Transclusion is not working yet.
