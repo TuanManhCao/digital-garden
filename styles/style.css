@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
 :root {
     --default-font: 'Open Sans', sans-serif;
     --font-monospace: 'Source Code Pro', monospace;
@@ -257,8 +259,91 @@ hr {
     }
 }
 
+@media screen and (min-width: 800px) {
+    #hamburger-menu,
+    #hamburger-input,
+    .mobile-bar {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .nav-bar {
         display: none;
     }
+
+    label .menu {
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      z-index: 100;
+      width: 200px;
+      height: 200px;
+      background: #FFF;
+      border-radius: 50% 50% 50% 50%;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+      cursor: pointer;
+    }
+
+    label .hamburger {
+      position: absolute;
+      top: 135px;
+      left: 50px;
+      width: 30px;
+      height: 2px;
+      background: #69D2e7;
+      display: block;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+    }
+
+    label .hamburger:after, label .hamburger:before {
+      -webkit-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #69d2e7;
+    }
+
+    label .hamburger:before { top: -10px; }
+
+    label .hamburger:after { bottom: -10px; }
+
+    label input { display: none; }
+
+
+
+    label input + .menu + .mobile-bar {
+        display: none;
+    }
+
+    label input:checked + .menu .hamburger {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    label input:checked + .menu .hamburger:after {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      bottom: 0;
+    }
+
+    label input:checked + .menu .hamburger:before {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      top: 0;
+    }
+
+    label input:checked + .menu + .mobile-bar {
+        display: inline;
+        z-index: 1;
+    }
+
 }
