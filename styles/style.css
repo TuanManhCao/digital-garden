@@ -304,8 +304,6 @@ hr {
     .burger-menu #hamburger-input:checked~nav>div.right-bar-container {
         display: inline;
         position: absolute;
-        left: 50%;
-        top:0;
     }
 
     .menu {
