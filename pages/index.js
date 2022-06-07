@@ -21,15 +21,19 @@ const DynamicGraph = dynamic(
 export default function Home({graphData, content, tree, flattenNodes, backLinks}) {
     return (
         <Layout>
-            <label id="hamburger-menu" htmlFor="hamburger-input">
-                <input type="checkbox" id="hamburger-input"
-                   className="burger-shower"/>
-                <span className="menu"> <span className="hamburger"></span> </span>
-                <nav className='mobile-bar'>
-                    <FolderTree tree={tree} flattenNodes={flattenNodes}/>
-                </nav>
-            </label>
              <div className = 'container'>
+                <div className="burger-menu">
+                    <input type="checkbox" id="hamburger-input"
+                        className="burger-shower" />
+                    <label id="hamburger-menu" for="hamburger-input">
+                        <span className="menu"> <span className="hamburger"></span> </span>
+                    </label>
+                    <nav>
+                        <FolderTree tree={tree} flattenNodes={flattenNodes} />
+                        <DynamicGraph graph={graphData} />
+                    </nav>
+
+                </div>
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>

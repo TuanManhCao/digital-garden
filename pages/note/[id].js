@@ -24,7 +24,19 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes, gr
             <Head>
                 {note.title && <meta name="title" content={note.title}/>}
             </Head>
+
             <div className='container'>
+                <div className="burger-menu">
+                    <input type="checkbox" id="hamburger-input"
+                        className="burger-shower" />
+                    <label id="hamburger-menu" for="hamburger-input">
+                        <span className="menu"> <span className="hamburger"></span> </span>
+                    </label>
+                    <nav>
+                        <FolderTree tree={tree} flattenNodes={flattenNodes} />
+                        <DynamicGraph graph={graphData} />
+                    </nav>
+                </div>
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
