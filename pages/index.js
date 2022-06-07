@@ -25,7 +25,7 @@ export default function Home({graphData, content, tree, flattenNodes, backLinks}
                 <div className="burger-menu">
                     <input type="checkbox" id="hamburger-input"
                         className="burger-shower" />
-                    <label id="hamburger-menu" for="hamburger-input">
+                    <label id="hamburger-menu" htmlFor="hamburger-input">
                         <span className="menu"> <span className="hamburger"></span> </span>
                     </label>
                     <nav>

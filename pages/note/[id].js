@@ -29,7 +29,7 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes, gr
                 <div className="burger-menu">
                     <input type="checkbox" id="hamburger-input"
                         className="burger-shower" />
-                    <label id="hamburger-menu" for="hamburger-input">
+                    <label id="hamburger-menu" htmlFor="hamburger-input">
                         <span className="menu"> <span className="hamburger"></span> </span>
                     </label>
                     <nav>

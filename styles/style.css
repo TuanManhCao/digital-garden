@@ -314,7 +314,7 @@ hr {
         width: 200px;
         height: 200px;
         background: #FFF;
-        border-radius: 50% 50% 50% 50%;
+        border-radius: 0 0 0 80%;
         -webkit-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
