@@ -18,7 +18,8 @@ const DynamicGraph = dynamic(
 )
 
 export default function Home({note, backLinks, fileNames, tree, flattenNodes, graphData}) {
-
+    const burgerId = 'hamburger-input'
+    const closeBurger = () => {document.getElementById(burgerId).checked = false}
     return (
         <Layout>
             <Head>
@@ -27,13 +28,16 @@ export default function Home({note, backLinks, fileNames, tree, flattenNodes, gr
 
             <div className='container'>
                 <div className="burger-menu">
-                    <input type="checkbox" id="hamburger-input"
-                        className="burger-shower" />
+                    <input type="checkbox" id={burgerId}
+                           className="burger-shower" />
                     <label id="hamburger-menu" htmlFor="hamburger-input">
                         <span className="menu"> <span className="hamburger"></span> </span>
                     </label>
                     <nav>
-                        <FolderTree tree={tree} flattenNodes={flattenNodes} />
+                        <FolderTree tree={tree}
+                                    flattenNodes={flattenNodes}
+                                    onNodeSelect={closeBurger}
+                        />
                         <DynamicGraph graph={graphData} />
                     </nav>
                 </div>
