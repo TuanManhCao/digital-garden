@@ -4,8 +4,10 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
+    # For development
     # volumes:
-      # - ./src:/app/src
+    #   - ./pages:/app/pages
+    #   - ./components:/app/components
     ports:
       - "3000:3000"
