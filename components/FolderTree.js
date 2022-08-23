@@ -45,6 +45,9 @@ export default function FolderTree(props) {
                 if (currentNode != null && currentNode.routePath != null) {
                     router.push(currentNode.routePath)
                     // router.reload()
+                    if (props.onNodeSelect) {
+                        props.onNodeSelect()
+                    }
                 }
             }}
             sx={{flexGrow: 1, maxWidth: 400, overflowY: 'auto'}}
