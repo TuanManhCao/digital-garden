@@ -3,7 +3,6 @@ import unified from "unified";
 import markdown from "remark-parse";
 import {wikiLinkPlugin} from "remark-wiki-link";
 import html from "remark-html";
-import frontmatter from "remark-frontmatter";
 import externalLinks from "remark-external-links";
 import highlight from "remark-highlight.js";
 import {Node} from "./node";
@@ -11,7 +10,7 @@ import rehypePrism from 'rehype-prism-plus'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import obsidianImage from './obsidian-image.js'
-import {getAllMarkdownFiles, toFilePath, toSlug} from "./utils";
+import {CustomNode, getAllMarkdownFiles, toFilePath, toSlug} from "./utils";
 
 export const Transformer = {
     haveFrontMatter: function (content) {
@@ -56,10 +55,12 @@ export const Transformer = {
         // permalink = Transformer.normalizeFileName(permalink)
         permalink = permalink.replace("ç", "c").replace("ı", "i").replace("ş", "s")
         return `/note/${permalink}`;
-    }, getHtmlContent: function (content) {
-        let htmlContent = []
+    },
+    getHtmlContent: function (content): string[] {
+        let htmlContent: Array<string> = []
         const sanitizedContent = Transformer.preprocessThreeDashes(content)
 
+        // @ts-ignore
         unified()
             .use(markdown, {gfm: true})
             .use(obsidianImage)
@@ -88,9 +89,8 @@ export const Transformer = {
                     }
                 }
             )
-        htmlContent = htmlContent.join("")
-        htmlContent = htmlContent.split("---")
-        return [htmlContent]
+
+        return htmlContent.join("").split("---")
     },
 
     /* SANITIZE MARKDOWN FOR --- */
@@ -137,8 +137,9 @@ export const Transformer = {
     /* Pair provided and existing Filenames*/
     getInternalLinks: function (aFilePath) {
         const fileContent = Node.readFileSync(aFilePath);
-        const internalLinks = []
+        const internalLinks: Array<CustomNode> = []
         const sanitizedContent = Transformer.preprocessThreeDashes(fileContent)
+        // @ts-ignore
         unified()
             .use(markdown, {gfm: true})
             .use(wikiLinkPlugin, {
@@ -146,7 +147,7 @@ export const Transformer = {
 
                     // let name = [Transformer.parseFileNameFromPath(pageName)];
 
-                    let canonicalSlug;
+                    let canonicalSlug: string;
                     if (pageName.includes('#')) {
                         // console.log(pageName)
                         const tempSlug = pageName.split('#')[0]
@@ -161,12 +162,13 @@ export const Transformer = {
                     }
 
 
-                    const backLink = {
+                    const backLink: CustomNode = {
                         title: Transformer.parseFileNameFromPath(toFilePath(canonicalSlug)),
                         slug: canonicalSlug,
                         shortSummary: canonicalSlug
                     }
 
+                    // @ts-ignore
                     if (canonicalSlug != null && internalLinks.indexOf(canonicalSlug) < 0) {
                         internalLinks.push(backLink);
                     }

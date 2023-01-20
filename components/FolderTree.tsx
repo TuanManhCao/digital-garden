@@ -5,8 +5,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeItem from '@mui/lab/TreeItem';
 import {useRouter} from 'next/router'
 import {styled} from '@mui/material/styles';
+import {MdObject} from "../lib/utils";
 
-const TCTreeItem = styled(TreeItem)(({theme}) => ({
+const TCTreeItem = styled(TreeItem)(() => ({
     '& .MuiTreeItem-content': {
         '& .MuiTreeItem-label': {
             fontSize: '1rem',
@@ -17,13 +18,12 @@ const TCTreeItem = styled(TreeItem)(({theme}) => ({
     },
 }))
 
-
-export default function FolderTree(props) {
-    const renderTree = (nodes) => (
+export default function FolderTree(props: { tree: MdObject, flattenNodes: MdObject[] }): JSX.Element {
+    const renderTree = (nodes: MdObject) => (
         <TCTreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}>
-            {Array.isArray(nodes.children)
-                ? nodes.children.map((node) => renderTree(node))
-                : null}
+            {
+                nodes.children.map((node) => renderTree(node))
+            }
         </TCTreeItem>
     );
 

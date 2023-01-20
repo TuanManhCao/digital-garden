@@ -5,17 +5,15 @@ import markdown from "remark-parse";
 import {toString} from 'mdast-util-to-string'
 import path from "path";
 import fs from "fs";
+import directoryTree, {DirectoryTree} from "directory-tree";
 
-const dirTree = require("directory-tree");
-
-
-export function getContent(slug) {
+export function getContent(slug): string {
     let currentFilePath = toFilePath(slug)
     if (currentFilePath === undefined || currentFilePath == null) return null
     return Node.readFileSync(currentFilePath)
 }
 
-export function getShortSummary(slug) {
+export function getShortSummary(slug): string {
     const content = getContent(slug)
     if (content === undefined || content === null) {
         return
@@ -39,11 +37,10 @@ export function getSinglePost(slug) {
     let currentFilePath = toFilePath(slug)
     //console.log("currentFilePath: ", currentFilePath)
 
-    var fileContent = Node.readFileSync(currentFilePath)
+    const fileContent = Node.readFileSync(currentFilePath);
 
-    const currentFileFrontMatter = Transformer.getFrontMatterData(fileContent)
     // console.log("===============\n\nFile is scanning: ", slug)
-    const [htmlContent] = Transformer.getHtmlContent(fileContent)
+    const htmlContent = Transformer.getHtmlContent(fileContent)
     // console.log("==================================")
     //console.log("hrmlcontents and backlinks")
     return {
@@ -56,18 +53,18 @@ export function getSinglePost(slug) {
 
 const cachedSlugMap = getSlugHashMap()
 
-export function toFilePath(slug) {
+export function toFilePath(slug): string {
     return cachedSlugMap[slug]
 }
 
-export function getSlugHashMap() {
+export function getSlugHashMap(): Map<string, string> {
     // This is to solve problem of converting between slug and filepath,
     // where previously if I convert a slug to a file path sometime
     // it does not always resolve to correct filepath, converting function is not bi-directional
     // and not conflict-free, other solution was considered (hash file name into a hash, but this
     // is not SEO-friendly and make url look ugly ==> I chose this
 
-    const slugMap = new Map()
+    const slugMap = new Map<string, string>()
     getAllMarkdownFiles().map(aFile => {
         const aSlug = toSlug(aFile);
         // if (slugMap.has(aSlug)) {
@@ -86,7 +83,7 @@ export function getSlugHashMap() {
 }
 
 
-export function toSlug(filePath) {
+export function toSlug(filePath): string {
 
     if (Node.isFile(filePath) && filePath.includes(Node.getMarkdownFolder())) {
         return filePath.replace(Node.getMarkdownFolder(), '')
@@ -101,9 +98,23 @@ export function toSlug(filePath) {
 
 }
 
+type GraphData = {
+    nodes: CustomNode[]
+    edges: CustomEdge[]
+}
 
+type CustomEdge = {
+    source: string
+    target: string
+}
 
-export function constructGraphData() {
+export type CustomNode = {
+    title: string | null
+    slug: string
+    shortSummary: string
+}
+
+export function constructGraphData(): GraphData {
 
     const filepath = path.join(process.cwd(), "graph-data.json");
     if (Node.isFile(filepath)) {
@@ -111,12 +122,12 @@ export function constructGraphData() {
         return JSON.parse(String(data))
     } else {
         const filePaths = getAllMarkdownFiles();
-        const edges = []
-        const nodes = []
+        const edges: CustomEdge[] = []
+        const nodes: CustomNode[] = []
         filePaths
             .forEach(aFilePath => {
                     // const {currentFilePath} = getFileNames(filename)
-                    const aNode = {
+                    const aNode: CustomNode = {
                         title: Transformer.parseFileNameFromPath(aFilePath),
                         slug: toSlug(aFilePath),
                         shortSummary: getShortSummary(toSlug(aFilePath))
@@ -129,7 +140,7 @@ export function constructGraphData() {
 
                         if (aLink.slug === null || aLink.slug.length === 0) return
 
-                        const anEdge = {
+                        const anEdge: CustomEdge = {
                             source: toSlug(aFilePath),
                             target: aLink.slug,
                         }
@@ -140,27 +151,46 @@ export function constructGraphData() {
                     // console.log("==============Constructing graph" )
                 }
             )
-        const data = {nodes, edges};
+        const data: GraphData = { nodes, edges };
         fs.writeFileSync(filepath, JSON.stringify(data), "utf-8");
         return data;
     }
 }
 
+export type LocalGraphData = {
+    nodes: NodeData[]
+    edges: EdgeData[]
+}
 
-export function getLocalGraphData(currentNodeId) {
+export type NodeData = {
+    data: {
+        id: string
+        label: string | null
+    }
+};
+
+export type EdgeData = {
+    data: {
+        source: string
+        target: string
+    }
+}
+
+
+export function getLocalGraphData(currentNodeId): LocalGraphData {
 
     const {nodes, edges} = constructGraphData()
 
-    const newNodes = nodes.map(aNode => (
+    const newNodes: NodeData[] = nodes.map(aNode => (
         {
             data: {
                 id: aNode.slug.toString(),
-                label: Transformer.parseFileNameFromPath(toFilePath(aNode.slug)),
+                label: Transformer.parseFileNameFromPath(toFilePath(aNode.slug)) as string | null,
             }
         }
     ))
 
-    const newEdges = edges.map(anEdge => ({
+    const newEdges: EdgeData[] = edges.map(anEdge => ({
         data: {
             source: anEdge.source,
             target: anEdge.target,
@@ -219,14 +249,19 @@ export function getAllSlugs() {
     return filePaths.map(f => toSlug(f))
 }
 
-export function getDirectoryData() {
-    const filteredDirectory = dirTree(Node.getMarkdownFolder(), {extensions: /\.md/});
+export function getDirectoryData(): MdObject {
+    const filteredDirectory = directoryTree(Node.getMarkdownFolder(), {extensions: /\.md/});
     return convertObject(filteredDirectory)
 }
 
-let _counter = 0;
+export type MdObject = {
+    name: string,
+    children: MdObject[]
+    id: string
+    routePath: string
+}
 
-export function convertObject(thisObject) {
+export function convertObject(thisObject: DirectoryTree): MdObject {
     const children = []
 
     let routerPath = getAllSlugs().find(slug => {
@@ -234,10 +269,10 @@ export function convertObject(thisObject) {
         return Transformer.normalizeFileName(fileName) === Transformer.normalizeFileName(thisObject.name)
     }) || null
     routerPath = routerPath ? '/note/' + routerPath : null
-    const newObject = {
+    const newObject: MdObject = {
         name: thisObject.name,
         children: children,
-        id: (_counter++).toString(),
+        id: thisObject.name + thisObject.type,
         routePath: routerPath || null
     };
 
@@ -252,8 +287,8 @@ export function convertObject(thisObject) {
     }
 }
 
-function flat(array) {
-    var result = [];
+function flat(array: MdObject[]): MdObject[] {
+    let result: MdObject[] = [];
     array.forEach(function (a) {
         result.push(a);
         if (Array.isArray(a.children)) {
@@ -263,6 +298,6 @@ function flat(array) {
     return result;
 }
 
-export function getFlattenArray(thisObject) {
+export function getFlattenArray(thisObject: MdObject): MdObject[] {
     return flat(thisObject.children)
 }

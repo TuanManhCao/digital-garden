@@ -2,10 +2,9 @@ import Layout from "../components/Layout";
 import {
     getSinglePost,
     getDirectoryData,
-    convertObject,
     getFlattenArray,
     getLocalGraphData,
-    constructGraphData
+    constructGraphData, MdObject, LocalGraphData, CustomNode
 } from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 import dynamic from 'next/dynamic'
@@ -18,7 +17,7 @@ const DynamicGraph = dynamic(
     { loading: () => <p>Loading ...</p>, ssr: false }
 )
 
-export default function Home({graphData, content, tree, flattenNodes, backLinks}) {
+export default function Home({graphData, content, tree, flattenNodes, backLinks}: Prop): JSX.Element {
     return (
         <Layout>
             <div className = 'container'>
@@ -32,15 +31,24 @@ export default function Home({graphData, content, tree, flattenNodes, backLinks}
     );
 
 }
-const {nodes, edges} = constructGraphData()
+const { nodes, edges } = constructGraphData()
 
-export function getStaticProps() {
-    const tree = convertObject(getDirectoryData());
+export type Prop = {
+    content: string[]
+    tree: MdObject
+    flattenNodes: MdObject[]
+    graphData: LocalGraphData
+    backLinks: CustomNode[]
+}
+
+export function getStaticProps(): {props: Prop} {
+    const tree = getDirectoryData();
     const contentData = getSinglePost("index");
     const flattenNodes = getFlattenArray(tree)
     const listOfEdges =   edges.filter(anEdge => anEdge.target === "index")
     const internalLinks = listOfEdges.map(anEdge => nodes.find(aNode => aNode.slug === anEdge.source)).filter(element => element !== undefined)
-    const backLinks = [...new Set(internalLinks)]
+    const backLinks = internalLinks.filter((value, index, array) => array.indexOf(value) === index)
+
 
     const graphData = getLocalGraphData("index");
     return {

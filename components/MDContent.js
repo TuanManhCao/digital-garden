@@ -1,6 +1,6 @@
 import React from 'react';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
+// import Alert from '@mui/material/Alert';
+// import AlertTitle from '@mui/material/AlertTitle';
 import {useRouter} from 'next/router'
 
 function BackLinks({linkList}) {
@@ -41,11 +41,11 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
     return (
 
         <div className="markdown-rendered">
-            <Alert severity="info">
-                <AlertTitle>Want to know more?</AlertTitle>
-                🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a
-                href="https://twitter.com/tuancm">@tuancm</a></span>
-            </Alert>
+            {/*<Alert severity="info">*/}
+            {/*    <AlertTitle>Want to know more?</AlertTitle>*/}
+            {/*    🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a*/}
+            {/*    href="https://twitter.com/tuancm">@tuancm</a></span>*/}
+            {/*</Alert>*/}
             <div dangerouslySetInnerHTML={{__html: content}}/>
             {/*<button onClick={handleInternalLinkClick}>Click me</button>*/}
             {/*<hr/>*/}
@@ -54,7 +54,7 @@ function MDContent({content, backLinks, handleOpenNewContent}) {
             </div>
             <hr/>
             <footer>
-                <p>Powered by  <a href="https://github.com/TuanManhCao/digital-garden">Mind Stone</a>, © 2022</p>
+                <p>Powered by  <a href="https://github.com/turtton/volglass">Volglass</a>, © 2023</p>
             </footer>
         </div>
     );
