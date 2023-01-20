@@ -1,5 +1,5 @@
 ## Volglass
-Volglass is a fork of [MindStone(digital-garden)](https://github.com/TuanManhCao/digital-garden) but many codes replaced to typescript.
+Volglass is a fork of [MindStone(digital-garden)](https://github.com/TuanManhCao/digital-garden)
 
 It is this project's goal to be a free open-source alternative solution to [Obsidian Publish](https://obsidian.md/publish)
 
