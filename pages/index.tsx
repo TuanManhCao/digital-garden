@@ -20,7 +20,19 @@ const DynamicGraph = dynamic(
 export default function Home({graphData, content, tree, flattenNodes, backLinks}: Prop): JSX.Element {
     return (
         <Layout>
-            <div className = 'container'>
+             <div className = 'container'>
+                <div className="burger-menu">
+                    <input type="checkbox" id="hamburger-input"
+                        className="burger-shower" />
+                    <label id="hamburger-menu" htmlFor="hamburger-input">
+                        <span className="menu"> <span className="hamburger"></span> </span>
+                    </label>
+                    <nav>
+                        <FolderTree tree={tree} flattenNodes={flattenNodes} />
+                        <DynamicGraph graph={graphData} />
+                    </nav>
+
+                </div>
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
