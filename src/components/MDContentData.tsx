@@ -47,6 +47,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
   // }
 
   useRouter();
+
   return (
     <div className="markdown-rendered">
       {/* <Alert severity="info"> */}
@@ -54,7 +55,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
       {/*    🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a */}
       {/*    href="https://twitter.com/tuancm">@tuancm</a></span> */}
       {/* </Alert> */}
-      <div dangerouslySetInnerHTML={{ __html: content.join() }} />
+      <div dangerouslySetInnerHTML={{ __html: content.join("") }} />
       {/* <button onClick={handleInternalLinkClick}>Click me</button> */}
       {/* <hr/> */}
       <div>
