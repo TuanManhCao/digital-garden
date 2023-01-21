@@ -47,8 +47,8 @@ export function getSinglePost(slug): Content {
   const fileContent = Node.readFileSync(currentFilePath);
 
   // console.log("===============\n\nFile is scanning: ", slug)
-  const htmlContent = Transformer.getHtmlContent(`# ${fileName}`)
-  htmlContent.push(...Transformer.getHtmlContent(fileContent))
+  const htmlContent = Transformer.getHtmlContent(`# ${fileName}`);
+  htmlContent.push(...Transformer.getHtmlContent(fileContent));
   // console.log("==================================")
   // console.log("hrmlcontents and backlinks")
   return {

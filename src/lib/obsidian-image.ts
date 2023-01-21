@@ -1,7 +1,6 @@
 import { visit } from "unist-util-visit";
 import { Node } from "unist";
-import { Settings } from "unified";
-import { VFile } from "vfile";
+import { Processor } from "unified";
 
 const regex = /!\[\[(([a-z\-_0-9\\/:]+\s*)+\.(jpg|jpeg|png|gif|svg|webp))]]/gi;
 const regex2 = /!\[\[(([a-z\-_0-9\\/:]+\s*)+\.(jpg|jpeg|png|gif|svg|webp))]]/gi; // TODO why can't I reuse regex literal???
@@ -88,10 +87,9 @@ function convertTextNode(node): CustomNode {
   };
 }
 
-export default function attacher(
-  options?: Settings,
-): (tree: CustomNode, vfile: VFile) => CustomNode {
-  return function transformer(tree: CustomNode, vfile: VFile) {
+export default function attacher(this: Processor): void {
+  this.runSync = transformer;
+  function transformer(tree: Node): Node {
     visit(tree, "text", (node: TextNode) => {
       if (regex2.test(node.value)) {
         const newNode = convertTextNode(node);
@@ -106,5 +104,5 @@ export default function attacher(
     });
 
     return tree;
-  };
+  }
 }

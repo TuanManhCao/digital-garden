@@ -78,8 +78,12 @@ export const Transformer = {
 
         aliasDivider: "|",
       })
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       .use(remarkRehype)
       .use(rehypePrism)
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       .use(rehypeStringify)
       .process(sanitizedContent, function (err, file) {
         htmlContent.push(String(file).replace("\n", ""));
