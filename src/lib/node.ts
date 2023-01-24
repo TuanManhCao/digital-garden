@@ -2,6 +2,9 @@ import path from "path";
 import fs from "fs";
 
 export const Node = {
+  exists: function (fileName: string): boolean {
+      return fs.existsSync(fileName)
+  },
   isFile: function (filename): boolean {
     try {
       return fs.lstatSync(filename).isFile();

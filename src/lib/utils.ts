@@ -6,6 +6,8 @@ import { toString } from "mdast-util-to-string";
 import path from "path";
 import fs from "fs";
 import directoryTree, { DirectoryTree } from "directory-tree";
+import { FIRST_PAGE } from "../pages";
+import { ElementDefinition } from "cytoscape";
 
 export function getContent(slug): string | null {
   const currentFilePath = toFilePath(slug);
@@ -34,7 +36,7 @@ export interface Content {
   data: string[];
 }
 
-export function getSinglePost(slug): Content {
+export function getSinglePost(slug: string): Content {
   // List of filenames that will provide existing links to wikilink
   const currentFilePath = toFilePath(slug);
   // console.log("currentFilePath: ", currentFilePath)
@@ -61,8 +63,9 @@ export function getSinglePost(slug): Content {
 
 const cachedSlugMap = getSlugHashMap();
 
-export function toFilePath(slug): string {
-  return cachedSlugMap[slug];
+export function toFilePath(slug: string): string {
+  const result = cachedSlugMap.get(slug);
+  return result ?? "";
 }
 
 interface SlugMap extends Map<string, string> {
@@ -85,11 +88,12 @@ export function getSlugHashMap(): Map<string, string> {
     //     slugMap[aSlug] = [aFile]
     // }
     // Note: [Future improvement] Resolve conflict
-    slugMap[aSlug] = aFile;
+    slugMap.set(aSlug, aFile);
   });
 
-  slugMap.index = Node.getMarkdownFolder() + "/index.md";
-  slugMap["/"] = Node.getMarkdownFolder() + "/index.md";
+  const firstMd = `${FIRST_PAGE()}.md`
+  slugMap.set(FIRST_PAGE(),  Node.getMarkdownFolder() + `/${firstMd}`);
+  slugMap.set("/", Node.getMarkdownFolder() + `/${firstMd}`);
 
   return slugMap;
 }
@@ -126,7 +130,7 @@ export interface CustomNode {
 
 export function constructGraphData(): GraphData {
   const filepath = path.join(process.cwd(), "graph-data.json");
-  if (Node.isFile(filepath)) {
+  if (Node.exists(filepath) && Node.isFile(filepath)) {
     const data = fs.readFileSync(filepath);
     return JSON.parse(String(data));
   } else {
@@ -159,13 +163,14 @@ export function constructGraphData(): GraphData {
     });
     const data: GraphData = { nodes, edges };
     fs.writeFileSync(filepath, JSON.stringify(data), "utf-8");
+    console.log("data", data);
     return data;
   }
 }
 
 export interface LocalGraphData {
-  nodes: NodeData[];
-  edges: EdgeData[];
+  nodes: ElementDefinition[];
+  edges: ElementDefinition[];
 }
 
 export interface NodeData {
@@ -182,17 +187,16 @@ export interface EdgeData {
   };
 }
 
-export function getLocalGraphData(currentNodeId): LocalGraphData {
+export function getLocalGraphData(currentNodeId: string): LocalGraphData {
   const { nodes, edges } = constructGraphData();
-
-  const newNodes: NodeData[] = nodes.map((aNode) => ({
+  const newNodes: ElementDefinition[] = nodes.map((aNode) => ({
     data: {
       id: aNode.slug.toString(),
       label: Transformer.parseFileNameFromPath(toFilePath(aNode.slug)),
     },
   }));
 
-  const newEdges: EdgeData[] = edges.map((anEdge) => ({
+  const newEdges: ElementDefinition[] = edges.map((anEdge) => ({
     data: {
       source: anEdge.source,
       target: anEdge.target,
@@ -200,7 +204,8 @@ export function getLocalGraphData(currentNodeId): LocalGraphData {
   }));
 
   const existingNodeIDs = newNodes.map((aNode) => aNode.data.id);
-  currentNodeId = currentNodeId === "index" ? "__index" : currentNodeId;
+  const firstPage = FIRST_PAGE();
+  currentNodeId = currentNodeId === firstPage ? `__${firstPage}` : currentNodeId;
   if (currentNodeId != null && existingNodeIDs.includes(currentNodeId)) {
     const outGoingNodeIds = newEdges
       .filter((anEdge) => anEdge.data.source === currentNodeId)
@@ -249,7 +254,7 @@ export function getAllSlugs(): string[] {
   // console.log("\n\nAll Posts are scanning")
   // Get file names under /posts
   const filePaths = Node.getFiles(Node.getMarkdownFolder()).filter(
-    (f) => !(f.endsWith("index") || f.endsWith("sidebar")),
+    (f) => !(f.endsWith(FIRST_PAGE()) || f.endsWith("sidebar")),
   );
   return filePaths.map((f) => toSlug(f));
 }
@@ -275,7 +280,7 @@ export function convertObject(thisObject: DirectoryTree): MdObject {
   let routerPath: string | null =
     getAllSlugs().find((slug) => {
       const fileName = Transformer.parseFileNameFromPath(toFilePath(slug));
-      return Transformer.normalizeFileName(fileName) === Transformer.normalizeFileName(objectName);
+      return Transformer.normalizeFileName(fileName ?? "") === Transformer.normalizeFileName(objectName);
     }) ?? "";
 
   const nameAndExtension = objectName.split(".");

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 // import cytoscape from 'cytoscape';
 // import cola from 'cytoscape-cola';
 import { useRouter } from "next/router";
 
 import CytoscapeComponent from "react-cytoscapejs";
 import { Core } from "cytoscape";
+import { LocalGraphData, MdObject } from "../lib/utils";
 
 const layout = {
   name: "circle",
@@ -58,18 +59,15 @@ const styleSheet = [
   },
 ];
 
-function Graph({ graph }): JSX.Element {
-  const [width] = useState("300px");
-  const [height] = useState("300px");
-  const [graphData] = useState({
-    nodes: graph.nodes,
-    edges: graph.edges,
-  });
+function Graph({ graph }: {graph: LocalGraphData}): JSX.Element {
+  const c: CSSProperties = { width: "300px", height: "300px" }
+  const [cssProperties] = useState(c)
+  const [elements, elementSetter] = useState(CytoscapeComponent.normalizeElements(graph))
+  useEffect(() => {
+    elementSetter(CytoscapeComponent.normalizeElements(graph))
+  }, [graph])
 
   const router = useRouter();
-  // TODO: Listen to query change/ graphdata change to update state of this component
-  // Can use this: https://github.com/vercel/next.js/discussions/12661
-
   return (
     <>
       <div className="right-bar-container">
@@ -82,9 +80,9 @@ function Graph({ graph }): JSX.Element {
           }}
         >
           <CytoscapeComponent
-            elements={CytoscapeComponent.normalizeElements(graphData)}
+            elements={elements}
             // pan={{ x: 200, y: 200 }}
-            style={{ width, height }}
+            style={cssProperties}
             zoomingEnabled={true}
             maxZoom={2}
             minZoom={0.5}
@@ -94,14 +92,13 @@ function Graph({ graph }): JSX.Element {
             stylesheet={styleSheet}
             cy={(cy) => {
               // console.log("EVT", cy);
-
+              cy.layout(layout).run()
+              cy.fit()
               cy.on("tap", "node", (evt) => {
                 const node: Core = evt.target;
-                const { id }: { id: any } = node.data();
-                if (typeof id === "string") {
-                  const path = "/note/" + id;
-                  void router.push(path);
-                }
+                const { id }: MdObject = node.data();
+                const path = "/note/" + id;
+                void router.push(path);
               });
             }}
           />
