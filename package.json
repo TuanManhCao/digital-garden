@@ -9,7 +9,8 @@
     "start": "next start",
     "deploy": "pnpm build && git add . && git commit -m '...' && git push",
     "format": "prettier --write \"src/**/*.{ts,tsx,js}\"",
-    "lint": "eslint --fix ."
+    "lint": "eslint --fix .",
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/cache": "latest",
