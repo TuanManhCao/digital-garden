@@ -30,7 +30,7 @@ See [volglass-docs repository](https://github.com/turtton/volglass-docs) for an 
 I also plan to create a CLI application for easy environment building and updating.
 
 ## For developers
-Instead of cloning this repository, I recommend to use volglass-cli.
+Instead of cloning this repository, I recommend to use [volglass-cli](https://github.com/turtton/volglass-cli).
 
 1. `npm init --yes`
 2. `npm install --save-dev volglass-cli`
