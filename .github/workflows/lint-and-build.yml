@@ -45,9 +45,15 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        
+
       - name: Lint
         run: pnpm eslint .
-        
+
+      - name: Download template contents
+        run: |
+          curl -L -o temp.zip https://github.com/turtton/volglass-docs/archive/refs/heads/main.zip
+          7z x temp.zip
+          cp -r volglass-docs-main/posts .
+
       - name: Build
         run: pnpm run build
