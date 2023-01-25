@@ -11,12 +11,15 @@ https://volglass.turtton.net
 ### Run on your local machine
 
 Steps to run it on your local machine:
-1. Clone this [Github repo](https://github.com/turtton/volglass)
-2. Install [pnpm](https://pnpm.io/installation) package manager 
-3. Copy all of your **markdown** file (`.md` only) and folder to `/posts/` **except** `/posts/index.md` file
-4. Copy all of your images from your Obsidian Vault to `/public/images/` folder 
-5. Go to root folder of your project, run `pnpm i && pnpm run dev`
-6. Open this link in your browser http://localhost:3000/ 
+1. `npm init --yes`
+2. `npm install --save-dev volglass-cli`
+3. Put in your vault contents in `posts` directory.
+4. `npx volglass serve`
+5. Open this link in your browser http://localhost:3000/ 
+
+### Publish your page
+
+See [volglass-docs repository](https://github.com/turtton/volglass-docs) for an example.
 
 ## Future development 
 
@@ -25,3 +28,17 @@ Steps to run it on your local machine:
 - Tag list view
 
 I also plan to create a CLI application for easy environment building and updating.
+
+## Develop project
+Instead of cloning this repository, I recommend to use volglass-cli.
+
+1. `npm init --yes`
+2. `npm install --save-dev volglass-cli`
+3. `npx volglass dev --use-ssh -T`
+
+Now, volglass-cli does these tasks
+- clone this repository(with ssh`--use-ssh`) to dev directory
+- download template page contents(`-T`)
+- run `next dev`
+
+Please run `npx volglass dev` after the second time.
