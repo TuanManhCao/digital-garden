@@ -13,9 +13,10 @@ https://volglass.turtton.net
 Steps to run it on your local machine:
 1. `npm init --yes`
 2. `npm install --save-dev volglass-cli`
-3. Put in your vault contents in `posts` directory.
-4. `npx volglass serve`
-5. Open this link in your browser http://localhost:3000/ 
+3. `npx volglass init`
+4. Put in your vault contents in `posts` directory.
+5. `npx volglass serve`
+6. Open this link in your browser http://localhost:3000/ 
 
 ### Publish your page
 
@@ -26,8 +27,6 @@ See [volglass-docs repository](https://github.com/turtton/volglass-docs) for an 
 - Embed markdown/image rendering
 - Text search
 - Tag list view
-
-I also plan to create a CLI application for easy environment building and updating.
 
 ## For developers
 Instead of cloning this repository, I recommend to use [volglass-cli](https://github.com/turtton/volglass-cli).
