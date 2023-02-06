@@ -62,11 +62,6 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
         <BackLinks linkList={backLinks} />
       </div>
       <hr />
-      <footer>
-        <p>
-          Powered by <a href="https://github.com/turtton/volglass">Volglass</a>, © 2023
-        </p>
-      </footer>
     </div>
   );
 }
