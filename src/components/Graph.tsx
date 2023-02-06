@@ -5,7 +5,8 @@ import { useRouter } from "next/router";
 
 import CytoscapeComponent from "react-cytoscapejs";
 import { Core } from "cytoscape";
-import { LocalGraphData, MdObject } from "../lib/utils";
+import { LocalGraphData } from "../lib/graph";
+import { MdObject } from "../lib/markdown";
 
 const layout = {
   name: "circle",
@@ -59,13 +60,13 @@ const styleSheet = [
   },
 ];
 
-function Graph({ graph }: {graph: LocalGraphData}): JSX.Element {
-  const c: CSSProperties = { width: "300px", height: "300px" }
-  const [cssProperties] = useState(c)
-  const [elements, elementSetter] = useState(CytoscapeComponent.normalizeElements(graph))
+function Graph({ graph }: { graph: LocalGraphData }): JSX.Element {
+  const c: CSSProperties = { width: "300px", height: "300px" };
+  const [cssProperties] = useState(c);
+  const [elements, elementSetter] = useState(CytoscapeComponent.normalizeElements(graph));
   useEffect(() => {
-    elementSetter(CytoscapeComponent.normalizeElements(graph))
-  }, [graph])
+    elementSetter(CytoscapeComponent.normalizeElements(graph));
+  }, [graph]);
 
   const router = useRouter();
   return (
@@ -92,8 +93,8 @@ function Graph({ graph }: {graph: LocalGraphData}): JSX.Element {
             stylesheet={styleSheet}
             cy={(cy) => {
               // console.log("EVT", cy);
-              cy.layout(layout).run()
-              cy.fit()
+              cy.layout(layout).run();
+              cy.fit();
               cy.on("tap", "node", (evt) => {
                 const node: Core = evt.target;
                 const { id }: MdObject = node.data();

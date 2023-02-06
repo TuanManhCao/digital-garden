@@ -15,7 +15,8 @@
   },
   "ignorePatterns": [
     ".next",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "out"
   ],
   "extends": [
     "next/core-web-vitals",

@@ -5,7 +5,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeItem from "@mui/lab/TreeItem";
 import { useRouter } from "next/router";
 import { styled } from "@mui/material/styles";
-import { MdObject } from "../lib/utils";
+import { MdObject } from "../lib/markdown";
 
 const TCTreeItem = styled(TreeItem)(() => ({
   "& .MuiTreeItem-content": {

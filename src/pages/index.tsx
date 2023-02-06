@@ -1,17 +1,10 @@
 import Layout from "../components/Layout";
-import {
-  getSinglePost,
-  getDirectoryData,
-  getFlattenArray,
-  getLocalGraphData,
-  constructGraphData,
-  MdObject,
-  LocalGraphData,
-  CustomNode,
-} from "../lib/utils";
 import FolderTree from "../components/FolderTree";
 import dynamic from "next/dynamic";
 import MDContent from "../components/MDContentData";
+import { constructGraphData, CustomNode, getLocalGraphData, LocalGraphData } from "../lib/graph";
+import { getFlattenArray, MdObject } from "../lib/markdown";
+import { getDirectoryData, getSinglePost } from "../lib/slug";
 
 // This trick is to dynamically load component that interact with window object (browser only)
 const DynamicGraph = dynamic(async () => await import("../components/Graph"), {
@@ -63,7 +56,9 @@ export interface Prop {
 
 // TODO make customizable
 // FIXME This should be a string field, but I don't know to avoid init error
-export function FIRST_PAGE(): string { return "README" }
+export function FIRST_PAGE(): string {
+  return "README";
+}
 
 export function getStaticProps(): { props: Prop } {
   const fistPage = FIRST_PAGE();

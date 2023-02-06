@@ -2,7 +2,7 @@ import React from "react";
 // import Alert from '@mui/material/Alert';
 // import AlertTitle from '@mui/material/AlertTitle';
 import { useRouter } from "next/router";
-import { CustomNode } from "../lib/utils";
+import { CustomNode } from "../lib/graph";
 
 function BackLinks({ linkList }: { linkList: CustomNode[] }): JSX.Element {
   return (

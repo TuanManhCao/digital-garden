@@ -5,12 +5,13 @@ import { wikiLinkPlugin } from "remark-wiki-link";
 import html from "remark-html";
 import externalLinks from "remark-external-links";
 import highlight from "remark-highlight.js";
-import { Node } from "./node";
 import rehypePrism from "rehype-prism-plus";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import obsidianImage from "./obsidian-image";
-import { CustomNode, getAllMarkdownFiles, toFilePath, toSlug } from "./utils";
+import { getAllMarkdownFiles, readFileSync } from "./io";
+import { toFilePath, toSlug } from "./slug";
+import { CustomNode } from "./graph";
 
 export const Transformer = {
   haveFrontMatter: function (content: string | undefined): boolean {
@@ -146,7 +147,7 @@ export const Transformer = {
   },
   /* Pair provided and existing Filenames */
   getInternalLinks: function (aFilePath) {
-    const fileContent = Node.readFileSync(aFilePath);
+    const fileContent = readFileSync(aFilePath);
     const internalLinks: CustomNode[] = [];
     const sanitizedContent = Transformer.preprocessThreeDashes(fileContent);
     const settings: Settings = { gfm: true };

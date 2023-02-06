@@ -1,19 +1,12 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import {
-  getAllSlugs,
-  getSinglePost,
-  getDirectoryData,
-  constructGraphData,
-  getLocalGraphData,
-  getFlattenArray,
-  Content,
-  CustomNode,
-} from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import MDContent from "../../components/MDContentData";
 import dynamic from "next/dynamic";
 import { Prop } from "../index";
+import { Content, getAllSlugs, getDirectoryData, getSinglePost } from "../../lib/slug";
+import { constructGraphData, CustomNode, getLocalGraphData } from "../../lib/graph";
+import { getFlattenArray } from "../../lib/markdown";
 
 const DynamicGraph = dynamic(async () => await import("../../components/Graph"), {
   loading: () => <p>Loading ...</p>,
