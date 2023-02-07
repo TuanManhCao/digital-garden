@@ -96,7 +96,9 @@ a:hover {
 
 .markdown-rendered {
     position: relative;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     font-size: 18px;
     line-height: 1.6em;
     width: 100%;
@@ -104,7 +106,6 @@ a:hover {
     background-color: var(--background-primary);
     color: var(--text-normal);
     font-family: var(--default-font);
-    padding: 15px 30px;
 }
 
 .markdown-rendered code {
@@ -221,14 +222,6 @@ a:hover {
 .right-bar-container {
     display: block;
     padding: 0 3em;
-}
-
-footer {
-    margin-top: 2em;
-    text-align: center;
-    background-color: rgb(231, 242, 250);
-    border-radius: 8px;
-    padding: 4px;
 }
 
 footer ul li {

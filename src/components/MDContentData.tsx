@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 // import Alert from '@mui/material/Alert';
 // import AlertTitle from '@mui/material/AlertTitle';
 import { useRouter } from "next/router";
@@ -39,6 +39,13 @@ export interface MDContentData {
   backLinks: CustomNode[];
 }
 
+const contentCss: CSSProperties = {
+  marginTop: "15px",
+  padding: "0 30px",
+  overflow: "hidden",
+  overflowY: "auto",
+};
+
 function MDContent({ content, backLinks }: MDContentData): JSX.Element {
   // function handleInternalLinkClick() {
   //     //Processing fetching
@@ -51,16 +58,13 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
 
   return (
     <div className="markdown-rendered">
-      {/* <Alert severity="info"> */}
-      {/*    <AlertTitle>Want to know more?</AlertTitle> */}
-      {/*    🌱 <strong>Follow</strong> or <strong>DM</strong> me on Twitter at <span><a */}
-      {/*    href="https://twitter.com/tuancm">@tuancm</a></span> */}
-      {/* </Alert> */}
-      <div dangerouslySetInnerHTML={{ __html: content.join("") }} />
-      {/* <button onClick={handleInternalLinkClick}>Click me</button> */}
-      {/* <hr/> */}
-      <div>
-        <BackLinks linkList={backLinks} />
+      <div style={contentCss}>
+        <div dangerouslySetInnerHTML={{ __html: content.join("") }} />
+        {/* <button onClick={handleInternalLinkClick}>Click me</button> */}
+        {/* <hr/> */}
+        <div style={{ marginBottom: "3em" }}>
+          <BackLinks linkList={backLinks} />
+        </div>
       </div>
       <Footer />
     </div>
