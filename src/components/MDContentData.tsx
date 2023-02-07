@@ -3,6 +3,7 @@ import React from "react";
 // import AlertTitle from '@mui/material/AlertTitle';
 import { useRouter } from "next/router";
 import { CustomNode } from "../lib/graph";
+import Footer from "./Footer";
 
 function BackLinks({ linkList }: { linkList: CustomNode[] }): JSX.Element {
   return (
@@ -38,6 +39,7 @@ export interface MDContentData {
   backLinks: CustomNode[];
 }
 
+
 function MDContent({ content, backLinks }: MDContentData): JSX.Element {
   // function handleInternalLinkClick() {
   //     //Processing fetching
@@ -61,7 +63,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
       <div>
         <BackLinks linkList={backLinks} />
       </div>
-      <hr />
+      <Footer/>
     </div>
   );
 }
