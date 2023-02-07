@@ -61,7 +61,7 @@ const styleSheet = [
 ];
 
 function Graph({ graph }: { graph: LocalGraphData }): JSX.Element {
-  const c: CSSProperties = { width: "300px", height: "300px"};
+  const c: CSSProperties = { width: "300px", height: "300px" };
   const [cssProperties] = useState(c);
   const [elements, elementSetter] = useState(CytoscapeComponent.normalizeElements(graph));
   useEffect(() => {

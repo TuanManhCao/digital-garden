@@ -39,7 +39,6 @@ export interface MDContentData {
   backLinks: CustomNode[];
 }
 
-
 function MDContent({ content, backLinks }: MDContentData): JSX.Element {
   // function handleInternalLinkClick() {
   //     //Processing fetching
@@ -63,7 +62,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
       <div>
         <BackLinks linkList={backLinks} />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
