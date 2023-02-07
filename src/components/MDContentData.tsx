@@ -3,6 +3,7 @@ import React from "react";
 // import AlertTitle from '@mui/material/AlertTitle';
 import { useRouter } from "next/router";
 import { CustomNode } from "../lib/graph";
+import Footer from "./Footer";
 
 function BackLinks({ linkList }: { linkList: CustomNode[] }): JSX.Element {
   return (
@@ -61,12 +62,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
       <div>
         <BackLinks linkList={backLinks} />
       </div>
-      <hr />
-      <footer>
-        <p>
-          Powered by <a href="https://github.com/turtton/volglass">Volglass</a>, © 2023
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
