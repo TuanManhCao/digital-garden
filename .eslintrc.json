@@ -22,7 +22,8 @@
     "next/core-web-vitals",
     "plugin:react/recommended",
     "standard-with-typescript",
-    "prettier"
+    "prettier",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "react/jsx-uses-react": "off",

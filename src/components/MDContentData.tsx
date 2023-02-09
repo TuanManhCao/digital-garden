@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 // import Alert from '@mui/material/Alert';
 // import AlertTitle from '@mui/material/AlertTitle';
 import { useRouter } from "next/router";
@@ -39,13 +39,6 @@ export interface MDContentData {
   backLinks: CustomNode[];
 }
 
-const contentCss: CSSProperties = {
-  marginTop: "15px",
-  padding: "0 30px",
-  overflow: "hidden",
-  overflowY: "auto",
-};
-
 function MDContent({ content, backLinks }: MDContentData): JSX.Element {
   // function handleInternalLinkClick() {
   //     //Processing fetching
@@ -58,7 +51,7 @@ function MDContent({ content, backLinks }: MDContentData): JSX.Element {
 
   return (
     <div className="markdown-rendered">
-      <div style={contentCss}>
+      <div className="mt-4 overflow-hidden overflow-y-auto px-8">
         <div dangerouslySetInnerHTML={{ __html: content.join("") }} />
         {/* <button onClick={handleInternalLinkClick}>Click me</button> */}
         {/* <hr/> */}

@@ -1,14 +1,6 @@
-import { CSSProperties } from "react";
-
-const wrapper: CSSProperties = {
-  display: "grid",
-  gridTemplateRows: "1fr",
-  gridTemplateColumns: "100%",
-  minHeight: "100vh",
-};
 export default function Layout({ children }): JSX.Element {
   return (
-    <div style={wrapper} className="container">
+    <div className="fixed grid h-full min-h-full w-full grid-cols-1 grid-rows-1 flex-row overflow-hidden">
       <main className="theme-light">{children}</main>
     </div>
   );

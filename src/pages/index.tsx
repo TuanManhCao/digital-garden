@@ -1,16 +1,8 @@
 import Layout from "../components/Layout";
-import FolderTree from "../components/FolderTree";
-import dynamic from "next/dynamic";
-import MDContent from "../components/MDContentData";
 import { constructGraphData, CustomNode, getLocalGraphData, LocalGraphData } from "../lib/graph";
 import { getFlattenArray, MdObject } from "../lib/markdown";
 import { getDirectoryData, getSinglePost } from "../lib/slug";
-
-// This trick is to dynamically load component that interact with window object (browser only)
-const DynamicGraph = dynamic(async () => await import("../components/Graph"), {
-  loading: () => <p>Loading ...</p>,
-  ssr: false,
-});
+import RootContainer from "../components/RootContainer";
 
 export default function Home({
   graphData,
@@ -21,26 +13,13 @@ export default function Home({
 }: Prop): JSX.Element {
   return (
     <Layout>
-      <div className="container">
-        <div className="burger-menu">
-          <input type="checkbox" id="hamburger-input" className="burger-shower" />
-          <label id="hamburger-menu" htmlFor="hamburger-input">
-            <span className="menu">
-              {" "}
-              <span className="hamburger"></span>{" "}
-            </span>
-          </label>
-          <nav>
-            <FolderTree tree={tree} flattenNodes={flattenNodes} />
-            <DynamicGraph graph={graphData} />
-          </nav>
-        </div>
-        <nav className="nav-bar">
-          <FolderTree tree={tree} flattenNodes={flattenNodes} />
-        </nav>
-        <MDContent content={content} backLinks={backLinks} />
-        <DynamicGraph graph={graphData} />
-      </div>
+      <RootContainer
+        content={content}
+        tree={tree}
+        flattenNodes={flattenNodes}
+        graphData={graphData}
+        backLinks={backLinks}
+      />
     </Layout>
   );
 }

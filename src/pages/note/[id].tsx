@@ -1,24 +1,13 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import FolderTree from "../../components/FolderTree";
-import MDContent from "../../components/MDContentData";
-import dynamic from "next/dynamic";
 import { Prop } from "../index";
 import { Content, getAllSlugs, getDirectoryData, getSinglePost } from "../../lib/slug";
 import { constructGraphData, CustomNode, getLocalGraphData } from "../../lib/graph";
 import { getFlattenArray } from "../../lib/markdown";
-
-const DynamicGraph = dynamic(async () => await import("../../components/Graph"), {
-  loading: () => <p>Loading ...</p>,
-  ssr: false,
-});
+import RootContainer from "../../components/RootContainer";
 
 interface InternalProp extends Prop {
   note: Content;
-}
-
-interface HomeElement extends HTMLElement {
-  checked: boolean;
 }
 
 export default function Home({
@@ -28,37 +17,16 @@ export default function Home({
   flattenNodes,
   graphData,
 }: InternalProp): JSX.Element {
-  const burgerId = "hamburger-input";
-  const closeBurger = (): void => {
-    const element = document.getElementById(burgerId) as HomeElement | null;
-    if (element !== null) {
-      element.checked = false;
-    }
-  };
   return (
     <Layout>
       <Head>{<meta name="title" content={note.title} />}</Head>
-
-      <div className="container">
-        <div className="burger-menu">
-          <input type="checkbox" id={burgerId} className="burger-shower" />
-          <label id="hamburger-menu" htmlFor="hamburger-input">
-            <span className="menu">
-              {" "}
-              <span className="hamburger"></span>{" "}
-            </span>
-          </label>
-          <nav>
-            <FolderTree tree={tree} flattenNodes={flattenNodes} onNodeSelect={closeBurger} />
-            <DynamicGraph graph={graphData} />
-          </nav>
-        </div>
-        <nav className="nav-bar">
-          <FolderTree tree={tree} flattenNodes={flattenNodes} />
-        </nav>
-        <MDContent content={note.data} backLinks={backLinks} />
-        <DynamicGraph graph={graphData} />
-      </div>
+      <RootContainer
+        content={note.data}
+        tree={tree}
+        flattenNodes={flattenNodes}
+        graphData={graphData}
+        backLinks={backLinks}
+      />
     </Layout>
   );
 }

@@ -1,17 +1,8 @@
-import React, { CSSProperties } from "react";
-
-const css: CSSProperties = {
-  position: "absolute",
-  top: "auto",
-  bottom: 0,
-  width: "100%",
-  textAlign: "center",
-  backgroundColor: "rgb(231, 242, 250)",
-};
+import React from "react";
 
 export default function Footer(): JSX.Element {
   return (
-    <footer style={css}>
+    <footer className="absolute top-auto bottom-0 w-full bg-gray-50 text-center">
       Powered by <a href="https://github.com/turtton/volglass">Volglass</a>, © 2023
     </footer>
   );
