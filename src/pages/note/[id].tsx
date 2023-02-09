@@ -5,6 +5,7 @@ import { Content, getAllSlugs, getDirectoryData, getSinglePost } from "../../lib
 import { constructGraphData, CustomNode, getLocalGraphData } from "../../lib/graph";
 import { getFlattenArray } from "../../lib/markdown";
 import RootContainer from "../../components/RootContainer";
+import { getSearchIndex } from "../../lib/search";
 
 interface InternalProp extends Prop {
   note: Content;
@@ -16,6 +17,7 @@ export default function Home({
   tree,
   flattenNodes,
   graphData,
+  searchIndex,
 }: InternalProp): JSX.Element {
   return (
     <Layout>
@@ -26,6 +28,7 @@ export default function Home({
         flattenNodes={flattenNodes}
         graphData={graphData}
         backLinks={backLinks}
+        searchIndex={searchIndex}
       />
     </Layout>
   );
@@ -57,6 +60,7 @@ export function getStaticProps({ params }): { props: InternalProp } {
     .filter((element): element is CustomNode => element !== null);
   const backLinks = [...new Set(internalLinks)];
   const graphData = getLocalGraphData(params.id);
+  const searchIndex = getSearchIndex();
   return {
     props: {
       content: [],
@@ -65,6 +69,7 @@ export function getStaticProps({ params }): { props: InternalProp } {
       flattenNodes,
       backLinks: backLinks.filter((link) => link.slug !== params.id),
       graphData,
+      searchIndex,
     },
   };
 }

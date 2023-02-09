@@ -3,6 +3,7 @@ import { constructGraphData, CustomNode, getLocalGraphData, LocalGraphData } fro
 import { getFlattenArray, MdObject } from "../lib/markdown";
 import { getDirectoryData, getSinglePost } from "../lib/slug";
 import RootContainer from "../components/RootContainer";
+import { getSearchIndex, SearchData } from "../lib/search";
 
 export default function Home({
   graphData,
@@ -10,6 +11,7 @@ export default function Home({
   tree,
   flattenNodes,
   backLinks,
+  searchIndex,
 }: Prop): JSX.Element {
   return (
     <Layout>
@@ -19,6 +21,7 @@ export default function Home({
         flattenNodes={flattenNodes}
         graphData={graphData}
         backLinks={backLinks}
+        searchIndex={searchIndex}
       />
     </Layout>
   );
@@ -31,6 +34,7 @@ export interface Prop {
   flattenNodes: MdObject[];
   graphData: LocalGraphData;
   backLinks: CustomNode[];
+  searchIndex: SearchData[];
 }
 
 // TODO make customizable
@@ -51,6 +55,7 @@ export function getStaticProps(): { props: Prop } {
   const backLinks = internalLinks
     .filter((value, index, array) => array.indexOf(value) === index)
     .filter((v): v is CustomNode => v !== undefined);
+  const searchIndex = getSearchIndex();
 
   const graphData = getLocalGraphData(fistPage);
   return {
@@ -60,6 +65,7 @@ export function getStaticProps(): { props: Prop } {
       flattenNodes,
       graphData,
       backLinks,
+      searchIndex,
     },
   };
 }

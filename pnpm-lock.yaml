@@ -19,6 +19,7 @@ specifiers:
   '@types/react-dom': ^17.0.18
   '@types/unist': ^2.0.6
   '@types/uuid': ^8.3.4
+  '@types/wanakana': ^4.0.3
   '@typescript-eslint/eslint-plugin': ^5.48.2
   '@typescript-eslint/parser': ^5.48.2
   autoprefixer: ^10.4.13
@@ -68,12 +69,14 @@ specifiers:
   remark-wiki-link: ^1.0.0
   tailwindcss: ^3.2.4
   to-vfile: ^6.1.0
+  ts-pattern: ^4.1.4
   typescript: ^4.9.4
   typesync: ^0.9.2
   unified: ^9.2.0
   unist-util-visit: ^4.1.0
   uuid: ^8.3.2
   vfile-reporter: ^6.0.1
+  wanakana: ^5.0.2
 
 dependencies:
   '@emotion/cache': 11.10.5
@@ -83,6 +86,7 @@ dependencies:
   '@mui/icons-material': 5.11.0_fk5bccl2hinvnbyz2t4hxr3tei
   '@mui/lab': 5.0.0-alpha.119_26x4sipaaju26faxwnvcnf22vm
   '@mui/material': 5.11.8_qtidw54xdy2lrxqgglvfql7n3e
+  '@types/wanakana': 4.0.3
   cytoscape-d3-force: 1.1.4_cytoscape@3.23.0
   cytoscape-node-html-label: 1.2.2_nj5d75okz36274i5jrvj2kttty
   d3: 6.7.0
@@ -111,9 +115,11 @@ dependencies:
   remark-rehype: 10.1.0
   remark-wiki-link: 1.0.4
   to-vfile: 6.1.0
+  ts-pattern: 4.1.4
   unified: 9.2.2
   unist-util-visit: 4.1.1
   vfile-reporter: 6.0.2
+  wanakana: 5.0.2
 
 devDependencies:
   '@babel/core': 7.20.12
@@ -1255,6 +1261,10 @@ packages:
   /@types/uuid/8.3.4:
     resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
+
+  /@types/wanakana/4.0.3:
+    resolution: {integrity: sha512-AibaWzahBKizxmsAy8rEWSIqqcT0v9KZTS8S6zPLmStGBFdccYfXydhgwYOV+6lGqQ890MpA4h2MPET3uPk9Zg==}
+    dev: false
 
   /@typescript-eslint/eslint-plugin/5.48.2_jcx3lb2c6zodlu3ov7izqw24oy:
     resolution: {integrity: sha512-sR0Gja9Ky1teIq4qJOl0nC+Tk64/uYdX+mi+5iB//MH8gwyx8e3SOyhEzeLZEFEEfCaLf8KJq+Bd/6je1t+CAg==}
@@ -5587,6 +5597,10 @@ packages:
     resolution: {integrity: sha512-AqTiAOLcj85xS7vQ8QkAV41hPDIJ71XJB4RCUrzo/1GM2CQwhkJGaf9Hgr7BOugMRpgGUrqRg/DrBDl4H40+8g==}
     dev: false
 
+  /ts-pattern/4.1.4:
+    resolution: {integrity: sha512-Mcw65oUd1w5ktKi5BRwrnz16Otwk9iv7P0dKgvbi+A1albCDgnixohSqNLuFwIp5dzxPmTPm0iDQ6p1ZJr9uGw==}
+    dev: false
+
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
     dependencies:
@@ -5916,6 +5930,11 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.2
       vfile-message: 3.1.3
+    dev: false
+
+  /wanakana/5.0.2:
+    resolution: {integrity: sha512-eYTezpLYXCr+gmVmgBBYQP7A7WJphvhyx1PkrHaMrnExTiMPrgTgFLSJgo75DnZf1Wy0lA2nukNVJg7Ptvx9zA==}
+    engines: {node: '>=12'}
     dev: false
 
   /wcwidth/1.0.1:

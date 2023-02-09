@@ -1,6 +1,5 @@
 import { DirectoryTree } from "directory-tree";
-import { getAllSlugs, toFilePath } from "./slug";
-import { Transformer } from "./transformer";
+import { getRouterPath } from "./slug";
 
 export interface MdObject {
   name: string;
@@ -13,16 +12,7 @@ export function convertObject(thisObject: DirectoryTree): MdObject {
   const children: MdObject[] = [];
 
   const objectName = thisObject.name;
-  let routerPath: string | null =
-    getAllSlugs().find((slug) => {
-      const fileName = Transformer.parseFileNameFromPath(toFilePath(slug));
-      return (
-        Transformer.normalizeFileName(fileName ?? "") === Transformer.normalizeFileName(objectName)
-      );
-    }) ?? "";
-
-  const nameAndExtension = objectName.split(".");
-  routerPath = nameAndExtension.length > 1 && routerPath !== "" ? "/note/" + routerPath : null;
+  const routerPath = getRouterPath(objectName);
   const newObject: MdObject = {
     name: objectName,
     children,

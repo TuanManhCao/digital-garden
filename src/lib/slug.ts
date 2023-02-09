@@ -121,3 +121,16 @@ export function getShortSummary(slug: string): string {
   const plainText = toString(tree);
   return plainText.split(" ").splice(0, 40).join(" ");
 }
+
+export function getRouterPath(fileName: string): string | null {
+  const routerPath =
+    getAllSlugs().find((slug) => {
+      const slugFileName = Transformer.parseFileNameFromPath(toFilePath(slug));
+      return (
+        Transformer.normalizeFileName(slugFileName ?? "") ===
+        Transformer.normalizeFileName(fileName)
+      );
+    }) ?? "";
+  const nameAndExtension = fileName.split(".");
+  return nameAndExtension.length > 1 && routerPath !== "" ? `/note/${routerPath}` : null;
+}

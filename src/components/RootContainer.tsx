@@ -2,6 +2,7 @@ import FolderTree from "./FolderTree";
 import MDContent from "./MDContentData";
 import { Prop } from "../pages";
 import dynamic from "next/dynamic";
+import { SearchBar } from "./Search";
 
 interface HomeElement extends HTMLElement {
   checked: boolean;
@@ -19,6 +20,7 @@ export default function RootContainer({
   tree,
   flattenNodes,
   backLinks,
+  searchIndex,
 }: Prop): JSX.Element {
   const burgerId = "hamburger-input";
   const closeBurger = (): void => {
@@ -42,9 +44,12 @@ export default function RootContainer({
           <DynamicGraph graph={graphData} />
         </nav>
       </div>
-      <nav className="nav-bar">
-        <FolderTree tree={tree} flattenNodes={flattenNodes} />
-      </nav>
+      <div>
+        <nav className="nav-bar">
+          <SearchBar index={searchIndex} />
+          <FolderTree tree={tree} flattenNodes={flattenNodes} />
+        </nav>
+      </div>
       <MDContent content={content} backLinks={backLinks} />
       <DynamicGraph graph={graphData} />
     </div>
