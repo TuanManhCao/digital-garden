@@ -8,6 +8,11 @@ interface HomeElement extends HTMLElement {
   checked: boolean;
 }
 
+const DynamicThemeSwitcher = dynamic(async () => await import("./ThemeSwitcher"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
+
 // This trick is to dynamically load component that interact with window object (browser only)
 const DynamicGraph = dynamic(async () => await import("./Graph"), {
   loading: () => <p>Loading ...</p>,
@@ -46,6 +51,7 @@ export default function RootContainer({
       </div>
       <div>
         <nav className="nav-bar">
+          <DynamicThemeSwitcher />
           <SearchBar index={searchIndex} />
           <FolderTree tree={tree} flattenNodes={flattenNodes} />
         </nav>

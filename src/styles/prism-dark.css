@@ -1,0 +1,91 @@
+/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript */
+html[class="dark"] code[class*=language-],html[class="dark"] pre[class*=language-] {
+    color: #f8f8f2;
+    background: 0 0;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+}
+
+html[class="dark"] pre[class*=language-] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+    border-radius: .3em
+}
+
+html[class="dark"] :not(pre) > code[class*=language-],html[class="dark"] pre[class*=language-] {
+    background: #272822
+}
+
+html[class="dark"] :not(pre) > code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal
+}
+
+html[class="dark"] .token.cdata, .token.comment,html[class="dark"] .token.doctype,html[class="dark"] .token.prolog {
+    color: #8292a2
+}
+
+html[class="dark"] .token.punctuation {
+    color: #f8f8f2
+}
+
+html[class="dark"] .token.namespace {
+    opacity: .7
+}
+
+html[class="dark"] .token.constant,html[class="dark"] .token.deleted,html[class="dark"]  .token.property,html[class="dark"]  .token.symbol, .token.tag {
+    color: #f92672
+}
+
+html[class="dark"] .token.boolean, .token.number {
+    color: #ae81ff
+}
+
+html[class="dark"] .token.attr-name,html[class="dark"]  .token.builtin,html[class="dark"]  .token.char,html[class="dark"]  .token.inserted,html[class="dark"]  .token.selector,html[class="dark"]  .token.string {
+    color: #a6e22e
+}
+
+html[class="dark"] .language-css .token.string,html[class="dark"]  .style .token.string,html[class="dark"]  .token.entity,html[class="dark"]  .token.operator,html[class="dark"]  .token.url,html[class="dark"]  .token.variable {
+    color: #f8f8f2
+}
+
+html[class="dark"] .token.atrule,html[class="dark"]  .token.attr-value,html[class="dark"]  .token.class-name,html[class="dark"]  .token.function {
+    color: #e6db74
+}
+
+html[class="dark"] .token.keyword {
+    color: #66d9ef
+}
+
+html[class="dark"] .token.important,html[class="dark"]  .token.regex {
+    color: #fd971f
+}
+
+html[class="dark"] .token.bold,html[class="dark"]  .token.important {
+    font-weight: 700
+}
+
+html[class="dark"] .token.italic {
+    font-style: italic
+}
+
+html[class="dark"] .token.entity {
+    cursor: help
+}

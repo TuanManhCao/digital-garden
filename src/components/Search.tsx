@@ -45,7 +45,6 @@ export function SearchBar(prop: SearchProp): JSX.Element {
       }}
     >
       <TextField
-        className="bg-white"
         fullWidth
         label="Search"
         onFocus={() => {

@@ -7,6 +7,13 @@ Volglass documentation is build my self!!
 
 https://volglass.turtton.net
 
+# Features
+
+- **Search** documents
+- **Dark** Theme
+
+Also, I fixed many issues that the original has.
+
 ## Getting started
 ### Run on your local machine
 
@@ -25,7 +32,6 @@ See [volglass-docs repository](https://github.com/turtton/volglass-docs) for an 
 ## Future development 
 
 - Embed markdown/image rendering
-- Text search
 - Tag list view
 
 ## For developers

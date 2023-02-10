@@ -7,6 +7,8 @@ import CytoscapeComponent from "react-cytoscapejs";
 import { Core } from "cytoscape";
 import { LocalGraphData } from "../lib/graph";
 import { MdObject } from "../lib/markdown";
+import { useCurrentTheme } from "./ThemeSwitcher";
+import { PaletteMode } from "@mui/material";
 
 const layout = {
   name: "circle",
@@ -32,7 +34,8 @@ const layout = {
   }, // transform a given node position. Useful for changing flow direction in discrete layouts
 };
 
-const styleSheet = [
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const styleSheet = (theme: PaletteMode) => [
   {
     selector: "node",
     style: {
@@ -45,7 +48,10 @@ const styleSheet = [
   },
   {
     selector: "label",
-    style: { "font-size": "12px" },
+    style: {
+      "font-size": "12px",
+      color: theme === "dark" ? "#e1e2e6" : "#000",
+    },
   },
   {
     selector: "edge",
@@ -68,18 +74,13 @@ function Graph({ graph }: { graph: LocalGraphData }): JSX.Element {
     elementSetter(CytoscapeComponent.normalizeElements(graph));
   }, [graph]);
 
+  const theme = useCurrentTheme();
   const router = useRouter();
   return (
     <>
       <div className="right-bar-container">
         <h3>Interactive Graph</h3>
-        <div
-          style={{
-            border: "1px solid #ddd",
-            backgroundColor: "#f5f6fe",
-            borderRadius: "8px",
-          }}
-        >
+        <div className="rounded-lg border-2 border-solid border-gray-300 bg-white dark:border-gray-600 dark:bg-dark-primary-alt ">
           <CytoscapeComponent
             elements={elements}
             // pan={{ x: 200, y: 200 }}
@@ -90,7 +91,7 @@ function Graph({ graph }: { graph: LocalGraphData }): JSX.Element {
             autounselectify={false}
             boxSelectionEnabled={true}
             layout={layout}
-            stylesheet={styleSheet}
+            stylesheet={styleSheet(theme)}
             cy={(cy) => {
               // console.log("EVT", cy);
               cy.layout(layout).run();

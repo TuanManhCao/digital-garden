@@ -25,7 +25,7 @@ export default function FolderTree(props: {
   flattenNodes: MdObject[];
 }): JSX.Element {
   const renderTree = (nodes: MdObject): JSX.Element => (
-    <TCTreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name}>
+    <TCTreeItem key={nodes.id} nodeId={nodes.id} label={nodes.name} className="dark:text-gray-200">
       {nodes.children.map((node) => renderTree(node))}
     </TCTreeItem>
   );

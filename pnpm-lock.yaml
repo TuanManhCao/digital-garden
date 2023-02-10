@@ -9,6 +9,7 @@ specifiers:
   '@mui/icons-material': latest
   '@mui/lab': latest
   '@mui/material': latest
+  '@mui/system': ^5.11.8
   '@types/babel__core': ^7.20.0
   '@types/cytoscape': ^3.19.9
   '@types/d3': ^6.7.5
@@ -41,6 +42,7 @@ specifiers:
   fs: ^0.0.1-security
   fuse.js: ^6.6.2
   gray-matter: ^4.0.2
+  jotai: ^2.0.1
   jsnetworkx: ^0.3.4
   mdast-util-to-string: ^3.1.0
   next: ^12.1.0
@@ -86,6 +88,7 @@ dependencies:
   '@mui/icons-material': 5.11.0_fk5bccl2hinvnbyz2t4hxr3tei
   '@mui/lab': 5.0.0-alpha.119_26x4sipaaju26faxwnvcnf22vm
   '@mui/material': 5.11.8_qtidw54xdy2lrxqgglvfql7n3e
+  '@mui/system': 5.11.8_4f3ngokrixlnstypmfsxocpf3m
   '@types/wanakana': 4.0.3
   cytoscape-d3-force: 1.1.4_cytoscape@3.23.0
   cytoscape-node-html-label: 1.2.2_nj5d75okz36274i5jrvj2kttty
@@ -94,6 +97,7 @@ dependencies:
   fs: 0.0.1-security
   fuse.js: 6.6.2
   gray-matter: 4.0.3
+  jotai: 2.0.1_react@17.0.2
   jsnetworkx: 0.3.4
   mdast-util-to-string: 3.1.0
   next: 12.3.4_jiuppbrrdpqsioctsbaxdlfu4e
@@ -3676,6 +3680,18 @@ packages:
   /isexe/2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
+
+  /jotai/2.0.1_react@17.0.2:
+    resolution: {integrity: sha512-b/BpBFkv3nq8HgT6YX5h5/y9VfKIn9OL1dO6gd9bWTgKt6LLe24VIMURTDwSYS888XfubuRQlbepb5IQGAtmcQ==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}

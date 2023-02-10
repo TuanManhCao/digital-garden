@@ -17,10 +17,15 @@ a:hover {
 /* Foooter section BEGIN */
 .note-footer {
     display: block;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: var(--background-secondary-alt);
     border-radius: 16px;
     margin-top: 24px;
     padding: 16px;
+}
+
+.brand {
+    background-color: var(--background-primary);
+    accent-color: var(--text-accent);
 }
 
 .backlink-container {
@@ -41,7 +46,7 @@ a:hover {
 
 .backlink-container .backlink {
     /*background-color: #f8f2f2;*/
-    margin: 8px -8px 0px;
+    margin: 8px -8px 0;
     padding: 8px;
     height: 116px;
     width: 318px;
@@ -80,7 +85,7 @@ a:hover {
 }
 
 .backlink-container p {
-    margin: 12px 0px;
+    margin: 12px 0;
 }
 
 /* Foooter section END */
@@ -164,6 +169,45 @@ a:hover {
     --dark: #141021;
 }
 
+.theme-dark {
+    --background-primary: #212323;
+    --background-primary-alt: #171818;
+    --background-secondary: #2b2b2c;
+    --background-secondary-alt: #333435;
+    --background-modifier-border: #4d4e4f;
+    --background-modifier-form-field: #171818;
+    --background-modifier-form-field-highlighted: #171818;
+    --background-modifier-box-shadow: rgba(255, 255, 255, 0.1);
+    --background-modifier-success: #A4E7C3;
+    --background-modifier-error: #ee0000;
+    --background-modifier-error-rgb: 238, 0, 0;
+    --background-modifier-error-hover: #9c0000;
+    --background-modifier-cover: rgba(255, 255, 255, 0.8);
+    --text-accent: #892f99;
+    --text-accent-hover: #25ccff;
+    --text-normal: #e1e2e6;
+    --text-muted: #7b7c7e;
+    --text-muted-rgb: 123, 124, 126;
+    --text-faint: #999999;
+    --text-error: #dd0000;
+    --text-error-hover: #950000;
+    --text-highlight-bg: #bdbd25;
+    --text-highlight-bg-active: #a35d20;
+    --text-selection: #6c6c6c;
+    --text-on-accent: #999999;
+    --interactive-normal: #adadad;
+    --interactive-hover: #8b8b8b;
+    --interactive-accent: #7b6cd9;
+    --interactive-accent-rgb: 123, 108, 217;
+    --interactive-accent-hover: #8273e6;
+    --interactive-success: #197300;
+    --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+    --scrollbar-bg: rgba(0, 0, 0, 0.05);
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+    --highlight-mix-blend-mode: darken;
+    --dark: #141021;
+}
+
 .markdown-rendered img:not([width]),
 .markdown-rendered audio,
 .markdown-rendered video {
@@ -213,6 +257,8 @@ a:hover {
 .right-bar-container {
     display: block;
     padding: 0 3em;
+    background-color: var(--background-primary);
+    color: var(--text-muted)
 }
 
 footer ul li {
@@ -334,11 +380,11 @@ hr {
         height: 100%;
         background: #69d2e7;
     }
-    
+
     .hamburger:before {
         top: -10px;
     }
-    
+
     .hamburger:after {
         bottom: -10px;
     }
