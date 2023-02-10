@@ -123,9 +123,13 @@ function ResultList({ contents, hidden, setHidden, setMouseOvering }: ResultProp
                 <p className="truncate text-left text-xs text-gray-500">
                   {data.lineAt}:{" "}
                   {match<string | undefined, string>(data.key)
-                    .with("singleLineContent", (): string =>
-                      data.singleLineContent.substring(data.startPos),
-                    )
+                    .with("singleLineContent", (): string => {
+                      let result = data.singleLineContent.substring(data.startPos);
+                      if (data.startPos !== 0) {
+                        result = `...${result}`;
+                      }
+                      return result;
+                    })
                     .with("rawContent.raw", (): string => {
                       let startDistance = data.startPos;
                       const rawContent = data.rawContent;
