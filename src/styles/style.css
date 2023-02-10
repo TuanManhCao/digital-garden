@@ -105,9 +105,9 @@ a:hover {
 }
 
 .markdown-rendered code {
-    color: #a20000c9;
+    color: var(--text-error);
     font-family: var(--font-monospace);
-    background-color: #f5f2f0;
+    background-color: var(--background-modifier-border);
     border-radius: 4px;
     font-size: 0.85em;
     padding: 4px 8px;
@@ -189,7 +189,7 @@ a:hover {
     --text-muted: #7b7c7e;
     --text-muted-rgb: 123, 124, 126;
     --text-faint: #999999;
-    --text-error: #dd0000;
+    --text-error: #e32568;
     --text-error-hover: #950000;
     --text-highlight-bg: #bdbd25;
     --text-highlight-bg-active: #a35d20;
