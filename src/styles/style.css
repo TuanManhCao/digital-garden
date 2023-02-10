@@ -256,7 +256,7 @@ a:hover {
 
 .right-bar-container {
     display: block;
-    padding: 0 3em;
+    padding: 32px 3em;
     background-color: var(--background-primary);
     color: var(--text-muted)
 }
