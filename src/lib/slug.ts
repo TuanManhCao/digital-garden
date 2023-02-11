@@ -29,7 +29,25 @@ export function getSinglePost(slug: string): Content {
   const splitedFileName = fileNameWithExtension.split(".");
   splitedFileName.pop();
   const fileName = splitedFileName.join();
-  const fileContent = readFileSync(currentFilePath);
+
+  let shouldBreakLine = true;
+  const fileContent = readFileSync(currentFilePath)
+    .split("\n")
+    // Fix Line breaks
+    .map((line, index, array) => {
+      if (line.startsWith("---") || line.startsWith("```")) {
+        shouldBreakLine = !shouldBreakLine;
+        return line;
+      } else if (shouldBreakLine && !(line.startsWith("#") && line.includes(" ")) && line !== "") {
+        const next = array[index + 1]
+        if (next === undefined || next === "") {
+          return line
+        }
+        return `${line}\\`;
+      } else {
+        return line;
+      }
+    }).join("\n");
 
   // console.log("===============\n\nFile is scanning: ", slug)
   const htmlContent = Transformer.getHtmlContent(`# ${fileName}`);
