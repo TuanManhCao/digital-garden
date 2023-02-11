@@ -144,7 +144,7 @@ a:hover {
     --background-modifier-error-rgb: 230, 135, 135;
     --background-modifier-error-hover: #bb0000;
     --background-modifier-cover: rgba(0, 0, 0, 0.8);
-    --text-accent: rgba(201, 19, 133, 0.77);;
+    --text-accent: rgba(201, 19, 133, 0.77);
     --text-accent-hover: #1ea2cc;
     --text-normal: #232324;
     --text-muted: #8e8e90;
@@ -213,6 +213,13 @@ a:hover {
 .markdown-rendered video {
     max-width: 100%;
     outline: none;
+}
+
+.markdown-rendered a {
+    color: var(--text-accent);
+}
+.markdown-rendered a:hover {
+    color: var(--text-accent-hover);
 }
 
 .markdown-rendered h1,
