@@ -3,14 +3,13 @@ import Layout from "../../components/Layout";
 import {
     getAllSlugs,
     getSinglePost,
-    convertObject,
-    getDirectoryData,
     constructGraphData, getLocalGraphData
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
 import {getFlattenArray} from "../../lib/utils";
 import MDContent from "../../components/MDContent";
 import dynamic from 'next/dynamic'
+import { getTree } from '../../lib/postsCache';
 
 const DynamicGraph = dynamic(
     () => import('../../components/Graph'),
@@ -50,7 +49,7 @@ const {nodes, edges} = constructGraphData()
 
 export function getStaticProps({params}) {
     const note = getSinglePost(params.id);
-    const tree = convertObject(getDirectoryData());
+    const tree = getTree();
     const flattenNodes = getFlattenArray(tree)
 
     const listOfEdges =   edges.filter(anEdge => anEdge.target === params.id)

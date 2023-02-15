@@ -1,8 +1,6 @@
 import Layout from "../components/Layout";
 import {
     getSinglePost,
-    getDirectoryData,
-    convertObject,
     getFlattenArray,
     getLocalGraphData,
     constructGraphData
@@ -10,6 +8,7 @@ import {
 import FolderTree from "../components/FolderTree";
 import dynamic from 'next/dynamic'
 import MDContent from "../components/MDContent";
+import { getTree } from '../lib/postsCache';
 
 
 // This trick is to dynamically load component that interact with window object (browser only)
@@ -35,7 +34,7 @@ export default function Home({graphData, content, tree, flattenNodes, backLinks}
 const {nodes, edges} = constructGraphData()
 
 export function getStaticProps() {
-    const tree = convertObject(getDirectoryData());
+    const tree = getTree();
     const contentData = getSinglePost("index");
     const flattenNodes = getFlattenArray(tree)
     const listOfEdges =   edges.filter(anEdge => anEdge.target === "index")

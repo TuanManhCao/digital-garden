@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 // import cytoscape from 'cytoscape';
 // import cola from 'cytoscape-cola';
 import {useRouter} from 'next/router'
 
-import CytoscapeComponent from "react-cytoscapejs";
+import CytoscapeComponent from 'react-cytoscapejs';
+import dynamic from 'next/dynamic';
 
 
 const layout = {
@@ -69,6 +70,16 @@ function Graph({graph}) {
     //TODO: Listen to query change/ graphdata change to update state of this component
     // Can use this: https://github.com/vercel/next.js/discussions/12661
 
+    useEffect(() => {
+        setGraphData((previousData) => ({
+            ...previousData,
+            nodes: graph.nodes,
+            edges: graph.edges,
+        }));
+    }, [graph]);
+
+    const DynamicCytoscapeComponent = dynamic(() => import('react-cytoscapejs'));
+
     return (
         <>
             <div className="right-bar-container">
@@ -80,7 +91,7 @@ function Graph({graph}) {
                         borderRadius:"8px"
                     }}
                 >
-                    <CytoscapeComponent
+                    <DynamicCytoscapeComponent
                         elements={CytoscapeComponent.normalizeElements(graphData)}
                         // pan={{ x: 200, y: 200 }}
                         style={{width: width, height: height}}
