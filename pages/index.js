@@ -1,8 +1,6 @@
 import Layout from "../components/Layout";
 import {
     getSinglePost,
-    getDirectoryData,
-    convertObject,
     getFlattenArray,
     getLocalGraphData,
     constructGraphData

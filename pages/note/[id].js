@@ -3,8 +3,6 @@ import Layout from "../../components/Layout";
 import {
     getAllSlugs,
     getSinglePost,
-    convertObject,
-    getDirectoryData,
     constructGraphData, getLocalGraphData
 } from "../../lib/utils";
 import FolderTree from "../../components/FolderTree";
