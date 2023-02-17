@@ -1,6 +1,6 @@
 {
   "name": "volglass",
-  "version": "0.2.0-hotfix",
+  "version": "0.2.1-hotfix",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
