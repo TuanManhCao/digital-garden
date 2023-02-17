@@ -43,7 +43,7 @@ export function getSinglePost(slug: string): Content {
         if (next === undefined || next === "") {
           return line
         }
-        return `${line}\\`;
+        return `${line}  `;
       } else {
         return line;
       }
