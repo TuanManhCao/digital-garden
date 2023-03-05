@@ -1,6 +1,6 @@
 import FolderTree from "./FolderTree";
 import MDContent from "./MDContentData";
-import { Prop } from "../pages";
+import { Prop } from "../pages/[...id]";
 import dynamic from "next/dynamic";
 import { SearchBar } from "./Search";
 

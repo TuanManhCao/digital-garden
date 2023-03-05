@@ -1,7 +1,6 @@
 import { ElementDefinition } from "cytoscape";
 import { Transformer } from "./transformer";
 import { getShortSummary, toFilePath, toSlug } from "./slug";
-import { FIRST_PAGE } from "../pages";
 import path from "path";
 import { getAllMarkdownFiles, isFile } from "./io";
 import fs from "fs";
@@ -70,7 +69,7 @@ export function getLocalGraphData(currentNodeId: string): LocalGraphData {
   const { nodes, edges } = constructGraphData();
   const newNodes: ElementDefinition[] = nodes.map((aNode) => ({
     data: {
-      id: aNode.slug.toString(),
+      id: aNode.slug,
       label: Transformer.parseFileNameFromPath(toFilePath(aNode.slug)),
     },
   }));
@@ -83,8 +82,8 @@ export function getLocalGraphData(currentNodeId: string): LocalGraphData {
   }));
 
   const existingNodeIDs = newNodes.map((aNode) => aNode.data.id);
-  const firstPage = FIRST_PAGE();
-  currentNodeId = currentNodeId === firstPage ? `__${firstPage}` : currentNodeId;
+  // const firstPage = FIRST_PAGE();
+  // currentNodeId = currentNodeId === firstPage ? `__${firstPage}` : currentNodeId;
   if (currentNodeId != null && existingNodeIDs.includes(currentNodeId)) {
     const outGoingNodeIds = newEdges
       .filter((anEdge) => anEdge.data.source === currentNodeId)

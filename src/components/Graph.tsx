@@ -99,8 +99,7 @@ function Graph({ graph }: { graph: LocalGraphData }): JSX.Element {
               cy.on("tap", "node", (evt) => {
                 const node: Core = evt.target;
                 const { id }: MdObject = node.data();
-                const path = "/note/" + id;
-                void router.push(path);
+                void router.push(`/${id}`);
               });
             }}
           />

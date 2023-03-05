@@ -33,7 +33,7 @@ export const Transformer = {
     return {};
   },
 
-  pageResolver: function (pageName) {
+  pageResolver: function (pageName: string): string[] {
     const allFileNames = getAllMarkdownFiles();
     const result = allFileNames.find((aFile) => {
       const parseFileNameFromPath = Transformer.parseFileNameFromPath(aFile);
@@ -55,7 +55,7 @@ export const Transformer = {
   hrefTemplate: function (permalink: string) {
     // permalink = Transformer.normalizeFileName(permalink)
     permalink = permalink.replace("ç", "c").replace("ı", "i").replace("ş", "s");
-    return `/note/${permalink}`;
+    return permalink;
   },
   getHtmlContent: function (content: string): string[] {
     const htmlContent: string[] = [];
@@ -138,7 +138,8 @@ export const Transformer = {
   /* Parse file name from path then sanitize it */
   parseFileNameFromPath: function (filepath: string): string | null {
     if (filepath.includes("/")) {
-      const parsedFileFromPath = filepath.split("/")[filepath.split("/").length - 1];
+      const splitPath = filepath.split("/");
+      const parsedFileFromPath = splitPath[splitPath.length - 1];
       return parsedFileFromPath.replace(".md", "");
     } else {
       return null;

@@ -1,4 +1,3 @@
-import { FIRST_PAGE } from "../pages";
 import { getAllMarkdownFiles, getFiles, getMarkdownFolder, isFile, readFileSync } from "./io";
 import directoryTree from "directory-tree";
 import markdown from "remark-parse";
@@ -6,6 +5,7 @@ import { toString } from "mdast-util-to-string";
 import { convertObject, MdObject } from "./markdown";
 import { Transformer } from "./transformer";
 import unified from "unified";
+import { FIRST_PAGE } from "../pages/[...id]";
 
 interface SlugMap extends Map<string, string> {
   index: string;
@@ -39,15 +39,16 @@ export function getSinglePost(slug: string): Content {
         shouldBreakLine = !shouldBreakLine;
         return line;
       } else if (shouldBreakLine && !(line.startsWith("#") && line.includes(" ")) && line !== "") {
-        const next = array[index + 1]
+        const next = array[index + 1];
         if (next === undefined || next === "") {
-          return line
+          return line;
         }
         return `${line}  `;
       } else {
         return line;
       }
-    }).join("\n");
+    })
+    .join("\n");
 
   // console.log("===============\n\nFile is scanning: ", slug)
   const htmlContent = Transformer.getHtmlContent(`# ${fileName}`);
@@ -95,12 +96,7 @@ export function getSlugHashMap(): Map<string, string> {
 
 export function toSlug(filePath: string): string {
   if (isFile(filePath) && filePath.includes(getMarkdownFolder())) {
-    return filePath
-      .replace(getMarkdownFolder(), "")
-      .replaceAll("/", "__")
-      .replaceAll(" ", "++++")
-      .replaceAll("&", "ambersand")
-      .replace(".md", "");
+    return filePath.replace(getMarkdownFolder(), "").replace(".md", "");
   } else {
     // TODO handle this properly
     return "/";
@@ -141,14 +137,12 @@ export function getShortSummary(slug: string): string {
 }
 
 export function getRouterPath(fileName: string): string | null {
-  const routerPath =
-    getAllSlugs().find((slug) => {
-      const slugFileName = Transformer.parseFileNameFromPath(toFilePath(slug));
-      return (
-        Transformer.normalizeFileName(slugFileName ?? "") ===
-        Transformer.normalizeFileName(fileName)
-      );
-    }) ?? "";
+  const routerPath = getAllSlugs().find((slug) => {
+    const slugFileName = Transformer.parseFileNameFromPath(toFilePath(slug));
+    return (
+      Transformer.normalizeFileName(slugFileName ?? "") === Transformer.normalizeFileName(fileName)
+    );
+  });
   const nameAndExtension = fileName.split(".");
-  return nameAndExtension.length > 1 && routerPath !== "" ? `/note/${routerPath}` : null;
+  return nameAndExtension.length > 1 && routerPath !== undefined ? routerPath : null;
 }
