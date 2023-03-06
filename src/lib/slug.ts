@@ -7,6 +7,8 @@ import { Transformer } from "./transformer";
 import unified from "unified";
 import { FIRST_PAGE } from "../pages/[...id]";
 
+type StringArrayProcessor = (line: string, index: number, array: string[]) => string;
+
 interface SlugMap extends Map<string, string> {
   index: string;
 }
@@ -30,24 +32,11 @@ export function getSinglePost(slug: string): Content {
   splitedFileName.pop();
   const fileName = splitedFileName.join();
 
-  let shouldBreakLine = true;
   const fileContent = readFileSync(currentFilePath)
     .split("\n")
     // Fix Line breaks
-    .map((line, index, array) => {
-      if (line.startsWith("---") || line.startsWith("```")) {
-        shouldBreakLine = !shouldBreakLine;
-        return line;
-      } else if (shouldBreakLine && !(line.startsWith("#") && line.includes(" ")) && line !== "") {
-        const next = array[index + 1];
-        if (next === undefined || next === "") {
-          return line;
-        }
-        return `${line}  `;
-      } else {
-        return line;
-      }
-    })
+    .map(convertObsidianLineBreak())
+    .map(fixMarkdownLink)
     .join("\n");
 
   // console.log("===============\n\nFile is scanning: ", slug)
@@ -62,6 +51,41 @@ export function getSinglePost(slug: string): Content {
     data: htmlContent,
   };
 }
+
+function convertObsidianLineBreak(): StringArrayProcessor {
+  let shouldBreakLine = true;
+  return (line, index, array) => {
+    const isCodeBlockInterval = line.startsWith("---") || line.startsWith("```");
+    const isHeading = !(line.startsWith("#") && line.includes(" ")) && line !== "";
+    if (isCodeBlockInterval) {
+      shouldBreakLine = !shouldBreakLine;
+      return line;
+    } else if (shouldBreakLine && isHeading) {
+      const next = array[index + 1];
+      if (next === undefined || next === "") {
+        return line;
+      }
+      return `${line}  `;
+    } else {
+      return line;
+    }
+  };
+}
+
+const fixMarkdownLink: StringArrayProcessor = line => {
+  const links = line.match(/]\(.*\.md\)/gi);
+  if (links === null || links.index === 0) return line;
+  links.forEach((target) => {
+    const title = target.replace("](", "").replace(")", "").split("/").pop()?.replace(".md", "");
+    if (!target.startsWith("](http") && title !== undefined) {
+      const file = toFilePath(title);
+      if (file !== "") {
+        line = line.replace(target, target.replace(".md", ""));
+      }
+    }
+  });
+  return line;
+};
 
 export function toFilePath(slug: string): string {
   const result = cachedSlugMap.get(slug);
@@ -96,7 +120,7 @@ export function getSlugHashMap(): Map<string, string> {
 
 export function toSlug(filePath: string): string {
   if (isFile(filePath) && filePath.includes(getMarkdownFolder())) {
-    return filePath.replace(getMarkdownFolder(), "").replace(".md", "");
+    return filePath.replace(getMarkdownFolder(), "").replace(" ", "+").replace(".md", "");
   } else {
     // TODO handle this properly
     return "/";
