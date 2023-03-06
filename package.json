@@ -5,7 +5,9 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
-    "build": "next build",
+    "build": "pnpm run build:kotlin && pnpm run build:next",
+    "build:next": "next build",
+    "build:kotlin": "cd kotlin && ./gradlew build",
     "start": "next start",
     "deploy": "pnpm build && git add . && git commit -m '...' && git push",
     "format": "prettier --write \"src/**/*.{ts,tsx,js}\"",
@@ -55,6 +57,7 @@
     "unified": "^9.2.0",
     "unist-util-visit": "^4.1.0",
     "vfile-reporter": "^6.0.1",
+    "volglass-backend": "link:kotlin/build/productionLibrary",
     "wanakana": "^5.0.2"
   },
   "devDependencies": {
