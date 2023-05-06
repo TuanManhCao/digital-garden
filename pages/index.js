@@ -10,6 +10,7 @@ import {
 import FolderTree from "../components/FolderTree";
 import dynamic from 'next/dynamic'
 import MDContent from "../components/MDContent";
+import Hamburger from "../components/Hamburger";
 
 
 // This trick is to dynamically load component that interact with window object (browser only)
@@ -25,6 +26,7 @@ export default function Home({graphData, content, tree, flattenNodes, backLinks}
                 <nav className="nav-bar">
                     <FolderTree tree={tree} flattenNodes={flattenNodes}/>
                 </nav>
+                <Hamburger/>
                 <MDContent content={content}  handleOpenNewContent={null} backLinks={backLinks}/>
                 <DynamicGraph graph={graphData}/>
             </div>
