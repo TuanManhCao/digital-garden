@@ -124,8 +124,26 @@ a:hover {
     min-height: 0;
     padding-top: 20px;
     flex-direction: column;
+    height: 100vh;
+    position: relative;
 }
 
+.hamburger {
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
 
 .theme-light {
     --background-primary: white;
@@ -258,7 +276,33 @@ hr {
 }
 
 @media screen and (max-width: 800px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 1;
+    }
     .nav-bar {
-        display: none;
+        position: fixed;
+        left: -100%;
+        transition: 0.3s;
+        z-index: 1;
+    }
+    .nav-bar.active {
+        left: 0;
+    }
+
+    .hamburger.active{
+        left: 270px;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
